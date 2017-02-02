@@ -7,16 +7,16 @@
 	</head>
 	<body>
 		<?php include("phparts/header.php"); ?>
-		<div class="container">
-			<div class="col-2-4"></div>
-		    <div class="col-1-2">
+		<div class="grid grid-pad">
+			<div class="col-2-12"></div>
+		    <div class="col-8-12">
 		        <h1><?= $body['title'] ?><h1>
 		        <p><?= $body['content'] ?><p>
 		        <h1><?= $heading['title'] ?><h1>
 		        <p><?= $heading['content'] ?><p>
 
 		    </div>
-		    <div class="col-2-4"></div>
+		    <div class="col-2-12"></div>
 		</div>
 
 

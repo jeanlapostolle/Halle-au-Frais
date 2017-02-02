@@ -12,9 +12,9 @@
 			<?php include("phparts/header.php"); ?>
 		</header>
 		<main>
-			<div class="container">
-				<div class="col-1-4"></div>
-				<div class="col-2-4">
+			<div class="grid grid-pad">
+				
+				<div class="col-8-12">
 					<article>
 						<?php 
 						foreach($article as $key => $value): ?>
@@ -33,7 +33,7 @@
 						endforeach; ?>
 					</article>
 				</div>
-				<div class="col-1-4">
+				<div class="col-4-12">
 					<section>
 						<h3> Nos Evènements </h3>
 						<?php 
@@ -52,7 +52,6 @@
 						endforeach; ?>	
 					</section>
 				</div>
-				<div class="col-1-4"></div>
 			</div>
 		</main>
 		<?php include("phparts/footer.php"); ?>
