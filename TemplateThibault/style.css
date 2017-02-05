@@ -69,31 +69,27 @@ table {
 
 
 
+/*-----------------------------------------------------*/
+/*-------------------------BODY------------------------*/
+/*-----------------------------------------------------*/
 
 /*body {background-color: #BCD11A}*/
 
-.content{
-	width: 100%;
-	border: 1px;
-	border-style: dotted;
-	border-color: red;
-}
 
-
+/*-----------------------------------------------------*/
+/*------------------------HEADER-----------------------*/
+/*-----------------------------------------------------*/
 /*
 .logo {
 	background:  url("img/logo-halle.png") no-repeat center;
 	background-size: contain;
 }*/
 
-.menu {
-	background-color: rgba(38,38,38,1);
-	width: 100%;
-}
+.menu {background-color: rgba(38,38,38,1)}
 
-.menu, .logo{
-	height: 100px;
-}
+.menu, .logo{height: 100px}
+
+/*-------------------------MENU------------------------*/
 
 li {
 	color: #BCD11A;
@@ -101,12 +97,13 @@ li {
 	font-family: 'font';
 }
 
-li img{
-	max-height: 100px;
-}
+li img{max-height: 100px}
 
 
 
+/*-----------------------------------------------------*/
+/*---------------ARTICLES-SUR-LES-HALLES---------------*/
+/*-----------------------------------------------------*/
 
 .art {
 	/*background: #BCD11A;*/
@@ -115,6 +112,11 @@ li img{
 
 a {float: right}
 
+
+
+/*-----------------------------------------------------*/
+/*-------------ARTICLES-SUR-LES-COMMERCANTS------------*/
+/*-----------------------------------------------------*/
 .commercants h1 {
 	width: 100%;
 	text-transform: uppercase;
@@ -124,6 +126,7 @@ a {float: right}
 	padding: 10px;
 	text-align: center;
 }
+/*présentation du groupe de commerants*/
 .pres {
 	background-color: rgba(38,38,38,1);
 	color: #BCD11A;
@@ -131,6 +134,7 @@ a {float: right}
 	height: 100px;
 	padding: 10px;
 }
+/*quelques pubs de commercants*/
 .pub {
 	background: #E0E0E0;
 	height: 100px;
@@ -140,16 +144,17 @@ a {float: right}
 
 .pub img {margin : auto}
 
+/*-----------------------------------------------------*/
+/*-------------------------FOOTER----------------------*/
+/*-----------------------------------------------------*/
+
 footer {text-align: center}
 footer img {width: 100%}
 
-/*
 
-	border:1px;
-	border-color: red;
-	border-style: dotted;
-
-*/
+/*-----------------------------------------------------*/
+/*---------------------MEDIA-QUERIES-------------------*/
+/*-----------------------------------------------------*/
 
 
 /*format PC*/
@@ -161,7 +166,9 @@ footer img {width: 100%}
 	.logo{z-index: 1}
 	.menu{z-index: 0}*/
 	.logo {display: none}
-	header {}
+
+	.menu {width: 100%}
+
 	ul {
 		display: inline-flex;
 		width: 100%;
@@ -169,6 +176,7 @@ footer img {width: 100%}
 		justify-content: space-between;
 		flex-direction: row;
 	}
+
 	li {
 		width: 100%;
 		text-align: center;
@@ -189,7 +197,10 @@ footer img {width: 100%}
 	ul {
 		width: 100%;
 		height: 100%;
+		display: inline-flex;
+		flex-direction: column;
 		justify-content: space-between;
+		align-items: center;
 	}
 	li {
 		width: 100%;
@@ -199,3 +210,14 @@ footer img {width: 100%}
 		display: none;
 	}
 }
+
+
+
+
+/*
+code de tests divers pour les boxs
+	border:1px;
+	border-color: red;
+	border-style: dotted;
+
+*/
