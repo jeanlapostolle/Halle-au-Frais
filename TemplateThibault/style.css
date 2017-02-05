@@ -70,7 +70,7 @@ table {
 
 
 
-body {background-color: #BCD11A}
+/*body {background-color: #BCD11A}*/
 
 .content{
 	width: 100%;
@@ -79,12 +79,17 @@ body {background-color: #BCD11A}
 	border-color: red;
 }
 
+
+/*
 .logo {
 	background:  url("img/logo-halle.png") no-repeat center;
 	background-size: contain;
-}
+}*/
 
-.menu {background-color: rgba(38,38,38,1)}
+.menu {
+	background-color: rgba(38,38,38,1);
+	width: 100%;
+}
 
 .menu, .logo{
 	height: 100px;
@@ -93,16 +98,22 @@ body {background-color: #BCD11A}
 li {
 	color: #BCD11A;
 	text-transform: uppercase;
+	font-family: 'font';
+}
+
+li img{
+	max-height: 100px;
 }
 
 @media handheld, only screen and (min-width: 767px) {
-	.menu, .logo{
+	/*.menu, .logo{
 		position: absolute;
 		width: 100%;
 	}
 	.logo{z-index: 1}
-	.menu{z-index: 0}
-
+	.menu{z-index: 0}*/
+	.logo {display: none}
+	header {}
 	ul {
 		display: inline-flex;
 		width: 100%;
@@ -119,14 +130,47 @@ li {
 }
 @media handheld, only screen and (max-width: 767px) {
 	ul {
-		display: inline-flex;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
-		flex-direction: column;
 	}
 	li {
 		width: 100%;
 		text-align: center;
 	}
+	li img {
+		display: none;
+	}
 }
+
+main {
+	width: 100%;
+	height: 1000px;
+}
+
+
+.art {
+	background: #BCD11A;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.art:nth-child(2) {
+    border-left: 1px dotted black;
+    border-right: 1px dotted black;
+}
+
+a {
+	float: right;
+
+}
+
+
+/*
+
+	border:1px;
+	border-color: red;
+	border-style: dotted;
+
+*/
