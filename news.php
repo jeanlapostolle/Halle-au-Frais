@@ -8,17 +8,16 @@
     	<?php include("head.php"); ?>
 	</head>
 	<body>
-		<header>
+		<header id="base_header">
 			<?php include("phparts/header.php"); ?>
 		</header>
 		<main>
 			<div class="grid grid-pad">
-				
-				<div class="col-8-12">
-					<article>
-						<?php 
-						foreach($article as $key => $value): ?>
-							<img src="<?php echo $value['lien_image']?>" alt=<?php echo $value['titre_image']?> />
+				<div class="col-1-12"></div>
+				<div class="col-6-12">
+					<?php 
+					foreach($article as $key => $value): ?>
+						<article>
 							<header>
 								<h3><?php echo $value['titre'] ?></h3>
 								<time><?php echo $value['date'] ?></time>
@@ -29,12 +28,12 @@
 							<footer>
 								<a href="news.php" title="<?php echo $value['titre']; ?>">Lire la suite</a>
 							</footer>
-						<?php 
-						endforeach; ?>
-					</article>
+						</article>
+					<?php 
+					endforeach; ?>
 				</div>
 				<div class="col-4-12">
-					<section>
+					<section id="events">
 						<h3> Nos Evènements </h3>
 						<?php 
 						foreach($event as $key => $value): ?>
@@ -43,7 +42,7 @@
 						<?php 
 						endforeach; ?>
 					</section>
-					<section>
+					<section id="find_us">
 						<h3> Nous Retrouver </h3>
 						<?php 
 						foreach($reseauSocial as $key => $value): ?>
@@ -52,8 +51,11 @@
 						endforeach; ?>	
 					</section>
 				</div>
+				<div class="col-1-12"></div>
 			</div>
 		</main>
-		<?php include("phparts/footer.php"); ?>
+		<footer>
+			<?php include("phparts/footer.php"); ?>
+		</footer>
 	</body>
 </html>
