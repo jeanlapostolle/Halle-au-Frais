@@ -117,4 +117,4 @@ INSERT INTO COMMERCE(id, nom, telephone, mail, siteWeb, facebook, proprietaire, 
 	(14, 'Philippe Olivier',,,,,,'',4),
 	(15, 'Poissonerie chez Dupuis',,,,,,'',3),
 	(16, 'Primeurs et maraîchers Pierre Quillet',,,,,,'',1),
-	(17, 'Au palais gourmand',,,,,,'',6),
+	(17, 'Au palais gourmand',,,,,,'',6);
