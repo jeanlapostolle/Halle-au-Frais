@@ -1,29 +1,21 @@
-<?php include('data/d_index.php'); ?>
-<!doctype html>
-<html>
-	<head>
-	    <title>Accueil - Halle au frais</title>
-    	<?php include("head.php"); ?>
-	</head>
-	<body>
-		<header id="base_header">
-			<?php include("phparts/header.php"); ?>
-		</header>
-		<main>
-			<div class="grid grid-pad">
-				<div class="col-2-12"></div>
-				<div class="col-8-12">
-					<h1><?= $body['title'] ?></h1>
-					<p><?= $body['content'] ?></p>
-					<h1><?= $heading['title'] ?></h1>
-					<p><?= $heading['content'] ?></p>
+<?php
+require 'libs/flight/Flight.php';
+include('controllers/route_methode.php');
 
-				</div>
-				<div class="col-2-12"></div>
-			</div>
-		</main>
-		<footer>
-			<?php include("phparts/footer.php"); ?>
-		</footer>
-	</body>
-</html>
+// require_once 'libs/idiorm.php';
+// require_once 'libs/paris.php';
+// ORM::configure('sqlite:data/data.sqlite');
+// require_once 'models/article.php';
+
+
+Flight::route('/', 'accueil');
+Flight::route('/Contact', 'contact');
+Flight::route('/Nouveaute', 'news');
+Flight::route('/Evenements', 'events');
+Flight::route('/QuiSommesNous?', 'whoarewe');
+Flight::route('/Exemple', 'example');
+
+
+
+
+Flight::start();
