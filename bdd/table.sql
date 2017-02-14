@@ -100,21 +100,47 @@ INSERT INTO TYPE(id, label) VALUES
 
 
 INSERT INTO COMMERCE(id, nom, telephone, mail, siteWeb, facebook, proprietaire, description, numType) VALUES
-	(0, 'Halle au frais',,,,,,'Association des commerçants d''Amiens',0),
-	(1, 'Au pêché mignon','+33 3 22 92 04 50',,,,,'',8),
-	(2, 'Aux quatre saisons','+33 3 22 92 48 58',,,,,'',1),
-	(3, 'Au roi du boudin','+33 6 86 12 20 49',,,,,'',7),
-	(4, 'Aux papilles du monde','+33 3 22 91 14 22',,,,,'',5),
-	(5, 'Boucherie Amiénoise Pocholle','+33 3 22 91 74 09',,,,,'',7),
-	(6, 'Héripré volaille','+33 3 ',,,,,'',2),
-	(7, 'Hong Duc',,,,,,'',5),
-	(8, 'La boucherie des Halles',,,,,,'',7),
-	(9, 'L''épicerie Italienne',,,,,,'',5),
-	(10, 'L''étale de Planchon',,,,,,'',4),
-	(11, 'Les artisans du pain',,,,,,'',9),
-	(12, 'Boucherie Legrand',,,,,,'',7),
-	(13, 'Nature du pain',,,,,,'',9),
-	(14, 'Philippe Olivier',,,,,,'',4),
-	(15, 'Poissonerie chez Dupuis',,,,,,'',3),
-	(16, 'Primeurs et maraîchers Pierre Quillet',,,,,,'',1),
-	(17, 'Au palais gourmand',,,,,,'',6);
+	(0, 'Halle au frais','','','','','','Association des commerçants d''Amiens',0),
+	(1, 'Au pêché mignon','+33 3 22 92 04 50','','','','','Vins & spiritueux',8),
+	(2, 'Aux quatre saisons','+33 3 22 92 48 58','alexandradecaux3@orange.fr','','','M. Joel Decaux','Primeurs',1),
+	(3, 'Au roi du boudin','+33 6 86 12 20 49','','http://www.auroiduboudin.fr/','','M. Gysel Van','Le spécialiste du boudin blanc et noir ',7),
+	(4, 'Aux papilles du monde','+33 3 22 91 14 22','','http://www.auxpapillesdumonde.fr/','','M&Mme Alves','Produit du monde',5),
+	(5, 'Boucherie Amiénoise Pocholle','+33 3 22 91 74 09','','','','','Boucherie Charcuterie ',7),
+	(6, 'Héripré volaille','+33 3 22 92 61 54','','http://www.heripre.com/','https://www.facebook.com/heripre.maison','M. Geoffrey Héripré','Volaille et gibier',2),
+	(7, 'Hong Duc','+33 3 22 92 39 09','','','https://www.facebook.com/Hong.Duc.Amiens','','Produits Asiatiques ',5),
+	(8, 'La boucherie des Halles','+33 6 85 20 93 63','stephane.wiotte@orange.fr','','','M. Stéphane Wiotte','1er prix National en boucherie artisanale',7),
+	(9, 'L''épicerie Italienne','+33 3 22 72 49 52','l-epicerie341@orange.fr','','','Mme Nathalie Rubignay','Produits Italiens',5),
+	(10, 'L''étale de Planchon','+33 3 22 91 96 22','leblogdejulienplanchon@gmail.com','http://leblogdejulienplanchon.blogspot.fr/','','M. Julien Planchon','Fromager Affineur',4),
+	(11, 'Les artisans du pain','+33 6 44 37 09 99','','','https://www.facebook.com/Nature-de-Pain-1726363787599598/','M. Sainneville','Boulangerie pâtisserie',9),
+	(12, 'Boucherie Legrand','+33 3 22 92 04 63','philippelegrand73@gmail.com','','','M. Philippe LEGRAND','',7),
+	(13, 'Nature du pain','+33 3 22 91 25 36','','http://www.naturedepain.com/','','','Boulangerie pâtisserie ',9),
+	(14, 'Philippe Olivier','+33 3 22 92 33 54','info@philippeolivier.fr','http://www.philippeolivier.fr/','','','L''affineur des Fromages',4),
+	(15, 'Poissonerie chez Dupuis','+33 3 22 92 05 39','','','','','Poissons et moules',3),
+	(16, 'Primeurs et maraîchers Pierre Quillet', '+33 3 22 31 61 63','pierre.quillet4@wanadoo.fr','','https://www.facebook.com/quilletpierre','','',1),
+	(17, 'Au palais gourmand','+33 3 22 91 72 77','apgamiens@wanadoo.fr','','https://www.facebook.com/apgamiens/?frer=ts','Cédric Hely ','',6);
+
+
+
+/*
+LISTE DES DONNEES SAISIE SOUS FORME DE TABLEAU CLAIR :
+
+INSERT INTO COMMERCE(id, nom, 						telephone, 				mail, 									siteWeb, 										facebook, 														proprietaire, 				description, 								numType) VALUES
+	(0, 'Halle au frais',							'',						'',										'',												'',																'',							'Association des commerçants d''Amiens',		0),
+	(1, 'Au pêché mignon',							'+33 3 22 92 04 50',	'',										'',												'',																'',							'Vins & spiritueux',							8),
+	(2, 'Aux quatre saisons',						'+33 3 22 92 48 58',	'alexandradecaux3@orange.fr',			'',												'',																'M. Joel Decaux',			'Primeurs',										1),
+	(3, 'Au roi du boudin',							'+33 6 86 12 20 49',	'',										'http://www.auroiduboudin.fr/',					'',																'M. Gysel Van',				'Le spécialiste du boudin blanc et noir ',		7),
+	(4, 'Aux papilles du monde',					'+33 3 22 91 14 22',	'',										'http://www.auxpapillesdumonde.fr/',			'',																'M&Mme Alves',				'Produit du monde',								5),
+	(5, 'Boucherie Amiénoise Pocholle',				'+33 3 22 91 74 09',	'',										'',												'',																'',							'Boucherie Charcuterie ',						7),
+	(6, 'Héripré volaille',							'+33 3 22 92 61 54',	'',										'http://www.heripre.com/',						'https://www.facebook.com/heripre.maison',						'M. Geoffrey Héripré',		'Volaille et gibier',							2),
+	(7, 'Hong Duc',									'+33 3 22 92 39 09',	'',										'',												'https://www.facebook.com/Hong.Duc.Amiens',						'',							'Produits Asiatiques ',							5),
+	(8, 'La boucherie des Halles',					'+33 6 85 20 93 63',	'stephane.wiotte@orange.fr',			'',												'',																'M. Stéphane Wiotte',		'1er prix National en boucherie artisanale',	7),
+	(9, 'L''épicerie Italienne',					'+33 3 22 72 49 52',	'l-epicerie341@orange.fr',				'',												'',																'Mme Nathalie Rubignay',	'Produits Italiens',							5),
+	(10, 'L''étale de Planchon',					'+33 3 22 91 96 22',	'leblogdejulienplanchon@gmail.com',		'http://leblogdejulienplanchon.blogspot.fr/',	'',																'M. Julien Planchon',		'Fromager Affineur',							4),
+	(11, 'Les artisans du pain',					'+33 6 44 37 09 99',	'',										'',												'https://www.facebook.com/Nature-de-Pain-1726363787599598/',	'M. Sainneville',			'Boulangerie pâtisserie',						9),
+	(12, 'Boucherie Legrand',						'+33 3 22 92 04 63',	'philippelegrand73@gmail.com',			'',												'',																'M. Philippe LEGRAND',		'',												7),
+	(13, 'Nature du pain',							'+33 3 22 91 25 36',	'',										'http://www.naturedepain.com/',					'',																'',							'Boulangerie pâtisserie ',						9),
+	(14, 'Philippe Olivier',						'+33 3 22 92 33 54',	'info@philippeolivier.fr',				'http://www.philippeolivier.fr/',				'',																'',							'L''affineur des Fromages',						4),
+	(15, 'Poissonerie chez Dupuis',					'+33 3 22 92 05 39',	'',										'',												'',																'',							'Poissons et moules',							3),
+	(16, 'Primeurs et maraîchers Pierre Quillet', 	'+33 3 22 31 61 63',	'pierre.quillet4@wanadoo.fr',			'',												'https://www.facebook.com/quilletpierre',						'',							'',												1),
+	(17, 'Au palais gourmand',						'+33 3 22 91 72 77',	'apgamiens@wanadoo.fr',					'',												'https://www.facebook.com/apgamiens/?frer=ts',					'Cédric Hely',				'',												6);
+*/
