@@ -29,6 +29,8 @@ CREATE TABLE ARTICLE (
 	nom			varchar(32) NOT NULL,
 	description	text NOT NULL,
 	image		BLOB,
+	slug 		varchar(32) NOT NULL,
+	banner		BLOB,
 	auteur		varchar(32) NOT NULL
 );
 
@@ -54,6 +56,8 @@ CREATE TABLE COMMERCE (
 	description	text NOT NULL,
 	logo		BLOB,
 	numType		integer(2) NOT NULL,
+	slug 		varchar(32) NOT NULL,
+	banner		BLOB,
 	FOREIGN KEY(numType) REFERENCES TYPE(id)
 );
 
@@ -70,6 +74,8 @@ CREATE TABLE EVENT (
 	dateFin		date NOT NULL,
 	image		BLOB,
 	numCommerce	integer(3) NOT NULL,
+	slug 		varchar(32) NOT NULL,
+	banner		BLOB,
 	FOREIGN KEY(numCommerce) REFERENCES COMMERCE(id)
 );
 
@@ -80,6 +86,8 @@ CREATE TABLE EVENT (
 CREATE TABLE TYPE (
 	id			integer(2) PRIMARY KEY AUTOINCREMENT,
 	label		varchar(20) NOT NULL,
+	slug 		varchar(32) NOT NULL,
+	banner		BLOB,
 	logo		BLOB
 );
 
