@@ -1,6 +1,9 @@
 <?php
 require 'libs/flight/Flight.php';
 include('controllers/route_methode.php');
+require_once 'libs/idiorm.php';
+require_once 'libs/paris.php';
+ORM::configure('sqlite:data/data.sqlite');
 
 // require_once 'libs/idiorm.php';
 // require_once 'libs/paris.php';
