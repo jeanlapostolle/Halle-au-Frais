@@ -1,4 +1,6 @@
-<?php include('data/d_index.php'); ?>
+<?php include('data/d_index.php'); 
+require_once 'models/commercant.php';
+?>
 <!doctype html>
 <html>
 	<head>
@@ -17,6 +19,7 @@
 					<p><?= $body['content'] ?></p>
 					<h1><?= $heading['title'] ?></h1>
 					<p><?= $heading['content'] ?></p>
+					<p><?= $article[3]?></p>
 
 				</div>
 				<div class="col-2-12"></div>
