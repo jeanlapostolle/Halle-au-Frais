@@ -188,7 +188,7 @@ main p{
 	opacity: 0.7;
 }
 
-h1 {text-transform : uppercase}
+h1 {text-transform : capitalize}
 
 .whoweare h1 {text-align: center}
 
