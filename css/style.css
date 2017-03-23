@@ -1,192 +1,5 @@
 /* Halle au frais css */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-@font-face {
-    font-family: "ph300";
-    src: url("polices/PH-300CondCaps.otf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gruenewald";
-    src: url("polices/Gruenewald VA normal.ttf") format("truetype");
-}
-
-*{
-	color: var(--color-green-font);
-	font-family: "Georgia";
-}
-
-
-
-article header{
-	border-top: 1px solid var(color-green-border);
-	border-right: 1px solid var(color-green-border);
-	border-left: 1px solid var(color-green-border);
-}
-
-article header h3{
-	font-size: 3em;
-	font-family: "ph300";
-	padding: 0px 0px 7px 5px;
-}
-
-article header time{
-	text-align: right;
-	display: block;
-	padding: 0px 5px 7px 0px;
-	font-family: "Gruenewald";
-}
-
-article section{
-	border-right: 1px solid var(color-green-border);
-	border-left: 1px solid var(color-green-border);
-	padding: 0px 0px 7px 5px;
-}
-
-article footer{
-	border-bottom: 1px solid var(color-green-border);
-	border-top: 1px solid var(color-green-border);
-	border-right: 1px solid var(color-green-border);
-	border-left: 1px solid var(color-green-border);
-	background-color: var(color-white);
-	color: #FE9A2E;
-	margin: 0px 0px 15px 0px;
-	padding: 7px 0px 7px 5px;
-	font-family: "Georgia";
-}
-
-article footer a {
-	text-decoration: none;
-	color: #01A9DB;
-}
-
-article footer a:hover {
-	text-decoration: none;
-	color: #B43104;
-}
-
-section h3{
-	font-size: 3em;
-	font-family: "ph300";
-	padding: 0px 0px 7px 5px;	
-}
-
-section h4{
-	font-size: 2em;
-	font-family: "ph300";
-	padding: 0px 0px 7px 5px;	
-}
-
-main h1{
-	font-size: 4em;
-	font-family: "ph300";
-	text-align: center;
-	margin: 10px 0px 10px 0px;
-}
-
-main p{
-	margin-bottom: 30px;
-	text-aligne: justify;
-}
-
-#events{
-	border-bottom: 1px solid var(color-green-border);
-	border-top: 1px solid var(color-green-border);
-	border-right: 1px solid var(color-green-border);
-	border-left: 1px solid var(color-green-border);
-	margin: 0px 0px 20px 0px;
-	padding: 10px 10px 10px 10px;
-	text-align: center;
-}
-
-#events img{
-	width: 300px;
-	height: 200px;
-	border-radius: 10px;
-	border: 1px solid #ddd;
-}
-
-#events img:hover{
-	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-#find_us{
-	border-bottom: 1px solid var(color-green-border);
-	border-top: 1px solid var(color-green-border);
-	border-right: 1px solid var(color-green-border);
-	border-left: 1px solid var(color-green-border);
-	margin: 0px 0px 20px 0px;
-	padding: 10px 10px 10px 10px;
-	text-align: center;
-}
-
-#find_us img{
-	width: 65px;
-	height: 55px;
-}
-
-#find_us img{
-	margin: 0px 10px 0px 10px;
-}
-
-#base_header{
-	background-color: #3D3D37;
-    border-bottom: 1px solid #000000;
-}
-
-#base_header nav a{
-	font-size: 1.8em;
-	font-family: "ph300";
-	color: #B09F91;
-	text-decoration: none;
-}
-
-#base_header nav ul{
-	padding-top: 50px;
-	list-style-type:none;
-	align: center;
-}
-
-#base_header nav ul li{
-	display: inline;
-	margin: 0px 20px 0px 0px;
-}
-
-#base_header h1 a{
-	font-size: 5em;
-	margin: 0px 20px 7px 30px;
-	font-family: "ph300";
-	color: #ECE8BE;
-	text-shadow: 0px 0px 9px #000000;
-	display: inline-block;
-	text-decoration: none;
-}
-
-#base_header img{
-	width: 100px;
-	height: 100px;
-	opacity: 0.7;
-}
 
 h1 {text-transform : capitalize}
 
@@ -201,3 +14,153 @@ h1 {text-transform : capitalize}
 @media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
 
 .whoweare .msg {width : 100%}
+
+.slider.content{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides{
+	max-height: 200px;
+  	display: none;
+}
+
+.slider img{
+  	width: 100%;
+  	height: 100%;
+  	display: block;
+}
+
+.fleche_gauche, .fleche_droite {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.fleche_droite {
+	right: 0;
+}
+
+.fleche_gauche:hover, .fleche_droite:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.button {
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 28px;
+	font-style: bold;
+  	color: #000000;
+  	text-align: center;
+  	border-radius: 6px;
+  	border: none;
+  	padding: 15px;
+  	height: 200px;
+  	width: 200px;
+  	display: inline-block;
+  	margin: auto;
+}
+
+.l1{
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.colonne {
+	margin-left: auto;
+	margin-right: auto;
+	width: 610px;
+}
+
+.texte {
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+.button.primeurs {
+	background-image: url(primeurs.png);
+}
+
+.button.primeurs:hover {
+	opacity: 0.8;
+}
+
+.button.rotissiers {
+	background-image: url(rotissiers.png);
+
+}
+
+.button.rotissiers:hover {
+	opacity: 0.7;
+}
+
+.button.poissonniers {
+	background-image: url(poissonniers.png);
+
+}
+
+.button.poissonniers:hover {
+	opacity: 0.7;
+}
+
+.button.fromagers {
+	background-image: url(fromagers.png);
+
+}
+
+.button.fromagers:hover {
+	opacity: 0.7;
+}
+
+.button.epiciers {
+	background-image: url(epiciers.png);
+
+}
+
+.button.epiciers:hover {
+	opacity: 0.7;
+}
+
+.button.traiteurs {
+	background-image: url(traiteurs.png);
+
+}
+
+.button.traiteurs:hover {
+	opacity: 0.7;
+}
+
+.button.bouchers {
+	background-image: url(bouchers.png);
+
+}
+
+.button.bouchers:hover {
+	opacity: 0.7;
+}
+
+.button.cavistes {
+	background-image: url(cavistes.png);
+
+}
+
+.button.cavistes:hover {
+	opacity: 0.7;
+}
+
+.button.boulangers {
+	background-image: url(boulangers.png);
+}
+
+.button.boulangers:hover {
+	opacity: 0.7;
+}
