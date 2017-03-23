@@ -5,10 +5,10 @@
     	<?php include("head.php"); ?>
 	</head>
 	<body>
-		<?php include("phparts/header.php"); ?>
+		<?php include("header.php"); ?>
 
 
 
-		<?php include("phparts/footer.php"); ?>
+		<?php include("footer.php"); ?>
 	</body>
 </html>

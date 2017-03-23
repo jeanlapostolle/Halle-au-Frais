@@ -7,7 +7,7 @@
 				<h1><a href="index.php">Halle au frais</a></h1> <!-- Logo? -->
 			</div>
 			<div class="col-7-12">
-				<?php include("phparts/menu.php"); ?>
+				<?php include("menu.php"); ?>
 			<div>
 		</div>
 		

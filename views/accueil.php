@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<header id="base_header">
-			<?php include("phparts/header.php"); ?>
+			<?php include("header.php"); ?>
 		</header>
 		<main>
 			<div class="grid grid-pad">
@@ -23,7 +23,7 @@
 			</div>
 		</main>
 		<footer>
-			<?php include("phparts/footer.php"); ?>
+			<?php include("footer.php"); ?>
 		</footer>
 	</body>
 </html>
