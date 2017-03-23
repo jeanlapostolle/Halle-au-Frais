@@ -19,7 +19,7 @@ require_once 'models/commercant.php';
 					<p><?= $body['content'] ?></p>
 					<h1><?= $heading['title'] ?></h1>
 					<p><?= $heading['content'] ?></p>
-					<p><?= $article[3]?></p>
+					<p><?= $commerce[3]?></p>
 
 				</div>
 				<div class="col-2-12"></div>

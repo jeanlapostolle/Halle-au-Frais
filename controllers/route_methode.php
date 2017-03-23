@@ -1,6 +1,7 @@
 <?php
 function accueil(){
 	$commerce = Model::factory('Commerce')->find_many();
+	$type = Model::factory('Type')->find_many();
     Flight::render('accueil.php');
 }
 
