@@ -164,3 +164,66 @@ h1 {text-transform : capitalize}
 .button.boulangers:hover {
 	opacity: 0.7;
 }
+
+.menu.content1 {
+    list-style-type: none;
+    display: block;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 50%;
+}
+
+img {
+    display: block;
+    margin-left: 550px;
+    top: 0px;
+    width: 10%;
+    position: fixed;
+}
+
+.menu.content2 {
+    list-style-type: none;
+    display: block;
+    margin-left: 685px;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 50%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 110px;
+    padding-right: 110px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.texte {
+    padding:20px;
+    margin-top:80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color:#A9A9A9;
+    height:200px;
+    text-align: center;
+}
