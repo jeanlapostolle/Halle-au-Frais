@@ -16,14 +16,15 @@ h1 {text-transform : capitalize}
 .whoweare .msg {width : 100%}
 
 .slider.content{
-  max-width: 1000px;
+  max-width: 1270px;
   position: relative;
+  display: block;
   margin: auto;
 }
 
 .mySlides{
-	max-height: 200px;
-  	display: none;
+	max-height: 230px;
+  display: block;
 }
 
 .slider img{
@@ -35,10 +36,9 @@ h1 {text-transform : capitalize}
 .fleche_gauche, .fleche_droite {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
+  top: 35%;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -58,15 +58,15 @@ h1 {text-transform : capitalize}
 	border-radius: 4px;
 	font-size: 28px;
 	font-style: bold;
-  	color: #000000;
-  	text-align: center;
-  	border-radius: 6px;
-  	border: none;
-  	padding: 15px;
-  	height: 200px;
-  	width: 200px;
-  	display: inline-block;
-  	margin: auto;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  padding: 15px;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: auto;
 }
 
 .l1{
@@ -165,65 +165,52 @@ h1 {text-transform : capitalize}
 	opacity: 0.7;
 }
 
-.menu.content1 {
-    list-style-type: none;
-    display: block;
-    overflow: hidden;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    width: 50%;
+.col-1-5 {
+  list-style-type: none;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #000000;
+  padding-top: 10px;
+  width: 97%;
 }
 
-img {
-    display: block;
-    margin-left: 550px;
-    top: 0px;
-    width: 10%;
-    position: fixed;
+.case {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 17%;
 }
 
-.menu.content2 {
-    list-style-type: none;
-    display: block;
-    margin-left: 685px;
-    overflow: hidden;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    width: 50%;
+.case:hover {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  width: 17%;
 }
 
-li {
-    float: left;
+.home {
+  background-color: #4CAF50;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  width: 17%;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 110px;
-    padding-right: 110px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-
-.texte {
-    padding:20px;
-    margin-top:80px;
-    margin-left: 40px;
-    margin-right: 40px;
-    background-color:#A9A9A9;
-    height:200px;
-    text-align: center;
+.home:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  width: 17%;
 }
