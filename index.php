@@ -7,11 +7,12 @@
 	require_once 'libs/paris.php';
 	ORM::configure('sqlite:data/data.sqlite');
 	// require_once 'models/article.php';
+	require_once 'models/commerce.php';
 	
 	Flight::route('/', 'accueil');
 	Flight::route('/nouveaute', 'news');
-	Flight::route('/contact', 'contact');
 	Flight::route('/apropos', 'about');
+	Flight::route('/contact', 'contact');
 	Flight::start();
 	
 ?>
