@@ -1,0 +1,11 @@
+/*
+Définition des couleurs par des variables (utilisation plus simples dans le css)
+
+definition : --name : value;
+utilisation: var(name);
+*/
+
+--color-white : #FEFEFE;
+--color-black : #000000;
+--color-green-border : #BDBDBD;
+--color-green-font : #6E6E6E;
