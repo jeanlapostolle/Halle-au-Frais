@@ -1,6 +1,13 @@
 <?php
 	
 	function accueil(){
+		// $user = Model::factory('admin')->create();
+		// $user->prenom = 'Amaury';
+		// $user->nom = 'GELIN';
+		// $user->mail = 'momo.test@gmail.com';
+		// $user->pseudo = 'test_niggas';
+		// $user->mdp = 'test';
+		// $user->save();
 		//$articles = Model::factory('Article')->find_many();
 		Flight::render('accueil.php', NULL, 'body_content');
 		Flight::render('layout.php', array('title' => 'Home Page'));
