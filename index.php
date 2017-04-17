@@ -9,6 +9,9 @@
 	// require_once 'models/article.php';
 	
 	Flight::route('/', 'accueil');
+	Flight::route('/nouveaute', 'news');
+	Flight::route('/contact', 'contact');
+	Flight::route('/apropos', 'about');
 	Flight::start();
 	
 ?>

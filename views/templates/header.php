@@ -8,10 +8,10 @@
 	<div class="col-4-12">
 		<nav>
 			<ul>
-				<a class="home" href="accueil.php">Accueil</a></li>
-				<a class="case" href="#news">Actualités</a></li>
-				<a class="case" href="#contact">Commerçants</a></li>
-				<a class="case" href="#about">Contact</a></li>
+				<a class="home" href="/">Accueil</a></li>
+				<a class="case" href="/nouveaute">Actualités</a></li>
+				<a class="case" href="/contact">Commerçants</a></li>
+				<a class="case" href="/apropos">Contact</a></li>
 			</ul>
 		</nav>
 	<div>
