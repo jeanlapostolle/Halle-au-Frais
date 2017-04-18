@@ -10,14 +10,14 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"> 
 	</head>
 	<body>
-		<header>
-			<?php require 'templates/header.php'; ?>	
+		<header class="header">
+			<?php include('templates/header.php'); ?>	
 		</header>
 		<main>
 			<?php echo $body_content; ?>			
 		</main>
-		<footer>
-			<?php require 'templates/footer.php'; ?>
+		<footer class="footer">
+			<?php include('templates/footer.php'); ?>
 		</footer>
 	</body>
 </html>
