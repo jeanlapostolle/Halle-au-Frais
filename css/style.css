@@ -87,7 +87,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.primeurs {
-	background-image: url(primeurs.png);
+	background-image: url(../images/primeurs.png);
 }
 
 .button.primeurs:hover {
@@ -95,7 +95,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.rotissiers {
-	background-image: url(rotissiers.png);
+	background-image: url(../images/rotissiers.png);
 
 }
 
@@ -104,7 +104,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.poissonniers {
-	background-image: url(poissonniers.png);
+	background-image: url(../images/poissonniers.png);
 
 }
 
@@ -113,7 +113,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.fromagers {
-	background-image: url(fromagers.png);
+	background-image: url(../images/fromagers.png);
 
 }
 
@@ -122,7 +122,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.epiciers {
-	background-image: url(epiciers.png);
+	background-image: url(../images/epiciers.png);
 
 }
 
@@ -131,7 +131,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.traiteurs {
-	background-image: url(traiteurs.png);
+	background-image: url(../images/traiteurs.png);
 
 }
 
@@ -140,7 +140,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.bouchers {
-	background-image: url(bouchers.png);
+	background-image: url(../images/bouchers.png);
 
 }
 
@@ -149,7 +149,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.cavistes {
-	background-image: url(cavistes.png);
+	background-image: url(../images/cavistes.png);
 
 }
 
@@ -158,7 +158,7 @@ h1 {text-transform : capitalize}
 }
 
 .button.boulangers {
-	background-image: url(boulangers.png);
+	background-image: url(../images/boulangers.png);
 }
 
 .button.boulangers:hover {

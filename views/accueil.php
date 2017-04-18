@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <link rel="stylesheet" type="text/css" href="grid.css">
-  <link rel="stylesheet" type="text/css" href="normalize.css">
-  <link rel="stylesheet" type="text/css" href="simple-grid.scss">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/simple-grid.scss">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
     <div class="col-1-1">
       <div class="content slider">
 
-        <img class="mySlides" src="1.png" />
-        <img class="mySlides" src="boulangers.png" />
-        <img class="mySlides" src="Capture.png" />
+        <img class="mySlides" src="images/1.png" />
+        <img class="mySlides" src="images/boulangers.png" />
+        <img class="mySlides" src="images/Capture.png" />
 
           <div class="fleche_gauche" onclick="plusDivs(-1)">&#10094;</div>
           <div class="fleche_droite" onclick="plusDivs(1)">&#10095;</div>
