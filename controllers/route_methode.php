@@ -30,5 +30,15 @@
 		Flight::render('contact.php', NULL, 'body_content');
 		Flight::render('layout.php', array('title' => 'Contact'));
 	}
+	
+	function connexion(){
+		Flight::render('administration/connexion_admin.php', NULL, 'body_content');
+		Flight::render('layout.php', array('title' => 'Connexion Admin'));
+	}
+	
+	function admin(){
+		Flight::render('administration/menu_admin.php', NULL, 'body_content');
+		Flight::render('layout.php', array('title' => 'Menu Admin'));
+	}
 
 ?>

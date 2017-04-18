@@ -9,12 +9,14 @@
 	require_once 'models/article.php';
 	require_once 'models/commerce.php';
 	require_once 'models/manege.php';
-	// require_once 'models/admin.php';
+	require_once 'models/admin.php';
 	
 	Flight::route('/', 'accueil');
 	Flight::route('/nouveaute', 'news');
 	Flight::route('/apropos', 'about');
 	Flight::route('/contact', 'contact');
+	Flight::route('/admin', 'admin');
+	Flight::route('/connexion', 'connexion');
 	Flight::start();
 	
 ?>
