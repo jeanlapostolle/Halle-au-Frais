@@ -8,6 +8,7 @@
 	ORM::configure('sqlite:data/data.sqlite');
 	require_once 'models/article.php';
 	require_once 'models/commerce.php';
+	require_once 'models/manege.php';
 	// require_once 'models/admin.php';
 	
 	Flight::route('/', 'accueil');
