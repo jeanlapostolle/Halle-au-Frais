@@ -6,9 +6,9 @@
 	require_once 'libs/idiorm.php';
 	require_once 'libs/paris.php';
 	ORM::configure('sqlite:data/data.sqlite');
-	// require_once 'models/article.php';
+	require_once 'models/article.php';
 	require_once 'models/commerce.php';
-	require_once 'models/admin.php';
+	// require_once 'models/admin.php';
 	
 	Flight::route('/', 'accueil');
 	Flight::route('/nouveaute', 'news');

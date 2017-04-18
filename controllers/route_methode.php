@@ -14,7 +14,8 @@
 	}
 
 	function news(){
-		Flight::render('news.php', NULL, 'body_content');
+		$articles = Model::factory('Article')->find_many();
+		Flight::render('news.php', array('articles' => $articles), 'body_content');
 		Flight::render('layout.php', array('title' => 'Nouveauté'));
 	}
 

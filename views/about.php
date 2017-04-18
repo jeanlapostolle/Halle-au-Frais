@@ -1,8 +1,7 @@
-test a propos
-
-</form>
-<?php
-	foreach($commercant as $com):?> 
-		<p><?php echo "$com->nom";
-	endforeach; ?>
+<?php foreach($commercant as $com):?> 
+	<p>
+		<?= "$com->nom";?>
+		<?= "$com->propriétaire";?>
+	</p>
+<?php endforeach; ?>
 
