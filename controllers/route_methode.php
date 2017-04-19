@@ -32,14 +32,19 @@
 	}
 	
 	function connexion(){
-		Flight::render('administration/connexion_admin.php', NULL, 'body_content');
-		Flight::render('layout.php', array('title' => 'Connexion Admin'));
+		Flight::render('administration/connexion.php', NULL, 'body_content');
+		Flight::render('layout.php', array('title' => 'Connexion'));
 	}
 	
-	function erreur_connexion(){
-		Flight::render('administration/erreur_connexion.php', NULL, 'body_content');
-		Flight::render('layout.php', array('title' => 'Erreur Connexion'));
+	function erreur_authentification($message){
+		Flight::render('administration/erreur_authentification.php', array('message' => $message), 'body_content');
+		Flight::render('layout.php', array('title' => 'Erreur'));
 	}
+	
+	// function erreur_droits(){
+		// Flight::render('administration/erreur_droits.php', NULL, 'body_content');
+		// Flight::render('layout.php', array('title' => 'Erreur Connexion'));
+	// }
 	
 	function admin(){
 		if (isset($_POST['login']) AND isset($_POST['pass']))
@@ -59,12 +64,12 @@
 			}
 			else
 			{
-				erreur_connexion();
+				erreur_authentification("Erreur de connexion : mot de passe et/ou login incorrect(s).");
 			}
 		}	
 		else
 		{
-			erreur_connexion();
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
 		} 
 	}
 

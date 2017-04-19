@@ -6,6 +6,7 @@
 	require_once 'libs/idiorm.php';
 	require_once 'libs/paris.php';
 	ORM::configure('sqlite:data/data.sqlite');
+	
 	require_once 'models/article.php';
 	require_once 'models/commerce.php';
 	require_once 'models/manege.php';

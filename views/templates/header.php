@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div class="col-4-12">
-		<a href="/"><img src="images/logo-halle.png" alt="Logo Halle au Frais"/></a>
+		<a href="http://localhost/Halle-au-Frais/"><img src="images/logo-halle.png" alt="Logo Halle au Frais"/></a>
 	</div>
 	<div class="col-4-12">
 		<div class="col-1-2">
