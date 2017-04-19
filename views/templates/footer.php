@@ -7,7 +7,7 @@
 			<img src="images/mail_icone.png" alt="Mail"/>
 		</p>
 		<p>
-			<a class="home" href="/connexion">Panneau d'administration</a>
+			<a class="home" href="http://localhost/Halle-au-Frais/connexion">Panneau d'administration</a>
 		</p>
 		<p>
 			Copyright &copy; 2017 | Halle au frais

@@ -3,14 +3,14 @@
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="home" href="/">Accueil</a></li>
+					<li><a class="home" href="http://localhost/Halle-au-Frais/">Accueil</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="case" href="/nouveaute">Actualités</a></li>
+					<li><a class="case" href="http://localhost/Halle-au-Frais/nouveaute">Actualités</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -22,14 +22,14 @@
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="case" href="/apropos">Commerce</a></li>
+					<li><a class="case" href="http://localhost/Halle-au-Frais/apropos">Commerce</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="case" href="/contact">Contact</a></li>
+					<li><a class="case" href="http://localhost/Halle-au-Frais/contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>

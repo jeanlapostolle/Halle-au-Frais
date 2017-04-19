@@ -1,6 +1,6 @@
-<form method="post" action="/admin">
+<form method="post" action="http://localhost/Halle-au-Frais/admin">
 	<fieldset>
-		<legend>Entrez un login et un mot de passe.</legend>
+		<legend>Entrez vos identifiants</legend>
 		<p>
 			<p>
 				<label for="login">Login : </label>
