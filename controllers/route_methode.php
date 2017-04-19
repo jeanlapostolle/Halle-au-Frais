@@ -1,13 +1,6 @@
 <?php
 	
 	function accueil(){
-		// $user = Model::factory('admin')->create();
-		// $user->prenom = 'Amaury';
-		// $user->nom = 'GELIN';
-		// $user->mail = 'momo.test@gmail.com';
-		// $user->pseudo = 'test_niggas';
-		// $user->mdp = 'test';
-		// $user->save();
 		//$articles = Model::factory('Article')->find_many();
 		$maneges = Model::factory('Manege')->find_many();
 		Flight::render('accueil.php', array('images' => $maneges), 'body_content');
@@ -41,11 +34,6 @@
 		Flight::render('layout.php', array('title' => 'Erreur'));
 	}
 	
-	// function erreur_droits(){
-		// Flight::render('administration/erreur_droits.php', NULL, 'body_content');
-		// Flight::render('layout.php', array('title' => 'Erreur Connexion'));
-	// }
-	
 	function admin(){
 		if (isset($_POST['login']) AND isset($_POST['pass']))
 		{
@@ -59,6 +47,10 @@
 			
 			if ( isset($user->nom) AND isset($user->mdp) )
 			{ 
+				session_start();
+				$_SESSION['login'] = $login;
+				$_SESSION['pass'] = $pass;
+
 				Flight::render('administration/menu_admin.php', NULL, 'body_content');
 				Flight::render('layout.php', array('title' => 'Menu Admin'));
 			}
@@ -71,6 +63,19 @@
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
 		} 
+	}
+	
+	function creation_compte(){
+		// $user = Model::factory('admin')->create();
+		// $user->prenom = 'Amaury';
+		// $user->nom = 'GELIN';
+		// $user->mail = 'momo.test@gmail.com';
+		// $user->pseudo = 'test_niggas';
+		// $user->mdp = 'test';
+		// $user->save();
+		
+		Flight::render('administration/creation_compte.php', NULL, 'body_content');
+		Flight::render('layout.php', array('title' => 'Connexion'));
 	}
 
 ?>
