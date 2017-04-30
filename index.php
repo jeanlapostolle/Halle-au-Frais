@@ -18,6 +18,7 @@
 	Flight::route('/contact', 'contact');
 	Flight::route('/admin', 'admin');
 	Flight::route('/connexion', 'connexion');
+	Flight::route('/creation_compte', 'creation_compte');
 	Flight::start();
 	
 ?>

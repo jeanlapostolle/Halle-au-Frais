@@ -25,32 +25,22 @@
 	}
 	
 	function connexion(){
-		Flight::render('administration/connexion.php', NULL, 'body_content');
-		Flight::render('layout.php', array('title' => 'Connexion'));
-	}
-	
-	function erreur_authentification($message){
-		Flight::render('administration/erreur_authentification.php', array('message' => $message), 'body_content');
-		Flight::render('layout.php', array('title' => 'Erreur'));
-	}
-	
-	function admin(){
 		if (isset($_POST['login']) AND isset($_POST['pass']))
 		{
 			$login = $_POST['login'];
 			$pass = $_POST['pass']; 
 			
 			$user = Model::factory('admin')
-			->where('nom', $login)
+			->where('login', $login)
 			->where('mdp', $pass)
 			->find_one();
 			
-			if ( isset($user->nom) AND isset($user->mdp) )
+			if (isset($user->nom) AND isset($user->mdp))
 			{ 
 				session_start();
 				$_SESSION['login'] = $login;
 				$_SESSION['pass'] = $pass;
-
+				
 				Flight::render('administration/menu_admin.php', NULL, 'body_content');
 				Flight::render('layout.php', array('title' => 'Menu Admin'));
 			}
@@ -61,21 +51,59 @@
 		}	
 		else
 		{
+			Flight::render('administration/connexion.php', NULL, 'body_content');
+			Flight::render('layout.php', array('title' => 'Connexion'));
+		}
+	}
+	
+	function erreur_authentification($message){
+		Flight::render('administration/erreur_authentification.php', array('message' => $message), 'body_content');
+		Flight::render('layout.php', array('title' => 'Erreur'));
+	}
+	
+	function admin(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			Flight::render('administration/menu_admin.php', NULL, 'body_content');
+			Flight::render('layout.php', array('title' => 'Menu Admin'));
+		}
+		else
+		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		} 
+		}
 	}
 	
 	function creation_compte(){
-		// $user = Model::factory('admin')->create();
-		// $user->prenom = 'Amaury';
-		// $user->nom = 'GELIN';
-		// $user->mail = 'momo.test@gmail.com';
-		// $user->pseudo = 'test_niggas';
-		// $user->mdp = 'test';
-		// $user->save();
-		
-		Flight::render('administration/creation_compte.php', NULL, 'body_content');
-		Flight::render('layout.php', array('title' => 'Connexion'));
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			if ( isset($_POST['login']) AND isset($_POST['pass']) AND ($_POST['login'] != '') AND ($_POST['pass'] != ''))
+			{
+				if (($_POST['pass']) == ($_POST['conf']))
+				{
+					$user = Model::factory('admin')->create();
+					$user->login = $_POST['login'];
+					$user->mdp = $_POST['pass'];
+					$user->save();
+					Flight::render('administration/creation_compte.php', array('message' => 'Enregistrement validé !'), 'body_content');
+					Flight::render('layout.php', array('title' => 'Creation Compte'));
+				}
+				else
+				{	Flight::render('administration/creation_compte.php', array('message' => 'Le mot de passe et la confirmation ne correspondent pas. Veuillez rééssayer.'),'body_content');
+					Flight::render('layout.php', array('title' => 'Creation Compte'));
+				}
+			}
+			else
+			{
+				Flight::render('administration/creation_compte.php', array('message' => 'Veuillez saisir un login et un mot de passe.'),'body_content');
+				Flight::render('layout.php', array('title' => 'Creation Compte'));
+			}
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
 	}
 
 ?>
