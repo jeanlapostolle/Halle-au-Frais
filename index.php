@@ -20,6 +20,7 @@
 	Flight::route('/connexion', 'connexion');
 	Flight::route('/creation_compte', 'creation_compte');
 	Flight::route('/deconnexion', 'deconnexion');
+	Flight::route('/suppression_compte', 'suppression_compte');
 	Flight::start();
 	
 ?>

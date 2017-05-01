@@ -16,7 +16,7 @@
 					<input type="password" name="conf" />
 				</p>
 				<p>
-					<input type="submit" value="Connexion">
+					<input type="submit" value="Enregistrer">
 				</p>
 			</p>
 		</fieldset>

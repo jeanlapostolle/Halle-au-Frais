@@ -124,4 +124,24 @@
 		}	
 	}
 	
+	function suppression_compte(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			$compte_admin = Model::factory('admin')->find_many();
+			if (isset($_POST['suppr']))
+			{
+				$compte_suppr = Model::factory('admin')->find_one($_POST['suppr']);
+				$compte_suppr->delete();
+				header("Refresh:0"); //Actualise la page pour actualiser les éléments de la liste
+			}
+			Flight::render('administration/suppression_compte.php', array('compte_admin' => $compte_admin), 'body_content');
+			Flight::render('layout.php', array('title' => 'Suppression Compte'));
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
+	}
+	
 ?>

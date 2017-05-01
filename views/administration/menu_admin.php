@@ -2,7 +2,7 @@
 	<h3> Gestion des administrateurs : </h3>
 	<ul> 
 		<li><a href="http://localhost/Halle-au-Frais/creation_compte">Créer un compte</a></li> 
-		<li> Supprimer un compte</li> 
+		<li> <a href="http://localhost/Halle-au-Frais/suppression_compte">Supprimer un compte</a></li> 
 		<li> Modifier un compte </li> 
 	</ul> 
 </p>
