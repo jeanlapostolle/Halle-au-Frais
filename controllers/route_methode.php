@@ -1,7 +1,6 @@
 <?php
 	
 	function accueil(){
-		//$articles = Model::factory('Article')->find_many();
 		$maneges = Model::factory('Manege')->find_many();
 		Flight::render('accueil.php', array('images' => $maneges), 'body_content');
 		Flight::render('layout.php', array('title' => 'Home Page'));
@@ -25,7 +24,13 @@
 	}
 	
 	function connexion(){
-		if (isset($_POST['login']) AND isset($_POST['pass']))
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			Flight::render('administration/menu_admin.php', NULL, 'body_content');
+			Flight::render('layout.php', array('title' => 'Menu Admin'));
+		}
+		else if (isset($_POST['login']) AND isset($_POST['pass']))
 		{
 			$login = $_POST['login'];
 			$pass = $_POST['pass']; 
@@ -35,9 +40,8 @@
 			->where('mdp', $pass)
 			->find_one();
 			
-			if (isset($user->nom) AND isset($user->mdp))
+			if (isset($user->login) AND isset($user->mdp))
 			{ 
-				session_start();
 				$_SESSION['login'] = $login;
 				$_SESSION['pass'] = $pass;
 				
@@ -59,6 +63,20 @@
 	function erreur_authentification($message){
 		Flight::render('administration/erreur_authentification.php', array('message' => $message), 'body_content');
 		Flight::render('layout.php', array('title' => 'Erreur'));
+	}
+	
+	function deconnexion(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			Flight::render('administration/deconnexion.php', NULL, 'body_content');
+			Flight::render('layout.php', array('title' => 'Deconnexion'));
+			session_destroy();
+		}
+		else
+		{
+			erreur_authentification("Vous n'êtes pas connecté.");
+		}
 	}
 	
 	function admin(){
@@ -105,5 +123,5 @@
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
 		}	
 	}
-
+	
 ?>

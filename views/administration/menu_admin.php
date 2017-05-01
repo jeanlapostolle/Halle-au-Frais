@@ -22,3 +22,6 @@
 		<li> Modifier un commerce </li> 
 	</ul> 
 </p>
+<p>
+	<a href="http://localhost/Halle-au-Frais/deconnexion">Déconnexion</a>
+</p>
