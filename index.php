@@ -18,9 +18,13 @@
 	Flight::route('/contact', 'contact');
 	Flight::route('/admin', 'admin');
 	Flight::route('/connexion', 'connexion');
+	Flight::route('/deconnexion', 'deconnexion');	
 	Flight::route('/creation_compte', 'creation_compte');
-	Flight::route('/deconnexion', 'deconnexion');
 	Flight::route('/suppression_compte', 'suppression_compte');
+	Flight::route('/modification_compte', 'modification_compte');
+	Flight::route('/creation_article', 'creation_article');
+	Flight::route('/suppression_article', 'suppression_article');
+	Flight::route('/modification_article', 'modification_article');
 	Flight::start();
 	
 ?>

@@ -1,10 +1,11 @@
-<h3>Liste des comptes d'administration : </h2>
+<h2> Suppression de compte </h2>
 <p>
 	<form method="post" action="http://localhost/Halle-au-Frais/suppression_compte">
+		<h3>Choisir un compte administrateur : </h2>
 		<p>
 			<select name="suppr" size="3">
 				<?php foreach($compte_admin as $admin):?> 
-					<option value=<?php echo $admin->id ?>><?php echo 'id = ' . $admin->id . ' | ' . 'login = ' . $admin->login ?></option>
+					<option value=<?php echo $admin->id ?>><?php echo 'login : ' . $admin->login . ' | ' . 'nom : ' . $admin->nom . ' | ' . 'prenom : ' . $admin->prenom ?></option>
 				<?php endforeach; ?>
 			</select>
 		</p>
