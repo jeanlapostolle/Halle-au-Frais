@@ -263,4 +263,134 @@
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
 		}	
 	}
+	
+	function modification_article(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			$articles = Model::factory('article')->find_many();
+			if (isset($_POST['article_modif']) AND isset($_POST['titre_modif']) AND isset($_POST['contenu_modif']))
+			{
+				if (($_POST['titre_modif'])!='' AND ($_POST['contenu_modif'])!='')
+				{
+				$article_modif = Model::factory('article')->find_one($_POST['article_modif']);
+				$article_modif->titre = $_POST['titre_modif'];
+				$article_modif->contenu = $_POST['contenu_modif'];
+				$article_modif->auteur = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
+				$article_modif->date = date("d/m/Y");
+				$article_modif->save();
+				validation("Modification validée !");
+				}
+				else
+				{
+					Flight::render('administration/modification_article.php', array('articles' => $articles, 'message' => 'Veuillez saisir tous les champs.'), 'body_content');
+					Flight::render('layout.php', array('title' => 'Modification Article'));
+				}
+			}
+			else
+			{
+				Flight::render('administration/modification_article.php', array('articles' => $articles), 'body_content');
+				Flight::render('layout.php', array('title' => 'Modification Article'));
+			}
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
+	}
+	
+	function creation_commerce(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			$type_commerce = Model::factory('type')->find_many();
+			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
+			{
+				if(($_POST['nom_comm'] != '') AND ($_POST['desc_comm'] != '') AND ($_POST['liste_type_comm'] != '') AND ($_POST['prop_comm'] != ''))
+				{
+					$commerce = Model::factory('commerce')->create();
+					$commerce->nom = $_POST['nom_comm'];
+					$commerce->propriétaire = $_POST['prop_comm'];
+					$commerce->description = $_POST['desc_comm'];
+					$commerce->numType = $_POST['liste_type_comm'];
+					$commerce->save();
+					validation("Enregistrement validé !");
+				}
+				else
+				{
+					Flight::render('administration/creation_commerce.php', array('type_commerce' => $type_commerce,'message' => 'Veuillez saisir tous les champs.'),'body_content');
+					Flight::render('layout.php', array('title' => 'Creation Commerce'));
+				}
+			}
+			else
+			{
+				Flight::render('administration/creation_commerce.php', array('type_commerce' => $type_commerce), 'body_content');
+				Flight::render('layout.php', array('title' => 'Creation Commerce'));
+			}
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
+	}
+	
+	function suppression_commerce(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			$commerces = Model::factory('commerce')->find_many();
+			if (isset($_POST['suppr_commerce']))
+			{
+				$commerce_suppr = Model::factory('commerce')->find_one($_POST['suppr_commerce']);
+				$commerce_suppr->delete();
+				validation("Suppression validée !");
+			}
+			else
+			{
+				Flight::render('administration/suppression_commerce.php', array('commerces' => $commerces), 'body_content');
+				Flight::render('layout.php', array('title' => 'Suppression Article'));
+			}
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
+	}
+	
+	function modification_commerce(){
+		session_start();
+		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		{	
+			$commerces = Model::factory('commerce')->find_many();
+			$type_commerce = Model::factory('type')->find_many();
+			if (isset($_POST['modif_commerce']) AND isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
+			{
+				if(($_POST['nom_comm'] != '') AND ($_POST['desc_comm'] != '') AND ($_POST['liste_type_comm'] != '') AND ($_POST['prop_comm'] != ''))
+				{
+					$commerce_modif = Model::factory('commerce')->find_one($_POST['modif_commerce']);
+					$commerce_modif->nom = $_POST['nom_comm'];
+					$commerce_modif->propriétaire = $_POST['prop_comm'];
+					$commerce_modif->description = $_POST['desc_comm'];
+					$commerce_modif->numType = $_POST['liste_type_comm'];
+					$commerce_modif->save();
+					validation("Modification validée !");
+				}
+				else
+				{
+					Flight::render('administration/modification_commerce.php', array('commerces' => $commerces, 'type_commerce' => $type_commerce, 'message' => 'Veuillez saisir tous les champs.'), 'body_content');
+					Flight::render('layout.php', array('title' => 'Modification Commerce'));
+				}
+			}
+			else
+			{
+				Flight::render('administration/modification_commerce.php', array('commerces' => $commerces, 'type_commerce' => $type_commerce), 'body_content');
+				Flight::render('layout.php', array('title' => 'Modification Commerce'));
+			}
+		}
+		else
+		{
+			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
+		}	
+	}
+	
 ?>

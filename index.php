@@ -11,6 +11,7 @@
 	require_once 'models/commerce.php';
 	require_once 'models/manege.php';
 	require_once 'models/admin.php';
+	require_once 'models/type.php';
 	
 	Flight::route('/', 'accueil');
 	Flight::route('/nouveaute', 'news');
@@ -25,6 +26,9 @@
 	Flight::route('/creation_article', 'creation_article');
 	Flight::route('/suppression_article', 'suppression_article');
 	Flight::route('/modification_article', 'modification_article');
+	Flight::route('/creation_commerce', 'creation_commerce');
+	Flight::route('/suppression_commerce', 'suppression_commerce');
+	Flight::route('/modification_commerce', 'modification_commerce');
 	Flight::start();
 	
 ?>

@@ -12,15 +12,15 @@
 	<ul> 
 		<li> <a href="http://localhost/Halle-au-Frais/creation_article">Créer un article</a></li> 
 		<li> <a href="http://localhost/Halle-au-Frais/suppression_article">Supprimer un article</a></li> 
-		<li> Modifier un article </li> 
+		<li> <a href="http://localhost/Halle-au-Frais/modification_article">Modifier un article</a></li>
 	</ul> 
 </p>
 <p>
 	<h3> Gestion des commerces : </h3>
 	<ul> 
-		<li> Créer un commerce</li> 
-		<li> Supprimer un commerce</li> 
-		<li> Modifier un commerce </li> 
+		<li> <a href="http://localhost/Halle-au-Frais/creation_commerce">Créer un commerce</a></li>
+		<li> <a href="http://localhost/Halle-au-Frais/suppression_commerce">Supprimer un commerce</a></li>
+		<li> <a href="http://localhost/Halle-au-Frais/modification_commerce">Modifier un commerce</a></li>
 	</ul> 
 </p>
 <p>
