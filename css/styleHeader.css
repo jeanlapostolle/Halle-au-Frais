@@ -1,0 +1,37 @@
+header {background-color: rgba(190, 220, 0 ,1)}
+
+header a {
+	text-transform : uppercase;
+	color: black;
+	text-align: center;
+	text-decoration : none;
+	/*text-decoration : overline underline;*/
+}
+
+header nav {
+	width: inherit;
+}
+
+header nav a {
+	border-width: 1px 0px 1px 0px;
+	border-style: solid none solid none;
+	border-color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 20%;
+}
+
+header nav li:nth-child(3) a {border-style: hidden}
+
+@media screen and (max-width: 660px) {
+  header nav li:nth-child(3) {display : none}
+  header li {padding: 50px 0px 50px 0px}
+}
+
+#headerParent {
+	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
+	flex-flow: row ;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
+	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
+	align-items: center;
+	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
+}

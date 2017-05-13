@@ -2,6 +2,7 @@
 Ci-dessous, description global des li puis des h1
 */
 
+main {margin: 32px 0px 32px 0px}
 
 li {list-style-type: none}	/*pas de points ou autres decorations avant chaque element de la liste*/
 
@@ -97,7 +98,7 @@ ci dessous, css spécifique à la page commercants
 	width : inherit;		
 }
 
-.listeCommerces li {width : auto}
+.listeCommerces li {width : 30%; height: auto;}
 
 
 .parentCommerce {
@@ -113,7 +114,10 @@ ci dessous, css spécifique à la page commercants
 	border-width: 1px;
 	border-radius: 12px;
 	border-style: dashed;
-	width: 300px;
+	width: 31%;
+	text-align: center;
+	text-transform: justify;
+	margin : 10px 0px 0px 10px;
 }
 
 
@@ -129,6 +133,5 @@ ci dessous, css spécifique à la page commercants
 .commerce {
 	min-height: 350px;
 	min-width: 350px;
-	text-align: center;
-	text-transform: justify;
+
 }
