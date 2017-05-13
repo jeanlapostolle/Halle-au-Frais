@@ -5,7 +5,7 @@
 		<p>
 			<select name="suppr_commerce" size="3">
 				<?php foreach($commerces as $commerce):?> 
-					<option value=<?php echo $commerce->id ?>><?php echo 'nom : ' . $commerce->nom . ' | ' . 'propriétaire : ' . $commerce->propriétaire ?></option>
+					<option value=<?php echo $commerce->id ?>><?php echo $commerce->nom ?></option>
 				<?php endforeach; ?>
 			</select>
 		</p>

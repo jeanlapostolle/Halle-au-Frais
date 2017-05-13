@@ -352,27 +352,31 @@
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
 		{	
 			$articles = Model::factory('article')->find_many();
-			if (isset($_POST['article_modif']) AND isset($_POST['titre_modif']) AND isset($_POST['contenu_modif']))
+			if (isset($_POST['modif']))
 			{
-				if (($_POST['titre_modif'])!='' AND ($_POST['contenu_modif'])!='')
-				{
-				$article_modif = Model::factory('article')->find_one($_POST['article_modif']);
-				$article_modif->titre = $_POST['titre_modif'];
-				$article_modif->contenu = $_POST['contenu_modif'];
-				$article_modif->auteur = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
-				$article_modif->date = date("d/m/Y");
-				$article_modif->save();
-				validation("Modification validée !");
-				}
-				else
-				{
-					Flight::render('administration/modification_article.php', array('articles' => $articles, 'message' => 'Veuillez saisir tous les champs.'), 'body_content');
-					Flight::render('layout.php', array('title' => 'Modification Article'));
-				}
+				$article = Model::factory('article')->find_one($_POST['modif']);
+				Flight::render('administration/modification_article.php', array('article' => $article), 'body_content');
+				Flight::render('layout.php', array('title' => 'Modification Article'));
+			}
+			else if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
+			{
+					$article = Model::factory('article')->find_one($_POST['id_article']);
+					if(($_POST['titre_article'])!='') 
+						$article->titre = $_POST['titre_article'];
+					if(($_POST['desc_article'])!='') 
+						$article->description = $_POST['desc_article'];
+					if(($_POST['contenu_article'])!='') 
+						$article->contenu = $_POST['contenu_article'];
+					if(($_POST['image_article'])!='') 
+						$article->image = $_POST['image_article'];
+					if(($_POST['desc_image_article'])!='') 
+						$article->desc_image = $_POST['desc_image_article'];
+					$article->save();
+					validation("Modification validée !");
 			}
 			else
 			{
-				Flight::render('administration/modification_article.php', array('articles' => $articles), 'body_content');
+				Flight::render('administration/choix_article.php', array('articles' => $articles), 'body_content');
 				Flight::render('layout.php', array('title' => 'Modification Article'));
 			}
 		}
@@ -387,21 +391,25 @@
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
 		{	
 			$type_commerce = Model::factory('type')->find_many();
-			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
+			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['prop_comm']) AND isset($_POST['fb_comm']) AND isset($_POST['web_comm']) AND isset($_POST['mail_comm']) AND isset($_POST['tel_comm']))
 			{
-				if(($_POST['nom_comm'] != '') AND ($_POST['desc_comm'] != '') AND ($_POST['liste_type_comm'] != '') AND ($_POST['prop_comm'] != ''))
+				if(($_POST['nom_comm'] != '') AND isset($_POST['liste_type_comm']))
 				{
 					$commerce = Model::factory('commerce')->create();
 					$commerce->nom = $_POST['nom_comm'];
 					$commerce->propriétaire = $_POST['prop_comm'];
 					$commerce->description = $_POST['desc_comm'];
 					$commerce->numType = $_POST['liste_type_comm'];
+					$commerce->Facebook = $_POST['fb_comm'];
+					$commerce->siteWeb = $_POST['web_comm'];
+					$commerce->mail = $_POST['mail_comm'];
+					$commerce->telephone = $_POST['tel_comm'];
 					$commerce->save();
 					validation("Enregistrement validé !");
 				}
 				else
 				{
-					Flight::render('administration/creation_commerce.php', array('type_commerce' => $type_commerce,'message' => 'Veuillez saisir tous les champs.'),'body_content');
+					Flight::render('administration/creation_commerce.php', array('type_commerce' => $type_commerce,'message' => 'Veuillez saisir tous les champs obligatoires (*).'),'body_content');
 					Flight::render('layout.php', array('title' => 'Creation Commerce'));
 				}
 			}

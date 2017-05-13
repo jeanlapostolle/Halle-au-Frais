@@ -1,8 +1,5 @@
 <h2> Modification de commerce </h2>
 <p>
-	<?php if(isset($message)) echo $message; ?>
-</p>
-<p>
 	<form method="post" action="http://localhost/Halle-au-Frais/modification_commerce">
 		<h3> Choisir un commerce : </h3>
 		<p>

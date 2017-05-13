@@ -1,8 +1,5 @@
 <h2> Modification de compte </h2>
 <p>
-	<?php if(isset($message)) echo $message; ?>
-</p>
-<p>
 	<form method="post" action="http://localhost/Halle-au-Frais/modification_compte">
 		<h3> Saisir les nouvelles informations : </h3>
 		<p>

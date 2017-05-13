@@ -1,30 +1,36 @@
 <h2> Modification d'article </h2>
 <p>
-	<?php if(isset($message)) echo $message; ?>
-</p>
-<p>
 	<form method="post" action="http://localhost/Halle-au-Frais/modification_article">
-		<h3> Choisir un article : </h3>
-		<p>
-			<select name="article_modif" size="3">
-				<?php foreach($articles as $article):?> 
-					<option value=<?php echo $article->id ?>><?php echo 'titre : ' . $article->titre . ' | ' . 'auteur : ' . $article->auteur . ' | ' . 'date : ' . $article->date ?></option>
-				<?php endforeach; ?>
-			</select>
-		</p>
 		<h3> Saisir les nouvelles informations : </h3>
 		<p>
-			<label for="titre_modif">Titre : </label>
-			<input type="text" name="titre_modif" id="titre_modif"/>
+			<label for="titre_article">Titre</label>
+			<br/>
+			<input type="text" name="titre_article" id="titre_article" value="<?php echo $article->titre; ?>"/>
 		</p>
 		<p>
-			<label for="contenu_modif">Contenu : </label>
+			<label for="image_article">Image (URL .jpeg .png) </label>
 			<br/>
-			<textarea  rows="10" cols="60" name="contenu_modif" id="contenu_modif"></textarea>
+			<input type="text" name="image_article" id="image_article" value="<?php echo $article->image; ?>"/>
+		</p>
+		<p>
+			<label for="desc_image_article">Texte alternatif </label>
+			<br/>
+			<input type="text" name="desc_image_article" id="desc_image_article" value="<?php echo $article->desc_image; ?>"/>
+		</p>
+		<p>
+			<label for="desc_article">Description </label>
+			<br/>
+			<textarea  rows="2" cols="100" name="desc_article" id="desc_article"><?php echo $article->description; ?></textarea>
+		</p>
+		<p>
+			<label for="contenu_article">Contenu </label>
+			<br/>
+			<textarea  rows="10" cols="100" name="contenu_article" id="contenu_article"><?php echo $article->contenu; ?></textarea>
 		</p>
 		<p>
 			<input type="submit" value="Modifier">
 		</p>
+		<input type="hidden" name="id_article" value=<?= $article->id ?>></input>
 	</form>
 </p>
 <p>
