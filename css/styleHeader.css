@@ -19,7 +19,10 @@ header nav a {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	width: 20%;
+	font-size: 16px;
 }
+
+header nav a:hover {color: green}
 
 header nav li:nth-child(3) a {border-style: hidden}
 
