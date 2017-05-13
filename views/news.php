@@ -1,3 +1,5 @@
+<h1> Les Actualités </h1>
+
 <?php foreach($articles as $article):?>
 	<article class="actualite">
 		<header><?= $article->titre;?></header>

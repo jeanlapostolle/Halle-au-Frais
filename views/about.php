@@ -1,4 +1,5 @@
-<h2> Les commercants </h2>
+<h1> Les Commercants </h1>
+
 <p>
 	<ul> 
 		<li> <a href="http://localhost/Halle-au-Frais/primeurs">Les Primeurs</a></li> 
@@ -15,8 +16,23 @@
 
 <?php foreach($commercant as $com):?> 
 	<p>
-		<?= "$com->nom";?>
-		<?= "$com->propriétaire";?>
+		<?php 
+		echo '<h2>' . $com->nom . '</h2>';
+		if(($com->description)!='')
+			echo $com->description . '<br>';
+		if(($com->propriétaire)!='')
+			echo $com->propriétaire . '<br>';
+		if(($com->Facebook)!=''): ?>
+			<a href=<?= $com->Facebook ?>>Facebook</a><br>
+		<?php endif; 
+		if(($com->siteWeb)!=''): ?>
+			<a href=<?= $com->siteWeb ?>>Site Web</a><br>
+		<?php endif; 
+		if(($com->mail)!='')
+			echo 'E-mail : ' . $com->mail . '<br>';
+		if(($com->telephone)!='')
+			echo 'Tél : ' . $com->telephone . '<br>';	
+		?>
 	</p>
 <?php endforeach; ?>
 

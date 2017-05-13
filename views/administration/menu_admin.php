@@ -1,4 +1,4 @@
-<h2> Menu d'administration </h2>
+<h1> Menu d'administration </h1>
 <p>
 	<h3> Gestion des administrateurs : </h3>
 	<ul> 
