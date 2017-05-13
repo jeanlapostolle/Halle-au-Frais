@@ -2,7 +2,7 @@
 Ci-dessous, description global des li puis des h1
 */
 
-main {margin: 32px 0px 32px 0px}
+main {margin: 32px 0px 50px 0px}
 
 li {list-style-type: none}	/*pas de points ou autres decorations avant chaque element de la liste*/
 
@@ -19,8 +19,8 @@ ci dessous, css spécifique à la page commercants
 */
 #headerCommerce {
 	width : inherit;
-	padding : 10px 0% 10px 0%;
-	background : url(./../images/manege/1.png) center no-repeat;
+	padding : 32px 0% 32px 0%;
+	background : url(./../images/manege/1.png) center repeat-x;
 }
 .listeCommerces li a, #headerCommerce h1 {
 	color : white;
@@ -49,37 +49,43 @@ ci dessous, css spécifique à la page commercants
 
 .listeCommerces li a { 
 	background-color: rgba(32, 50, 32, 0.5);
-	width : 100%;
 	font-size : 20px;
 }
 
-.buttonprimeurs {background-image: url(../images/metier/primeurs.png)}
+.buttonprimeurs {background: url(../images/metier/primeurs.png) center no-repeat}
 .buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
 
 
-.buttonrotissiers {background-image: url(../images/metier/rotissiers.png)}
+.buttonrotissiers {background: url(../images/metier/rotissiers.png) center no-repeat}
 .buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonpoissonniers {background-image: url(../images/metier/poissonniers.png)}
+.buttonpoissonniers {background: url(../images/metier/poissonniers.png) center no-repeat}
 .buttonpoissonniers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonfromagers {background-image: url(../images/metier/fromagers.png)}
+.buttonfromagers {background: url(../images/metier/fromagers.png) center no-repeat}
 .buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonepiciers {background-image: url(../images/metier/epiciers.png)}
+.buttonepiciers {background: url(../images/metier/epiciers.png) center no-repeat}
 .buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttontraiteurs {background-image: url(../images/metier/traiteurs.png)}
+.buttontraiteurs {background: url(../images/metier/traiteurs.png) center no-repeat}
 .buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonbouchers {background-image: url(../images/metier/bouchers.png)}
+.buttonbouchers {background: url(../images/metier/bouchers.png) center no-repeat}
 .buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttoncavistes {background-image: url(../images/metier/cavistes.png)}
+.buttoncavistes {background: url(../images/metier/cavistes.png) center no-repeat}
 .buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonboulangers {background-image: url(../images/metier/boulangers.png)}
+.buttonboulangers {background: url(../images/metier/boulangers.png) center no-repeat}
 .buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
+
+/*.listeCommerces li {width : 10%; height: auto;}*/
+
+@media screen and (max-width: 580px) {.listeCommerces li {width: 30%}}
+@media screen and (min-width: 581px) and (max-width: 999px) {.listeCommerces li {width: 21%}}
+@media screen and (min-width: 1000px) {.listeCommerces li {width: 10%}}
+
 
 
 
@@ -98,8 +104,6 @@ ci dessous, css spécifique à la page commercants
 	width : inherit;		
 }
 
-.listeCommerces li {width : 30%; height: auto;}
-
 
 .parentCommerce {
 	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
@@ -114,24 +118,20 @@ ci dessous, css spécifique à la page commercants
 	border-width: 1px;
 	border-radius: 12px;
 	border-style: dashed;
-	width: 31%;
 	text-align: center;
 	text-transform: justify;
 	margin : 10px 0px 0px 10px;
 }
 
-
+@media screen and (max-width: 480px) {.commerces {width: 45%}}
+@media screen and (min-width: 481px) and (max-width: 919px) {.commerces {width: 30%}}
+@media screen and (min-width: 920px) {.commerces {width: 300px}}
 
 
 
 /*temporaire */
 .listeCommerces li {
-	min-height: 200px;
-	min-width: 200px;
+	min-height: 100px;
+	min-width: 100px;
 	text-align: center;
-}
-.commerce {
-	min-height: 350px;
-	min-width: 350px;
-
 }
