@@ -190,7 +190,7 @@
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
 		{	
-			if ( isset($_POST['login']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']))
+			if (isset($_POST['login']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']))
 			{
 				if(($_POST['login'] != '') AND ($_POST['pass'] != '') AND ($_POST['nom'] != '') AND ($_POST['prenom'] != ''))
 				{
@@ -254,28 +254,30 @@
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
 		{	
-			$compte_admin = Model::factory('admin')->find_many();
-			if (isset($_POST['modif']) AND isset($_POST['login_modif']) AND isset($_POST['pass_modif']) AND isset($_POST['nom_modif']) AND isset($_POST['prenom_modif']))
+			$comptes_admin = Model::factory('admin')->find_many();
+			if (isset($_POST['modif']))
 			{
-				if (($_POST['login_modif'])!='' AND ($_POST['pass_modif'])!='' AND ($_POST['nom_modif'])!='' AND ($_POST['prenom_modif'])!='')
-				{
-				$compte_modif = Model::factory('admin')->find_one($_POST['modif']);
-				$compte_modif->login = $_POST['login_modif'];
-				$compte_modif->mdp = $_POST['pass_modif'];
-				$compte_modif->nom = $_POST['nom_modif'];
-				$compte_modif->prenom = $_POST['prenom_modif'];
-				$compte_modif->save();
-				validation("Modification validée !");
-				}
-				else
-				{
-					Flight::render('administration/modification_compte.php', array('compte_admin' => $compte_admin, 'message' => 'Veuillez saisir tous les champs.'), 'body_content');
-					Flight::render('layout.php', array('title' => 'Modification Compte'));
-				}
+				$compte_admin = Model::factory('admin')->find_one($_POST['modif']);
+				Flight::render('administration/modification_compte.php', array('compte_admin' => $compte_admin), 'body_content');
+				Flight::render('layout.php', array('title' => 'Modification Compte'));
+			}
+			else if (isset($_POST['login_modif']) AND isset($_POST['pass_modif']) AND isset($_POST['nom_modif']) AND isset($_POST['prenom_modif']))
+			{
+					$compte_admin = Model::factory('admin')->find_one($_POST['id_admin']);
+					if(($_POST['login_modif'])!='') 
+						$compte_admin->login = $_POST['login_modif'];
+					if(($_POST['pass_modif'])!='') 
+						$compte_admin->mdp = $_POST['pass_modif'];
+					if(($_POST['nom_modif'])!='') 
+						$compte_admin->nom = $_POST['nom_modif'];
+					if(($_POST['prenom_modif'])!='') 
+						$compte_admin->prenom = $_POST['prenom_modif'];
+					$compte_admin->save();
+					validation("Modification validée !");
 			}
 			else
 			{
-				Flight::render('administration/modification_compte.php', array('compte_admin' => $compte_admin), 'body_content');
+				Flight::render('administration/choix_compte.php', array('comptes_admin' => $comptes_admin), 'body_content');
 				Flight::render('layout.php', array('title' => 'Modification Compte'));
 			}
 		}
@@ -289,13 +291,16 @@
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
 		{	
-			if ( isset($_POST['titre_article']) AND isset($_POST['contenu_article']))
+			if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
 			{
-				if(($_POST['titre_article'] != '') AND ($_POST['contenu_article'] != ''))
+				if(($_POST['titre_article'] != '') AND ($_POST['desc_article'] != '') AND ($_POST['contenu_article'] != '') AND ($_POST['image_article'] != '') AND ($_POST['desc_image_article'] != ''))
 				{
 					$article = Model::factory('article')->create();
 					$article->titre = $_POST['titre_article'];
+					$article->description = $_POST['desc_article'];
 					$article->contenu = $_POST['contenu_article'];
+					$article->image = $_POST['image_article'];
+					$article->desc_image = $_POST['desc_image_article'];
 					$article->auteur = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
 					$article->date = date("d/m/Y");
 					$article->save();
