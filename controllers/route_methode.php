@@ -9,13 +9,85 @@
 	function news(){
 		$articles = Model::factory('Article')->find_many();
 		Flight::render('news.php', array('articles' => $articles), 'body_content');
-		Flight::render('layout.php', array('title' => 'Nouveauté'));
+		Flight::render('layout.php', array('title' => 'Actualités'));
 	}
 	
 	function about(){
 		$commerces = Model::factory('commerce')->find_many();
 		Flight::render('about.php', array('commercant' => $commerces), 'body_content');
-		Flight::render('layout.php', array('title' => 'A propos'));
+		Flight::render('layout.php', array('title' => 'Commercants'));
+	}
+
+	function primeurs(){
+		$primeurs = Model::factory('commerce')
+			->where('numType',1)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $primeurs), 'body_content');
+		Flight::render('layout.php', array('title' => 'Primeurs'));
+	}
+	
+	function rotissiers(){
+		$rotissiers = Model::factory('commerce')
+			->where('numType',2)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $rotissiers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Rotissiers'));
+	}
+	
+	function poissoniers(){
+		$poissoniers = Model::factory('commerce')
+			->where('numType',3)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $poissoniers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Poissoniers'));
+	}
+	
+	function fromagers(){
+		$fromagers = Model::factory('commerce')
+			->where('numType',4)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $fromagers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Fromagers'));
+	}
+	
+	function epiciers(){
+		$epiciers = Model::factory('commerce')
+			->where('numType',5)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $epiciers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Epiciers'));
+	}
+	
+	function traiteurs(){
+		$traiteurs = Model::factory('commerce')
+			->where('numType',6)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $traiteurs), 'body_content');
+		Flight::render('layout.php', array('title' => 'Traiteurs'));
+	}
+	
+	function bouchers(){
+		$bouchers = Model::factory('commerce')
+			->where('numType',7)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $bouchers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Bouchers'));
+	}
+	
+	function cavistes(){
+		$cavistes = Model::factory('commerce')
+			->where('numType',8)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $cavistes), 'body_content');
+		Flight::render('layout.php', array('title' => 'Cavistes'));
+	}
+	
+	function boulangers(){
+		$boulangers = Model::factory('commerce')
+			->where('numType',9)
+			->find_many();
+		Flight::render('about.php', array('commercant' => $boulangers), 'body_content');
+		Flight::render('layout.php', array('title' => 'Boulangers'));
 	}
 	
 	function contact(){

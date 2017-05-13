@@ -10,7 +10,7 @@
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="case" href="http://localhost/Halle-au-Frais/nouveaute">Actualités</a></li>
+					<li><a class="case" href="http://localhost/Halle-au-Frais/actualites">Actualités</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -22,7 +22,7 @@
 		<div class="col-1-2">
 			<nav>
 				<ul>
-					<li><a class="case" href="http://localhost/Halle-au-Frais/apropos">Commerce</a></li>
+					<li><a class="case" href="http://localhost/Halle-au-Frais/commercants">Commerçants</a></li>
 				</ul>
 			</nav>
 		</div>
