@@ -11,6 +11,12 @@
 		Flight::render('news.php', array('articles' => $articles), 'body_content');
 		Flight::render('layout.php', array('title' => 'Actualités'));
 	}
+
+	function actualite(){
+		$article = Model::factory('Article')->find_one($_POST['id']);
+		Flight::render('actualite.php', array('article' => $article), 'body_content');
+		Flight::render('layout.php', array('title' => $article->titre));
+	}
 	
 	function about(){
 		$commerces = Model::factory('commerce')->find_many();
