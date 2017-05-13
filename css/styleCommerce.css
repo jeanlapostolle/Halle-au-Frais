@@ -1,0 +1,134 @@
+/*
+Ci-dessous, description global des li puis des h1
+*/
+
+
+li {list-style-type: none}	/*pas de points ou autres decorations avant chaque element de la liste*/
+
+h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
+
+.separation {
+	border-top: 1px solid grey;
+	margin: 50px 0px 50px 0px;
+	width: inherit;
+}
+
+/*
+ci dessous, css spécifique à la page commercants
+*/
+#headerCommerce {
+	width : inherit;
+	padding : 10px 0% 10px 0%;
+	background : url(./../images/manege/1.png) center no-repeat;
+}
+.listeCommerces li a, #headerCommerce h1 {
+	color : white;
+  	text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
+  	text-align: center;
+}
+
+
+
+
+
+.listeCommerces a {
+	text-decoration : none;
+	color : black;
+	font-size : 15px;
+}
+
+.commerces a {
+ 	color : rgb(245, 180, 0);
+ 	font-weight : bold;
+ }
+
+.commerces a:hover {font-size : 18px}
+
+.listeCommerces li {margin : 10px 0px 10px 0px} 
+
+.listeCommerces li a { 
+	background-color: rgba(32, 50, 32, 0.5);
+	width : 100%;
+	font-size : 20px;
+}
+
+.buttonprimeurs {background-image: url(../images/metier/primeurs.png)}
+.buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
+
+
+.buttonrotissiers {background-image: url(../images/metier/rotissiers.png)}
+.buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
+
+.buttonpoissonniers {background-image: url(../images/metier/poissonniers.png)}
+.buttonpoissonniers:hover {opacity: 0.8; font-size : 18px;}
+
+.buttonfromagers {background-image: url(../images/metier/fromagers.png)}
+.buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
+
+.buttonepiciers {background-image: url(../images/metier/epiciers.png)}
+.buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
+
+.buttontraiteurs {background-image: url(../images/metier/traiteurs.png)}
+.buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
+
+.buttonbouchers {background-image: url(../images/metier/bouchers.png)}
+.buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
+
+.buttoncavistes {background-image: url(../images/metier/cavistes.png)}
+.buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
+
+.buttonboulangers {background-image: url(../images/metier/boulangers.png)}
+.buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
+
+
+
+
+
+
+.commerces h2 {text-align: center}
+#desc, #Commercemail, #Commercetel {color : grey}
+#prop {font-weight : bold}
+
+.listeCommerces{
+	display: flex;			
+	flex-flow: row wrap;	
+	justify-content: space-around;	
+	align-items: center;
+	width : inherit;		
+}
+
+.listeCommerces li {width : auto}
+
+
+.parentCommerce {
+	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
+	flex-flow: row wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
+	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
+	align-items: center;
+	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
+}
+
+.commerces {
+	border-color: rgb(32,32,32);
+	border-width: 1px;
+	border-radius: 12px;
+	border-style: dashed;
+	width: 300px;
+}
+
+
+
+
+
+/*temporaire */
+.listeCommerces li {
+	min-height: 200px;
+	min-width: 200px;
+	text-align: center;
+}
+.commerce {
+	min-height: 350px;
+	min-width: 350px;
+	text-align: center;
+	text-transform: justify;
+}
