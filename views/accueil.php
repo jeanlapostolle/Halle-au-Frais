@@ -56,25 +56,42 @@
 	  	}
   	</script>
 
- 	 <div class="grid grid-pad">
+ <div class="grid grid-pad">
+   	<div class="col-1-1">
+   		<div class="col-1-3">
+       		<button class="button primeurs"><span class="texte">Primeurs </span></button>
+       	</div>
+        	
+       	<div class="col-1-3">
+       		<button class="button rotissiers"><span class="texte">Rotissiers </span></button>
+       	</div>
 
-    <div class="col-1-3 colonne">
-      	<div class="col-1-1 l1">
-        	<button class="button primeurs"><span class="texte">Primeurs </span></button>
-        	<button class="button rotissiers"><span class="texte">Rotissiers </span></button>
-       	 	<button class="button poissonniers"><span class="texte">Poissonniers </span></button>
-      	</div>
+       	<div class="col-1-3">
+   	 		<button class="button poissonniers"><span class="texte">Poissonniers </span></button>
+   		</div>
 
-      	<div class="col-1-1 l1">
-        	<button class="button fromagers"><span class="texte">Fromagers </span></button>
-       	 	<button class="button epiciers"><span class="texte">Epiciers </span></button>
-        	<button class="button traiteurs"><span class="texte">Traiteurs </span></button>
-      	</div>
+   		<div class="col-1-3">
+       		<button class="button fromagers"><span class="texte">Fromagers </span></button>
+       	</div>
 
-      	<div class="col-1-1">
-        	<button class="button bouchers"><span class="texte">Bouchers </span></button>
+       	<div class="col-1-3">
+   	 		<button class="button epiciers"><span class="texte">Epiciers </span></button>
+       	</div>
+
+       	<div class="col-1-3">
+       		<button class="button traiteurs"><span class="texte">Traiteurs </span></button>
+  		</div>
+
+       	<div class="col-1-3">
+       		<button class="button bouchers"><span class="texte">Bouchers </span></button>
+       	</div>
+
+        <div class="col-1-3">
         	<button class="button cavistes"><span class="texte">Cavistes </span></button>
+        </div>
+
+        <div class="col-1-3">
         	<button class="button boulangers"><span class="texte">Boulangers</span></button>
-      	</div>
+        </div>
     </div>
 </div>

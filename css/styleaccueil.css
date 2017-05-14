@@ -50,31 +50,20 @@ h1 {text-transform : capitalize}
   background-color: rgba(0,0,0,0.8);
 }
 
-.button {
+.col-1-3{
 	cursor: pointer;
 	border-radius: 4px;
 	font-size: 28px;
 	font-style: bold;
-  color: #000000;
-  text-align: center;
-  border-radius: 6px;
-  border: none;
-  padding: 15px;
-  height: 200px;
-  width: 200px;
-  display: inline-block;
-  margin: auto;
-}
-
-.l1{
-	margin-top: 15px;
-	margin-bottom: 5px;
-}
-
-.colonne {
-	margin-left: auto;
-	margin-right: auto;
-	width: 610px;
+  	text-align: center;
+  	border-radius: 6px;
+  	border: none;
+  	padding: 50px;
+  	height: 200px;
+  	width: 200px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 
 .texte {
@@ -93,7 +82,6 @@ h1 {text-transform : capitalize}
 
 .button.rotissiers {
 	background-image: url(../images/metier/rotissiers.png);
-
 }
 
 .button.rotissiers:hover {
@@ -102,7 +90,6 @@ h1 {text-transform : capitalize}
 
 .button.poissonniers {
 	background-image: url(../images/metier/poissonniers.png);
-
 }
 
 .button.poissonniers:hover {
@@ -111,7 +98,6 @@ h1 {text-transform : capitalize}
 
 .button.fromagers {
 	background-image: url(../images/metier/fromagers.png);
-
 }
 
 .button.fromagers:hover {
@@ -120,7 +106,6 @@ h1 {text-transform : capitalize}
 
 .button.epiciers {
 	background-image: url(../images/metier/epiciers.png);
-
 }
 
 .button.epiciers:hover {
@@ -160,13 +145,4 @@ h1 {text-transform : capitalize}
 
 .button.boulangers:hover {
 	opacity: 0.7;
-}
-
-.col-1-5 {
-  list-style-type: none;
-  display: inline-block;
-  overflow: hidden;
-  background-color: #000000;
-  padding-top: 10px;
-  width: 97%;
 }
