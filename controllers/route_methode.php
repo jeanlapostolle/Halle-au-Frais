@@ -7,7 +7,9 @@
 	}
 	
 	function news(){
-		$articles = Model::factory('Article')->find_many();
+		$articles = Model::factory('Article')
+			->order_by_desc('id')
+			->find_many();
 		Flight::render('news.php', array('articles' => $articles), 'body_content');
 		Flight::render('layout.php', array('title' => 'Actualités'));
 	}
