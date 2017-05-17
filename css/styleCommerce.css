@@ -66,7 +66,7 @@ ci dessous, css spécifique à la page commercants
 .buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
 
 
-.buttonrotissiers {background: url(../images/Commerce/png/woman-and-grill.png) center no-repeat; /*turkey.png*/
+.buttonrotissiers {background: url(../images/Commerce/png/turkey.png) center no-repeat; /*woman-and-grill.png*/
 	background-size: cover;}
 .buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
 
@@ -78,23 +78,23 @@ ci dessous, css spécifique à la page commercants
 	background-size: cover;}
 .buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonepiciers {background: url(../images/Commerce/png/shopping-groceries.png) center no-repeat; /*spices.png*/
+.buttonepiciers {background: url(../images/Commerce/png/spices.png) center no-repeat; /*shopping-groceries.png*/
 	background-size: cover;}
 .buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttontraiteurs {background: url(../images/Commerce/png/cauldron-chef.png) center no-repeat; /*sushi-1.png*/
+.buttontraiteurs {background: url(../images/Commerce/png/sushi-1.png) center no-repeat; /*cauldron-chef.png*/
 	background-size: cover;}
 .buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonbouchers {background: url(../images/Commerce/png/butcher-shop.png) center no-repeat; /*salami.png 	ham.png*/
+.buttonbouchers {background: url(../images/Commerce/png/ham.png) center no-repeat; /*salami.png 	butcher-shop.png*/
 	background-size: cover;}
 .buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttoncavistes {background: url(../images/Commerce/png/winemaker.png) center no-repeat; /*glass-4.png*/
+.buttoncavistes {background: url(../images/Commerce/png/glass-4.png) center no-repeat; /*winemaker.png*/
 	background-size: cover;}
 .buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonboulangers {background: url(../images/Commerce/png/bakery-vendor.png) center no-repeat; /*bread-1.png*/
+.buttonboulangers {background: url(../images/Commerce/png/bread-1.png) center no-repeat; /*bakery-vendor.png*/
 	background-size: cover;}
 .buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
 

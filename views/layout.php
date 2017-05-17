@@ -10,9 +10,10 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"> 
 		<link rel="stylesheet" type="text/css" href="css/styleCommerce.css">
 		<link rel="stylesheet" type="text/css" href="css/styleHeader.css"> 
+		<link rel="stylesheet" type="text/css" href="css/styleFooter.css"> 
 	</head>
 	<body>
-		<header class="header">
+		<header>
 			<?php include('templates/header.php'); ?>
 		</header>
 
@@ -20,7 +21,7 @@
 			<?php echo $body_content; ?>			
 		</main>
 		
-		<footer class="footer">
+		<footer>
 			<?php include('templates/footer.php'); ?>
 		</footer>
 	</body>

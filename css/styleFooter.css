@@ -1,0 +1,37 @@
+.TheFooter {font-weight: none}
+
+footer h2, footer a {color: rgb(190, 220, 0)}
+footer {background-color: rgba(12,15,12,0.9)}
+footer h3 {text-transform: uppercase}
+footer h3{color: rgb(160,200,160)}
+footer p {color: rgb(240, 255, 240)}
+/*.TheFooter div {background-color: rgba(12, 15, 12 , 0.3)}*/
+
+
+footer a {text-decoration : none}
+
+.TheFooter div {margin: auto}
+
+/*
+http://fr.tuto.com/blog/2016/03/icones-reseaux-sociaux.htm
+*/
+
+.TheFooter img {width: 100px; height: 100px}
+.TheFooter ul {
+	display: flex;			
+	flex-flow: row wrap;	
+	justify-content: space-around;	
+	align-items: center;
+}
+.TheFooter div:nth-child(3) {text-align: right}
+
+
+@media handheld, only screen and (max-width: 767px) {
+	.TheFooter div:nth-child(2) {	
+		border-width: 1px 0px 1px 0px;
+		border-style: solid none solid none;
+		border-color: black;
+	}
+}
+
+.TheFooter div {margin: auto}
