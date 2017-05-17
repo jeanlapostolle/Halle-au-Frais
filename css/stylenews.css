@@ -1,0 +1,23 @@
+h1 {text-transform : capitalize}
+
+.whoweare h1 {text-align: center}
+
+.whoweare li {
+	list-style : none;
+	text-align : center;
+}
+
+@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
+@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
+
+.whoweare .msg {width : 100%}
+
+.actualite{
+	border-width: 2px;
+	border-color: #333;
+	border-style: dashed;
+}
+
+h2 {
+
+}

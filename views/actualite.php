@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="css/styleactualite.css">
+
 <article class="actualite">
 	<header>
 		<h2><?= $article->titre;?><h2>
