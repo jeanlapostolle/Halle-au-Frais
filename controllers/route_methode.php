@@ -299,10 +299,10 @@
 				{
 					$article = Model::factory('article')->create();
 					$article->titre = $_POST['titre_article'];
-					$article->description = $_POST['desc_article'];
-					$article->contenu = $_POST['contenu_article'];
-					$article->image = $_POST['image_article'];
-					$article->desc_image = $_POST['desc_image_article'];
+					$article->description = htmlentities($_POST['desc_article']);
+					$article->contenu = htmlentities($_POST['contenu_article']);
+					$article->image = htmlentities($_POST['image_article']);
+					$article->desc_image = htmlentities($_POST['desc_image_article']);
 					$article->auteur = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
 					$article->date = date("d/m/Y");
 					$article->save();
@@ -364,15 +364,16 @@
 			{
 					$article = Model::factory('article')->find_one($_POST['id_article']);
 					if(($_POST['titre_article'])!='') 
-						$article->titre = $_POST['titre_article'];
+						$article->titre = htmlentities($_POST['titre_article']);
 					if(($_POST['desc_article'])!='') 
-						$article->description = $_POST['desc_article'];
+						$article->description = htmlentities($_POST['desc_article']);
 					if(($_POST['contenu_article'])!='') 
-						$article->contenu = $_POST['contenu_article'];
+						$article->contenu = htmlentities($_POST['contenu_article']);
 					if(($_POST['image_article'])!='') 
-						$article->image = $_POST['image_article'];
+						$article->image = htmlentities($_POST['image_article']);
 					if(($_POST['desc_image_article'])!='') 
-						$article->desc_image = $_POST['desc_image_article'];
+						$article->desc_image = htmlentities($_POST['desc_image_article']);
+					$article->date = date("d/m/Y");
 					$article->save();
 					validation("Modification validée !");
 			}
