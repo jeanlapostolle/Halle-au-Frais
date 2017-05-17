@@ -143,12 +143,15 @@ ci dessous, css spécifique à la page commercants
 	text-align: center;
 	text-transform: justify;
 	margin : 10px 0px 0px 10px;
+	width : 320px;
 }
 
-@media screen and (max-width: 480px) {.commerces {width: 45%}}
+
+/*
+@media screen and (max-width: 480px) {.commerces {width: 85%}}
 @media screen and (min-width: 481px) and (max-width: 919px) {.commerces {width: 30%}}
 @media screen and (min-width: 920px) {.commerces {width: 300px}}
-
+*/
 
 
 /*temporaire */
