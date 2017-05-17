@@ -1,0 +1,99 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:18
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-bakery-store:before { content: "\f100"; }
+.flaticon-bakery-vendor:before { content: "\f101"; }
+.flaticon-big-store:before { content: "\f102"; }
+.flaticon-big-store-1:before { content: "\f103"; }
+.flaticon-bio-store:before { content: "\f104"; }
+.flaticon-butcher-shop:before { content: "\f105"; }
+.flaticon-cauldron-chef:before { content: "\f106"; }
+.flaticon-closed-store:before { content: "\f107"; }
+.flaticon-clothes-store:before { content: "\f108"; }
+.flaticon-cotton-candy-maker:before { content: "\f109"; }
+.flaticon-fresh-vendor:before { content: "\f10a"; }
+.flaticon-fresh-vendor-1:before { content: "\f10b"; }
+.flaticon-go-shopping:before { content: "\f10c"; }
+.flaticon-hamburger-buffet:before { content: "\f10d"; }
+.flaticon-ice-cream-maker:before { content: "\f10e"; }
+.flaticon-market-place:before { content: "\f10f"; }
+.flaticon-market-shopping:before { content: "\f110"; }
+.flaticon-market-store:before { content: "\f111"; }
+.flaticon-open-store:before { content: "\f112"; }
+.flaticon-popcorn-maker:before { content: "\f113"; }
+.flaticon-pretzel-stand:before { content: "\f114"; }
+.flaticon-sales-season:before { content: "\f115"; }
+.flaticon-shopping-groceries:before { content: "\f116"; }
+.flaticon-shopping-man:before { content: "\f117"; }
+.flaticon-shopping-woman:before { content: "\f118"; }
+.flaticon-store-closed:before { content: "\f119"; }
+.flaticon-two-persons-shopping:before { content: "\f11a"; }
+.flaticon-vendor-with-ice-cream-and-couple:before { content: "\f11b"; }
+.flaticon-winemaker:before { content: "\f11c"; }
+.flaticon-woman-and-grill:before { content: "\f11d"; }
+    
+    $font-Flaticon-bakery-store: "\f100";
+    $font-Flaticon-bakery-vendor: "\f101";
+    $font-Flaticon-big-store: "\f102";
+    $font-Flaticon-big-store-1: "\f103";
+    $font-Flaticon-bio-store: "\f104";
+    $font-Flaticon-butcher-shop: "\f105";
+    $font-Flaticon-cauldron-chef: "\f106";
+    $font-Flaticon-closed-store: "\f107";
+    $font-Flaticon-clothes-store: "\f108";
+    $font-Flaticon-cotton-candy-maker: "\f109";
+    $font-Flaticon-fresh-vendor: "\f10a";
+    $font-Flaticon-fresh-vendor-1: "\f10b";
+    $font-Flaticon-go-shopping: "\f10c";
+    $font-Flaticon-hamburger-buffet: "\f10d";
+    $font-Flaticon-ice-cream-maker: "\f10e";
+    $font-Flaticon-market-place: "\f10f";
+    $font-Flaticon-market-shopping: "\f110";
+    $font-Flaticon-market-store: "\f111";
+    $font-Flaticon-open-store: "\f112";
+    $font-Flaticon-popcorn-maker: "\f113";
+    $font-Flaticon-pretzel-stand: "\f114";
+    $font-Flaticon-sales-season: "\f115";
+    $font-Flaticon-shopping-groceries: "\f116";
+    $font-Flaticon-shopping-man: "\f117";
+    $font-Flaticon-shopping-woman: "\f118";
+    $font-Flaticon-store-closed: "\f119";
+    $font-Flaticon-two-persons-shopping: "\f11a";
+    $font-Flaticon-vendor-with-ice-cream-and-couple: "\f11b";
+    $font-Flaticon-winemaker: "\f11c";
+    $font-Flaticon-woman-and-grill: "\f11d";

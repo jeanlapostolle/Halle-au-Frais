@@ -1,4 +1,4 @@
-header {background-color: rgba(190, 220, 0 ,1)}
+header {background-color: rgba(190, 220, 0 ,0.5)}
 
 header a {
 	text-transform : uppercase;
@@ -8,9 +8,12 @@ header a {
 	/*text-decoration : overline underline;*/
 }
 
-header nav {
-	width: inherit;
-}
+@media screen and (min-width: 1000px) and (max-width: 1199px)  {#headerParent {padding : 0% 5% 0% 5%}}
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {#headerParent {padding : 0% 10% 0% 10%}}
+@media screen and (min-width: 1400px) and (max-width: 1599px)   {#headerParent {padding : 0% 15% 0% 15%}}
+@media screen and (min-width: 1600px)	{#headerParent {padding : 0% 20% 0% 20%}}
+
+header nav {width: inherit}
 
 header nav a {
 	border-width: 1px 0px 1px 0px;
@@ -22,7 +25,7 @@ header nav a {
 	font-size: 16px;
 }
 
-header nav a:hover {color: green}
+header nav a:hover {color: green; border-color: green;}
 
 header nav li:nth-child(3) a {border-style: hidden}
 
@@ -38,3 +41,6 @@ header nav li:nth-child(3) a {border-style: hidden}
 	align-items: center;
 	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 }
+
+
+

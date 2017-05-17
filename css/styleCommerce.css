@@ -8,15 +8,18 @@ li {list-style-type: none}	/*pas de points ou autres decorations avant chaque el
 
 h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
 
+
+
+/*
+ci dessous, css spécifique à la page commercants
+*/
+
 .separation {
 	border-top: 1px solid grey;
 	margin: 50px 0px 50px 0px;
 	width: inherit;
 }
 
-/*
-ci dessous, css spécifique à la page commercants
-*/
 #headerCommerce {
 	width : inherit;
 	padding : 32px 0% 32px 0%;
@@ -24,7 +27,7 @@ ci dessous, css spécifique à la page commercants
 }
 .listeCommerces li a, #headerCommerce h1 {
 	color : white;
-  	text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
+  	/*text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
   	text-align: center;
 }
 
@@ -47,45 +50,64 @@ ci dessous, css spécifique à la page commercants
 
 .listeCommerces li {margin : 10px 0px 10px 0px} 
 
+/*
 .listeCommerces li a { 
 	background-color: rgba(32, 50, 32, 0.5);
 	font-size : 20px;
-}
+}*/
 
-.buttonprimeurs {background: url(../images/metier/primeurs.png) center no-repeat}
+/*à tester les images que j'ai mis à coté*/
+
+.buttonprimeurs {
+	background: url(../images/Commerce/png/asparagus.png) center no-repeat; /*bio-store.png 	(tous les legumes)*/
+	background-size: cover;}
 .buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
 
 
-.buttonrotissiers {background: url(../images/metier/rotissiers.png) center no-repeat}
+.buttonrotissiers {background: url(../images/Commerce/png/woman-and-grill.png) center no-repeat; /*turkey.png*/
+	background-size: cover;}
 .buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonpoissonniers {background: url(../images/metier/poissonniers.png) center no-repeat}
+.buttonpoissonniers {background: url(../images/Commerce/png/fish.png) center no-repeat; /*octopus.png 	shrimp.png*/
+	background-size: cover;}
 .buttonpoissonniers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonfromagers {background: url(../images/metier/fromagers.png) center no-repeat}
+.buttonfromagers {background: url(../images/Commerce/png/cheese.png) center no-repeat; /*cheese-1.png*/
+	background-size: cover;}
 .buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonepiciers {background: url(../images/metier/epiciers.png) center no-repeat}
+.buttonepiciers {background: url(../images/Commerce/png/shopping-groceries.png) center no-repeat; /*spices.png*/
+	background-size: cover;}
 .buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttontraiteurs {background: url(../images/metier/traiteurs.png) center no-repeat}
+.buttontraiteurs {background: url(../images/Commerce/png/cauldron-chef.png) center no-repeat; /*sushi-1.png*/
+	background-size: cover;}
 .buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonbouchers {background: url(../images/metier/bouchers.png) center no-repeat}
+.buttonbouchers {background: url(../images/Commerce/png/butcher-shop.png) center no-repeat; /*salami.png 	ham.png*/
+	background-size: cover;}
 .buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttoncavistes {background: url(../images/metier/cavistes.png) center no-repeat}
+.buttoncavistes {background: url(../images/Commerce/png/winemaker.png) center no-repeat; /*glass-4.png*/
+	background-size: cover;}
 .buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonboulangers {background: url(../images/metier/boulangers.png) center no-repeat}
+.buttonboulangers {background: url(../images/Commerce/png/bakery-vendor.png) center no-repeat; /*bread-1.png*/
+	background-size: cover;}
 .buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
 
 /*.listeCommerces li {width : 10%; height: auto;}*/
 
 @media screen and (max-width: 580px) {.listeCommerces li {width: 30%}}
 @media screen and (min-width: 581px) and (max-width: 999px) {.listeCommerces li {width: 21%}}
-@media screen and (min-width: 1000px) {.listeCommerces li {width: 10%}}
+@media screen and (min-width: 1000px) {
+	.listeCommerces li {width: 10%}
+}
 
+@media screen and (min-width: 1000px) and (max-width: 1199px)  {.parentCommerce, .listeCommerces, .headerCommerce  {padding : 0% 5% 0% 5%}}
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 10% 0% 10%}}
+@media screen and (min-width: 1400px) and (max-width: 1599px)   {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 15% 0% 15%}}
+@media screen and (min-width: 1600px){.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 20% 0% 20%}}
 
 
 
@@ -101,7 +123,7 @@ ci dessous, css spécifique à la page commercants
 	flex-flow: row wrap;	
 	justify-content: space-around;	
 	align-items: center;
-	width : inherit;		
+	/*width : inherit;	*/	
 }
 
 
@@ -110,7 +132,7 @@ ci dessous, css spécifique à la page commercants
 	flex-flow: row wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
-	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
+	/*width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 }
 
 .commerces {
@@ -131,7 +153,7 @@ ci dessous, css spécifique à la page commercants
 
 /*temporaire */
 .listeCommerces li {
-	min-height: 100px;
-	min-width: 100px;
+	height: 120px;
+	width: 120px;
 	text-align: center;
 }

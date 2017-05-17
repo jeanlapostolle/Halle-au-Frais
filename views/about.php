@@ -3,15 +3,15 @@
 </div>
 
 <ul class="listeCommerces"> 
-	<li class="buttonprimeurs"> <a href="http://localhost/Halle-au-Frais/primeurs">Les Primeurs</a></li> 
-	<li class="buttonrotissiers"> <a href="http://localhost/Halle-au-Frais/rotissiers">Les Rotissiers</a></li> 
-	<li class="buttonpoissonniers"> <a href="http://localhost/Halle-au-Frais/poissoniers">Les Poissoniers</a></li> 
-	<li class="buttonfromagers"> <a href="http://localhost/Halle-au-Frais/fromagers">Les Fromagers</a></li>
-	<li class="buttonepiciers"> <a href="http://localhost/Halle-au-Frais/epiciers">Les Epiciers</a></li>
-	<li class="buttontraiteurs"> <a href="http://localhost/Halle-au-Frais/traiteurs">Les Traiteurs</a></li>
-	<li class="buttonbouchers"> <a href="http://localhost/Halle-au-Frais/bouchers">Les Bouchers</a></li>
-	<li class="buttoncavistes"> <a href="http://localhost/Halle-au-Frais/cavistes">Les Cavistes</a></li>
-	<li class="buttonboulangers"> <a href="http://localhost/Halle-au-Frais/boulangers">Les Boulangers</a></li>
+	<li class="buttonprimeurs"> <a href="http://localhost/Halle-au-Frais/primeurs"></a></li> 
+	<li class="buttonrotissiers"> <a href="http://localhost/Halle-au-Frais/rotissiers"></a></li> 
+	<li class="buttonpoissonniers"> <a href="http://localhost/Halle-au-Frais/poissoniers"></a></li> 
+	<li class="buttonfromagers"> <a href="http://localhost/Halle-au-Frais/fromagers"></a></li>
+	<li class="buttonepiciers"> <a href="http://localhost/Halle-au-Frais/epiciers"></a></li>
+	<li class="buttontraiteurs"> <a href="http://localhost/Halle-au-Frais/traiteurs"></a></li>
+	<li class="buttonbouchers"> <a href="http://localhost/Halle-au-Frais/bouchers"></a></li>
+	<li class="buttoncavistes"> <a href="http://localhost/Halle-au-Frais/cavistes"></a></li>
+	<li class="buttonboulangers"> <a href="http://localhost/Halle-au-Frais/boulangers"></a></li>
 </ul>
 
 <div class="separation"></div>
