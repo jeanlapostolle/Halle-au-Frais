@@ -56,7 +56,18 @@
 	  	}
   	</script>
 
- <div class="grid grid-pad">
+<div class="grid grid-pad">
+   	<div class="col-1-1">
+   		<div class="col-4-12">
+			<p>100% Terroir</p>
+		</div>
+		<div class="col-8-12">
+			<p>Tous les produits de LA HALLE AU FRAIS sont des produits de première qualité, d’abord locaux, de producteurs passionnés, pour être dégustés, savourés en famille ou entre amis.</p>
+		</div>
+	</div>
+</div>
+             
+<div class="grid grid-pad">
    	<div class="col-1-1">
    		<div class="col-1-3">
        		<button class="button primeurs"><span class="texte">Primeurs </span></button>
