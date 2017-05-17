@@ -8,12 +8,15 @@ header a {
 	/*text-decoration : overline underline;*/
 }
 
+/*
 @media screen and (min-width: 1000px) and (max-width: 1199px)  {#headerParent {padding : 0% 5% 0% 5%}}
 @media screen and (min-width: 1200px) and (max-width: 1399px)  {#headerParent {padding : 0% 10% 0% 10%}}
 @media screen and (min-width: 1400px) and (max-width: 1599px)   {#headerParent {padding : 0% 15% 0% 15%}}
-@media screen and (min-width: 1600px)	{#headerParent {padding : 0% 20% 0% 20%}}
+@media screen and (min-width: 1600px)	{#headerParent {padding : 0% 20% 0% 20%}}*/
 
-header nav {width: inherit}
+header nav ul {max-width: 800px; margin: auto;}
+
+/*header nav {width: inherit}*/
 
 header nav a {
 	border-width: 1px 0px 1px 0px;
@@ -36,11 +39,10 @@ header nav li:nth-child(3) a {border-style: hidden}
 
 #headerParent {
 	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
-	flex-flow: row ;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
+	flex-flow: row;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
 	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 }
-
 
 
