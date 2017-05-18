@@ -16,22 +16,25 @@
 					<div class="titre article">
 						<header>
 							<h2><?= $article->titre;?></h2>
-							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:304px;height:228px;">
+							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:355px;height:228px;">
 						</header>
 					</div>
 					<p><?= $article->description;?></p>
-					<div class="pied page">
 						<footer>
-							<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-							<form method="post" action="http://localhost/Halle-au-Frais/actualite">
-								<p><input type="submit" value="Lire la suite">
-   									<input type="hidden" name="id" value=<?= $article->id ?>></input>
-								</p>
-							</form>
+							<div class="piedpage">
+								<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
+								<form method="post" action="http://localhost/Halle-au-Frais/actualite">
+									<p><div class="bouton">
+										<input type="submit" value="Lire la suite">
+   										<input type="hidden" name="id" value=<?= $article->id ?>></input>
+									</div></p>
+								</form>
+							</div>
 						</footer>
-					</div>
 				</article>
 			</div>
 		<?php endforeach; ?>
+	</div>
+</div>
 
 
