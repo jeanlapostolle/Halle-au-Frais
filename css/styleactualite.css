@@ -1,3 +1,22 @@
-h2{
-	background-color: #000000;
+.titrearticle{
+	background-color: #db8a00;
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 10px;
+}
+
+.imagearticle{
+	text-align: center;
+}
+
+.contenuarticle{
+	text-align: justify;
+	font-size: 25px;
+}
+
+.piedarticle{
+	background-color: #db8a00;
+	font-style: italic;
+	padding: 0,95px 0,95px 0,95px 0,95px;
+	text-align: right;
 }

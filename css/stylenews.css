@@ -22,9 +22,9 @@ h1 {
 }
 
 .actualite{
-	width: 355px;
+	width: 360px;
 	height: 408px;
-	margin: auto;
+	margin-bottom: 15px;
 	display: block;
 }
 
@@ -33,11 +33,11 @@ h2{
 }
 
 .titre.article {
-	background-color: #ffffff;
+	background-color: #db8a00;
+	padding: 1px 1px 1px 1px;
 }
 
 .piedpage{
-	color: black;
 	font-style: italic;
 }
 

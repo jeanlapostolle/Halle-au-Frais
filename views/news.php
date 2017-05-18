@@ -13,12 +13,12 @@
 		<?php foreach($articles as $article):?>
 			<div class="col-1-3">
 				<article class="actualite">
-					<div class="titre article">
-						<header>
+					<header>
+						<div class="titre article">
 							<h2><?= $article->titre;?></h2>
-							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:355px;height:228px;">
+						</div>
+							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:360px;height:228px;">
 						</header>
-					</div>
 					<p><?= $article->description;?></p>
 						<footer>
 							<div class="piedpage">
