@@ -9,8 +9,8 @@
 
 	<div class="col-4-12">
 		<ul>
-			<li><img src="images/icones/facebook.png" alt="Facebook"/></li> 
 			<li><img src="images/icones/mail.png" alt="Mail"/></li>
+			<li><img src="images/icones/facebook.png" alt="Facebook"/></li> 
 			<li><img src="images/icones/location.png" alt="Localisation"/></li>
 		</ul>
 	</div>
@@ -19,6 +19,7 @@
 		<p>
 			<a class="home" href="http://localhost/Halle-au-Frais/connexion">Panneau d'administration</a>
 		</p>
+
 		<p>
 			Copyright &copy; 2017 | Halle au frais
 		</p>
