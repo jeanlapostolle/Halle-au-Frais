@@ -39,6 +39,12 @@ header nav a:hover {color: green; border-color: green;}
   #LogoMobile {display: block}	/*visibility : visible;*/
 }
 @media screen and (min-width: 661px) {#LogoMobile {display: none}}
+/*@media screen and (min-width: 700px) {
+	header li:nth-child(1) {list-style-image: url('../images/icones/abricot.png')}
+	header li:nth-child(2) {list-style-image: url('../images/icones/citrouille.png')}
+	header li:nth-child(4) {list-style-image: url('../images/icones/piment.png')}
+	header li:nth-child(5) {list-style-image: url('../images/icones/viande.png')}
+}*/
 
 
 #headerParent {

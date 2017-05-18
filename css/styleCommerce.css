@@ -26,8 +26,6 @@ ci dessous, css spécifique à la page commercants
 	background : url(./../images/banner.png) center;
 	max-width: 1200px;
 	margin: auto;
-	font-family: 'titre';
-	text-shadow: 0px 0px 6px rgba(0, 12, 0, 0.85);
 }
 .listeCommerces li a, #headerCommerce h1 {
 	color : white;
@@ -108,21 +106,18 @@ ci dessous, css spécifique à la page commercants
 @media screen and (min-width: 1000px) { .listeCommerces li {width: 10%}}
 */
 
+/*
 @media screen and (min-width: 1000px) and (max-width: 1199px)  {.parentCommerce, .listeCommerces, .headerCommerce  {padding : 0% 5% 0% 5%}}
 @media screen and (min-width: 1200px) and (max-width: 1399px)  {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 10% 0% 10%}}
 @media screen and (min-width: 1400px) and (max-width: 1599px)   {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 15% 0% 15%}}
 @media screen and (min-width: 1600px){.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 20% 0% 20%}}
+*/
 
 
 
 
 
-
-.commerces h2 {
-	text-align: center;
-	font-family: 'titre';
-	text-transform: bold;
-}
+.commerces h2 {text-align: center}
 #desc, #Commercemail, #Commercetel {color : grey}
 #prop {font-weight : bold}
 
@@ -140,7 +135,8 @@ ci dessous, css spécifique à la page commercants
 	flex-flow: row wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
-	/*width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
+	width: inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
+	margin: 5px 0px 0px 32px;
 }
 
 .commerces {
@@ -151,8 +147,7 @@ ci dessous, css spécifique à la page commercants
 	text-align: center;
 	text-transform: justify;
 	margin : 10px 0px 0px 10px;
-	width : 320px;
-	font-family: 'font';
+	width : 280px;
 }
 
 
