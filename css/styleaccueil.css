@@ -53,8 +53,7 @@ h1 {text-transform : capitalize}
 .terroir{
 	margin: auto;
 	display: block;
-	background-color: #000000;
-	color: #ffffff;
+	color: #000000;
 }
 
 .terroir.titre{
