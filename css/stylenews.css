@@ -1,6 +1,10 @@
-h1 {text-transform : capitalize}
+h1 {
+	text-transform : capitalize;
+}
 
-.whoweare h1 {text-align: center}
+.whoweare h1 {
+	text-align: center;
+}
 
 .whoweare li {
 	list-style : none;
@@ -12,12 +16,29 @@ h1 {text-transform : capitalize}
 
 .whoweare .msg {width : 100%}
 
+.banniere_actualite{
+	margin: auto;
+}
+
 .actualite{
 	border-width: 2px;
 	border-color: #333;
 	border-style: dashed;
+	border-width: 1px;
+	width: 360px;
+	height: 400px;
+	margin-bottom: 25px;
+	display: inline-block;
 }
 
-h2 {
+h2{
+	text-align: center;
+}
 
+.titre.article {
+	background-color: #ffffff;
+}
+
+.pied.page{
+	background-color: #ffffff;
 }
