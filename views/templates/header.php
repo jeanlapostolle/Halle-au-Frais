@@ -38,6 +38,10 @@
 </div>
 -->
 <nav>
+	<!--<a id="logoMobile" href="http://localhost/Halle-au-Frais/"><img src="images/logo-halle.png" alt="Logo Halle au Frais"/></a>
+
+	pas fini, pour afficher l'icone en version mobile
+	-->
 	<ul id="headerParent">
 		<li><a class="home" href="http://localhost/Halle-au-Frais/">Accueil</a></li>
 		<li><a class="case" href="http://localhost/Halle-au-Frais/actualites">Actualités</a></li>

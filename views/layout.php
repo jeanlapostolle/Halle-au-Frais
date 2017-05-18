@@ -12,14 +12,15 @@
 		<link rel="stylesheet" type="text/css" href="css/styleCommerce.css">
 		<link rel="stylesheet" type="text/css" href="css/styleContact.css"> 
 		<link rel="stylesheet" type="text/css" href="css/styleHeader.css"> 
-		<link rel="stylesheet" type="text/css" href="css/styleFooter.css"> 
+		<link rel="stylesheet" type="text/css" href="css/styleFooter.css">
+		<link rel="stylesheet" type="text/css" href="css/styleAdministration.css">
 	</head>
 	<body>
 		<header>
 			<?php include('templates/header.php'); ?>
 		</header>
 
-		<main>
+		<main class="grid grid-pad">
 			<?php echo $body_content; ?>			
 		</main>
 		
