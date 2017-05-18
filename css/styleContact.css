@@ -23,3 +23,24 @@
 */
 
 .liste p {padding-left: 15px}
+
+.whoweare .liste:nth-child(1) h3 {
+	padding: 20px 0px 0px 50px;
+	background: url('../images/icones/ananas.png') no-repeat 0 0%;
+}
+.whoweare .liste:nth-child(2) h3 {
+	padding: 20px 0px 0px 50px;
+	background: url('../images/icones/abricot.png') no-repeat 0 0%;
+}
+.whoweare .liste:nth-child(3) h3 {
+	padding: 20px 0px 0px 50px;
+	background: url('../images/icones/asperge.png') no-repeat 0 0%;
+}
+.whoweare .liste:nth-child(4) h3 {
+	padding: 20px 0px 0px 50px;
+	background: url('../images/icones/piment.png') no-repeat 0 0%;
+}
+.whoweare .liste:nth-child(5) h3 {
+	padding: 20px 0px 0px 50px;
+	background: url('../images/icones/viande.png') no-repeat 0 0%;
+}

@@ -1,4 +1,4 @@
-﻿<div class="whoweare grid grid-pad">
+﻿<div class="whoweare">
 	<h2 class="col-1-1">Contact & Info complèmentaires</h2>
 
 	<div class="col-1-1">
