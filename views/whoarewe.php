@@ -2,7 +2,7 @@
 	<div class="col-1-1">
 		
 		<div class="contact col-8-12">
-			<h2>Contactez nous !</h1>
+			<h1>Contactez nous !</h1>
 			
 			<form id="contactform" method="post" action="envoi.php"> 
 				<p><p><label for="nom">Prénom : </label><p><input class="saisie" type="text" id="nom" name="nom" tabindex="1" /></p>
@@ -12,18 +12,16 @@
 				<div style="text-align:center;"><input type="submit" name="envoi" value=" Envoyer " /></div>
 			</form>
 		</div>
-
-		<div class="separation"></div>
 		
 		<div class="reseauxSoc col-4-12">
-			<h2>Suivez nous !</h1>
+			<h1>Suivez nous !</h1>
 			</br>
 			<ul>
-				<li><img src="images/icones/facebook.png" alt="logo facebook" style="height:50px"></li>
-				<li><img src="images/icones/twitter.png" alt="logo twitter" style="height:50px"></li>
-				<li><img src="images/icones/youtube.png" alt="logo YouTube" style="height:50px"></li>
-				<li><img src="images/icones/mail.png" alt="logo gmail" style="height:50px"></li>
-				<li><img src="images/icones/location.png" alt="Localisation" style="height:50px"/></li>
+				<li><img src="../images/icones/facebook.png" alt="logo facebook" style="height:32px"></li>
+				<li><img src="../images/twitterLogo.png" alt="logo twitter" style="height:32px"></li>
+				<li><img src="../images/icones/mail.png" alt="logo gmail" style="height:32px"></li>
+				<li><img src="../images/YouTubeLogo.png" alt="logo YouTube" style="height:32px"></li>
+				<li><img src="images/icones/location.png" alt="Localisation" style="height:32px"/></li>
 			</ul>
 		</div>
 

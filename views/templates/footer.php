@@ -1,6 +1,6 @@
 <div class="grid grid-pad TheFooter">
 	<div class="col-4-12">
-		<h2><a href="">Contactez-nous</a></h2>
+		<h2><a href="http://localhost/Halle-au-Frais/contact">Contactez-nous</a></h2>
 		<h3>Adresse</h3>
 		<p>Centre Commercial Les Halles</p>
 		<p>22 B rue du Général Leclerc</p>

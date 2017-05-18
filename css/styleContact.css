@@ -1,0 +1,16 @@
+.whoweare {
+	font-family: 'font';
+	font-size: 18px;
+}
+
+.whoweare h2 {
+	font-family: 'titre';
+	color: rgb(32, 50, 32);
+}
+
+.whoweare ul {
+	display: flex;			
+	flex-flow: row wrap;	
+	justify-content: space-around;	
+	align-items: center;
+}
