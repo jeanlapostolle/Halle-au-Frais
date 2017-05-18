@@ -18,17 +18,14 @@ h1 {
 
 .banniere_actualite{
 	margin: auto;
+	display: inline-block;
 }
 
 .actualite{
-	border-width: 2px;
-	border-color: #333;
-	border-style: dashed;
-	border-width: 1px;
-	width: 360px;
-	height: 400px;
-	margin-bottom: 25px;
-	display: inline-block;
+	width: 355px;
+	height: 408px;
+	margin: auto;
+	display: block;
 }
 
 h2{
@@ -39,6 +36,11 @@ h2{
 	background-color: #ffffff;
 }
 
-.pied.page{
-	background-color: #ffffff;
+.piedpage{
+	color: black;
+	font-style: italic;
+}
+
+.bouton{
+	text-align: center;
 }
