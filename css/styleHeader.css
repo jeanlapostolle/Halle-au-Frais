@@ -36,7 +36,10 @@ header nav a:hover {color: green; border-color: green;}
 @media screen and (max-width: 660px) {
   header nav li:nth-child(3) {display : none}
   header li {padding: 50px 0px 50px 0px}
+  #LogoMobile {display: block}	/*visibility : visible;*/
 }
+@media screen and (min-width: 661px) {#LogoMobile {display: none}}
+
 
 #headerParent {
 	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/

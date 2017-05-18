@@ -14,3 +14,12 @@
 	justify-content: space-around;	
 	align-items: center;
 }
+
+/*
+.parking li {
+	list-style-type: square;
+	display: block;
+}
+*/
+
+.liste p {padding-left: 15px}
