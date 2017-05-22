@@ -6,12 +6,6 @@
 		Flight::render('layout.php', array('title' => 'Home Page'));
 	}
 	
-	/*
-	function whoarewe(){
-		Flight::render('whoarewe.php', NULL, 'body_content');
-		Flight::render('layout.php', array('title' => 'Contact'));
-	}*/
-	
 	function news(){
 		$articles = Model::factory('Article')
 			->order_by_desc('id')
