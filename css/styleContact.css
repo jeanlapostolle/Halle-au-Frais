@@ -1,3 +1,17 @@
+.headerContact {
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	background : url(../images/banner/halles_01.jpg) center no-repeat;
+	max-width: 715px;
+	margin: auto;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);	/* generateur : https://css3gen.com/text-shadow/ */
+	color : white;
+  	text-align: center;
+	height: 75px;
+}
+
+.headerContact h2 {background-color: rgba(0,0,0,0.1)}
+
 .whoweare {
 	font-family: 'font';
 	font-size: 18px;
@@ -5,7 +19,7 @@
 
 .whoweare h2 {
 	font-family: 'titre';
-	color: rgb(32, 50, 32);
+	/*color: rgb(32, 50, 32);*/
 }
 
 .whoweare ul {
@@ -24,6 +38,8 @@
 
 .liste p {padding-left: 15px}
 
+
+/*Test Délire Icones Fruits&Legumes Liste Info Parking*/
 .whoweare .liste:nth-child(1) h3 {
 	padding: 20px 0px 0px 50px;
 	background: url('../images/icones/ananas.png') no-repeat 0 0%;

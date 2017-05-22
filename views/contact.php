@@ -1,5 +1,8 @@
 ﻿<div class="whoweare grid grid-pad">
-	<h2 class="col-1-1">Contact & Info complèmentaires</h2>
+
+	<div class="headerContact">
+		<h2 class="col-1-1">Contact & Info complèmentaires</h2>
+	</div>
 
 	<div class="col-1-1">
 		<div class="contact col-8-12">
