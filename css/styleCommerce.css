@@ -20,11 +20,7 @@ h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 0px;
-
-	border: 1px red dotted;
 }
-.listeCommerces li {border: 1px green solid; padding-left: 0px;}
-
 
 /*
 ci dessous, css spécifique à la page commercants
