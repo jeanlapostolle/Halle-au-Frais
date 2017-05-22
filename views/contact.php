@@ -1,4 +1,4 @@
-﻿<div class="whoweare">
+﻿<div class="whoweare grid grid-pad">
 	<h2 class="col-1-1">Contact & Info complèmentaires</h2>
 
 	<div class="col-1-1">
@@ -19,10 +19,10 @@
 			<div class="reseauxSoc">
 				<h3>Suivez nous !</h3>
 				<ul>
-					<li><img src="images/icones/facebook.png" alt="logo facebook" style="height:50px"></li>
+					<li><a href="https://fr-fr.facebook.com/Halleaufrais/" target="_blank"><img src="images/icones/facebook.png" alt="logo facebook" style="height:50px"></a></li>
 					<!--<li><img src="images/icones/twitter.png" alt="logo twitter" style="height:50px"></li>-->
 					<!--<li><img src="images/icones/youtube.png" alt="logo YouTube" style="height:50px"></li>-->
-					<li><a href="mailto:"><img src="images/icones/mail.png" alt="logo gmail" style="height:50px"></a></li>
+					<li><a href="mailto:newsletter@leshalles-amiens.fr"><img src="images/icones/mail.png" alt="logo gmail" style="height:50px"></a></li>
 					<li><a href="https://www.google.fr/maps/dir//La+Halle+au+Frais,+22+b+Rue+du+G%C3%A9n%C3%A9ral+Leclerc,+80000+Amiens/@49.8953401,2.29285,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e7843fa668860d:0xb8b275e7945bac7a!2m2!1d2.2950387!2d49.8953401" target="_blank"><img src="images/icones/location.png" alt="Localisation" style="height:50px"/></a></li>
 				</ul>
 			</div>

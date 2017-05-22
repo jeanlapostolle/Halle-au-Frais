@@ -9,6 +9,22 @@ li {list-style-type: none}	/*pas de points ou autres decorations avant chaque el
 h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
 
 
+#pageCommercants {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.listeCommerces {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0px;
+
+	border: 1px red dotted;
+}
+.listeCommerces li {border: 1px green solid; padding-left: 0px;}
+
 
 /*
 ci dessous, css spécifique à la page commercants
@@ -23,10 +39,11 @@ ci dessous, css spécifique à la page commercants
 #headerCommerce {
 	width : inherit;
 	padding : 32px 0% 32px 0%;
-	background : url(./../images/banner.png) center;
+	background : url(./../images/banner/banner1.jpg) center;
 	max-width: 1200px;
 	margin: auto;
-}
+	text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
+  }
 .listeCommerces li a, #headerCommerce h1 {
 	color : white;
   	/*text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
@@ -35,13 +52,12 @@ ci dessous, css spécifique à la page commercants
 
 
 
-
-
+/*
 .listeCommerces a {
 	text-decoration : none;
 	color : black;
 	font-size : 15px;
-}
+}*/
 
 .commerces a {
  	color : rgb(245, 180, 0);
@@ -60,41 +76,64 @@ ci dessous, css spécifique à la page commercants
 
 /*à tester les images que j'ai mis à coté*/
 
-.buttonprimeurs {
+.buttonListShop {
+	background-size: cover;
+	height: 120px;
+	width: 120px;
+}
+
+.buttonListShop:hover {opacity: 0.8}
+
+
+/*
+.buttonprimeurs, .buttonrotissiers, .buttonpoissonniers, .buttonfromagers, .buttonepiciers,
+ .buttontraiteurs, .buttonbouchers, .buttoncavistes, .buttonboulangers{
+	background-size: cover;
+	height: 120px;
+	width: 120px;
+}
+.buttonprimeurs:hover, .buttonrotissiers:hover, .buttonpoissonniers:hover,
+ .buttonfromagers:hover, .buttonepiciers:hover, .buttontraiteurs:hover,
+  .buttonbouchers:hover, .buttoncavistes:hover, .buttonboulangers:hover {
+  	opacity: 0.8; font-size : 18px}
+
+
+/*.buttonprimeurs a{
 	background: url(../images/Commerce/png/asparagus.png) center no-repeat; /*bio-store.png 	(tous les legumes)*/
-	background-size: cover;}
+/*	background-size: cover;}
 .buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
-
-
+*/
+/*
 .buttonrotissiers {background: url(../images/Commerce/png/turkey.png) center no-repeat; /*woman-and-grill.png*/
-	background-size: cover;}
+/*	background-size: cover;}
 .buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
-
-.buttonpoissonniers {background: url(../images/Commerce/png/fish.png) center no-repeat; /*octopus.png 	shrimp.png*/
+*/
+/*
+.buttonpoissonniers {background: url(../images/Commerce/png/fish.png) center no-repeat; /*octopus.png 	shrimp.png
 	background-size: cover;}
 .buttonpoissonniers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonfromagers {background: url(../images/Commerce/png/cheese.png) center no-repeat; /*cheese-1.png*/
+.buttonfromagers {background: url(../images/Commerce/png/cheese.png) center no-repeat; /*cheese-1.png
 	background-size: cover;}
 .buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonepiciers {background: url(../images/Commerce/png/spices.png) center no-repeat; /*shopping-groceries.png*/
+.buttonepiciers {background: url(../images/Commerce/png/spices.png) center no-repeat; /*shopping-groceries.png
 	background-size: cover;}
 .buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttontraiteurs {background: url(../images/Commerce/png/sushi-1.png) center no-repeat; /*cauldron-chef.png*/
+.buttontraiteurs {background: url(../images/Commerce/png/sushi-1.png) center no-repeat; /*cauldron-chef.png
 	background-size: cover;}
 .buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonbouchers {background: url(../images/Commerce/png/ham.png) center no-repeat; /*salami.png 	butcher-shop.png*/
+.buttonbouchers {background: url(../images/Commerce/png/ham.png) center no-repeat; /*salami.png 	butcher-shop.png
 	background-size: cover;}
 .buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
 
-.buttoncavistes {background: url(../images/Commerce/png/glass-4.png) center no-repeat; /*winemaker.png*/
+.buttoncavistes {background: url(../images/Commerce/png/glass-4.png) center no-repeat; /*winemaker.png
 	background-size: cover;}
 .buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
 
-.buttonboulangers {background: url(../images/Commerce/png/bread-1.png) center no-repeat; /*bakery-vendor.png*/
+.buttonboulangers {background: url(../images/Commerce/png/bread-1.png) center no-repeat; /*bakery-vendor.png
 	background-size: cover;}
 .buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
 
@@ -124,7 +163,7 @@ ci dessous, css spécifique à la page commercants
 .listeCommerces{
 	display: flex;			
 	flex-flow: row wrap;	
-	justify-content: space-around;	
+	justify-content: space-between;	
 	align-items: center;
 	/*width : inherit;	*/	
 }
@@ -136,7 +175,7 @@ ci dessous, css spécifique à la page commercants
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
 	width: inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
-	margin: 5px 0px 0px 32px;
+	margin: 5px 0px 32px 0px;
 }
 
 .commerces {
@@ -160,7 +199,7 @@ ci dessous, css spécifique à la page commercants
 
 
 .listeCommerces li {
-	height: 120px;
-	width: 120px;
+	max-height: 120px;
+	max-width: 120px;
 	text-align: center;
 }

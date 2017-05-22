@@ -10,3 +10,7 @@
 }
 
 .adminStyle a:hover {color: rgb(120, 160, 120)}
+
+
+label, input, textarea, select {font-family: 'font'}
+/*.adminStyle h2~p {padding-left: 10px}

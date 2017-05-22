@@ -20,7 +20,7 @@
 			<?php include('templates/header.php'); ?>
 		</header>
 
-		<main class="grid grid-pad">
+		<main>
 			<?php echo $body_content; ?>			
 		</main>
 		
