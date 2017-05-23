@@ -49,7 +49,7 @@
 		Flight::render('about.php', array('commercant' => $poissoniers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Poissoniers'));
 	}
-	
+
 	function fromagers(){
 		$fromagers = Model::factory('commerce')
 			->where('numType',4)
@@ -101,6 +101,12 @@
 	function contact(){
 		Flight::render('contact.php', NULL, 'body_content');
 		Flight::render('layout.php', array('title' => 'Contact'));
+	}
+
+	function envoi(){
+		$transport = new Swift_SendmailTransport('/usr/sbin/exim -bs');
+		$mailer = new Swift_Mailer($transport);
+		Flight::render('contact.php', array('mailer' => $mailer), 'body_content');
 	}
 
 	function connexion(){

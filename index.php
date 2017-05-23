@@ -1,9 +1,10 @@
 <?php
-
+	include('config.php');
 	require 'libs/flight/Flight.php';
 	require 'controllers/route_methode.php';
 
-	require_once  'libs/Michelf/MarkdownExtra.inc.php';
+	require_once 'libs/Michelf/MarkdownExtra.inc.php';
+	require_once 'libs/lib/swift_required.php';
 	require_once 'libs/idiorm.php';
 	require_once 'libs/paris.php';
 	ORM::configure('sqlite:data/data.sqlite');
@@ -42,6 +43,7 @@
 		Flight::route('/creation_commerce', 'creation_commerce');
 		Flight::route('/suppression_commerce', 'suppression_commerce');
 		Flight::route('/modification_commerce', 'modification_commerce');
+		Flight::route('/envoi', 'envoi');
 	Flight::start();
 
 ?>

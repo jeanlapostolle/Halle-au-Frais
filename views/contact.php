@@ -6,18 +6,18 @@
 
 	<div class="col-1-1">
 		<div class="contact col-8-12">
-			<form id="contactform" method="post" action="envoi.php"> 
+			<form id="contactform" method="post" action="envoi">
 				<h3>Formulaire de contact</h3>
 				<p><p><label for="nom">Prénom : </label><p><input class="saisie" type="text" id="nom" name="nom" tabindex="1" /></p>
-				<p><p><label for="nom">Nom : </label><p><input class="saisie" type="text" id="nom" name="nom" tabindex="1" /></p>
+				<p><p><label for="prenom">Nom : </label><p><input class="saisie" type="text" id="prenom" name="prenom" tabindex="1" /></p>
 				<p><p><label for="email">Email : </label><p><input class="saisie" type="text" id="email" name="email" tabindex="2" /></p>
-				<p><p><label for="message">Ecrivez votre message dans la box ci-dessous (3000 caractères maximum). </label><label for="objet">Saisissez votre objet : </label><input class="saisie" type="text" id="ojet" name="ojet" tabindex="3" /></p><textarea class="msg" id="message" name="message" tabindex="4" cols="50" rows="8"></textarea></p>
+				<p><p><label for="message">Ecrivez votre message dans la box ci-dessous (3000 caractères maximum). </label><label for="objet">Saisissez votre objet : </label><input class="saisie" type="text" id="objet" name="objet" tabindex="3" /></p><textarea class="msg" id="message" name="message" tabindex="4" cols="50" rows="8"></textarea></p>
 				<div style="text-align:center;"><input type="submit" name="envoi" value=" Envoyer " /></div>
 			</form>
 		</div>
 
 		<!--<div class="mobile-col-1-1 separation"></div>-->
-		
+
 		<div class="col-4-12">
 			<div class="reseauxSoc">
 				<h3>Suivez nous !</h3>
@@ -169,7 +169,7 @@
 			</ul>
 		</div>
 
-		<div class="col-1-2">	
+		<div class="col-1-2">
 			<p>Pour toute question, vous pouvez joindre le responsable du parking au :
 			03 22 09 64 58</p>
 		</div>
