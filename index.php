@@ -1,18 +1,20 @@
 <?php
-	
+
 	require 'libs/flight/Flight.php';
 	require 'controllers/route_methode.php';
-	
+
+	require_once  'libs/Michelf/MarkdownExtra.inc.php';
 	require_once 'libs/idiorm.php';
 	require_once 'libs/paris.php';
 	ORM::configure('sqlite:data/data.sqlite');
-	
+
 	require_once 'models/article.php';
 	require_once 'models/commerce.php';
 	require_once 'models/manege.php';
 	require_once 'models/admin.php';
 	require_once 'models/type.php';
-	
+
+
 	Flight::route('/', 'accueil');
 	Flight::route('/actualites', 'news');
 		Flight::route('/actualite', 'actualite');
@@ -28,7 +30,7 @@
 		Flight::route('/boulangers', 'boulangers');
 	Flight::route('/contact', 'contact');
 	Flight::route('/connexion', 'connexion');
-	Flight::route('/deconnexion', 'deconnexion');	
+	Flight::route('/deconnexion', 'deconnexion');
 	Flight::route('/admin', 'admin');
 		Flight::route('/creation_compte', 'creation_compte');
 		Flight::route('/suppression_compte', 'suppression_compte');
@@ -39,7 +41,7 @@
 		Flight::route('/modification_article', 'modification_article');
 		Flight::route('/creation_commerce', 'creation_commerce');
 		Flight::route('/suppression_commerce', 'suppression_commerce');
-		Flight::route('/modification_commerce', 'modification_commerce');	
+		Flight::route('/modification_commerce', 'modification_commerce');
 	Flight::start();
-	
+
 ?>

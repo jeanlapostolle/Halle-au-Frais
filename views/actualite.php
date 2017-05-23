@@ -11,7 +11,7 @@
 			</header>
 			<p>
 				<div class="contenuarticle">
-					<?= $article->contenu;?>
+					<?= \Michelf\MarkdownExtra::defaultTransform($article->contenu);?>
 				</div>
 			</p>
 			<footer>
