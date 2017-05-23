@@ -4,7 +4,7 @@
 			<?php if(isset($message)) echo $message; ?>
 		</p>
 		<p>
-			<form method="post" action="http://localhost/Halle-au-Frais/connexion">
+			<form method="post" action="/connexion">
 				<p>
 					<p>
 						<label for="login">Login : </label>

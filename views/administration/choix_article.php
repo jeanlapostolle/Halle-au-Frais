@@ -2,11 +2,11 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification d'article </h2>
 		<p>
-			<form method="post" action="http://localhost/Halle-au-Frais/modification_article">
+			<form method="post" action="/modification_article">
 				<h3> Choisir un article : </h3>
 				<p>
 					<select name="modif" size="3">
-						<?php foreach($articles as $article):?> 
+						<?php foreach($articles as $article):?>
 							<option value=<?php echo $article->id ?>><?php echo 'titre : ' . $article->titre . ' | ' . 'auteur : ' . $article->auteur . ' | ' . 'date : ' . $article->date ?></option>
 						<?php endforeach; ?>
 					</select>
@@ -16,6 +16,6 @@
 				</p>
 			</form>
 		</p>
-		<p><a class="home" href="http://localhost/Halle-au-Frais/admin">Retour au menu d'administration</a></p>
+		<p><a class="home" href="/admin">Retour au menu d'administration</a></p>
 	</div>
-</div>	
+</div>

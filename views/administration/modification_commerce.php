@@ -2,11 +2,11 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification de commerce </h2>
 		<p>
-			<form method="post" action="http://localhost/Halle-au-Frais/modification_commerce">
+			<form method="post" action="/modification_commerce">
 				<h3> Choisir un commerce : </h3>
 				<p>
 					<select name="modif_commerce" size="3">
-						<?php foreach($commerces as $commerce):?> 
+						<?php foreach($commerces as $commerce):?>
 							<option value=<?php echo $commerce->id ?>><?php echo 'nom : ' . $commerce->nom . ' | ' . 'propriétaire : ' . $commerce->propriétaire ?></option>
 						<?php endforeach; ?>
 					</select>
@@ -16,7 +16,7 @@
 					<label for="liste_type_comm">Type : </label>
 					<br/>
 					<select name="liste_type_comm" size="3">
-						<?php foreach($type_commerce as $type):?> 
+						<?php foreach($type_commerce as $type):?>
 							<option value=<?php echo $type->id ?>><?php echo $type->nom ?></option>
 						<?php endforeach; ?>
 					</select>
@@ -42,7 +42,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="http://localhost/Halle-au-Frais/admin">Retour au menu d'administration</a>
+			<a class="home" href="/admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

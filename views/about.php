@@ -3,35 +3,35 @@
 		<h1> Les Commercants </h1>
 	</div>
 
-	<ul class="listeCommerces"> 
-		<li> <a href="http://localhost/Halle-au-Frais/primeurs"><img class="buttonListShop" src="images/Commerce/png/asparagus.png" title="Nos primeurs"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/rotissiers"><img class="buttonListShop" src="images/Commerce/png/turkey.png" title="Nos rotissiers"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/poissoniers"><img class="buttonListShop" src="images/Commerce/png/fish.png" title="Nos poissoniers"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/fromagers"><img class="buttonListShop" src="images/Commerce/png/cheese.png" title="Nos fromagers"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/epiciers"><img class="buttonListShop" src="images/Commerce/png/spices.png" title="Nos epiciers"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/traiteurs"><img class="buttonListShop" src="images/Commerce/png/sushi-1.png" title="Nos traiteurs"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/bouchers"><img class="buttonListShop" src="images/Commerce/png/ham.png" title="Nos bouchers"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/cavistes"><img class="buttonListShop" src="images/Commerce/png/glass-4.png" title="Nos cavistes"></a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/boulangers"><img class="buttonListShop" src="images/Commerce/png/bread-1.png" title="Nos boulangers"></a></li>
+	<ul class="listeCommerces">
+		<li> <a href="/primeurs"><img class="buttonListShop" src="images/Commerce/png/asparagus.png" title="Nos primeurs"></a></li>
+		<li> <a href="/rotissiers"><img class="buttonListShop" src="images/Commerce/png/turkey.png" title="Nos rotissiers"></a></li>
+		<li> <a href="/poissoniers"><img class="buttonListShop" src="images/Commerce/png/fish.png" title="Nos poissoniers"></a></li>
+		<li> <a href="/fromagers"><img class="buttonListShop" src="images/Commerce/png/cheese.png" title="Nos fromagers"></a></li>
+		<li> <a href="/epiciers"><img class="buttonListShop" src="images/Commerce/png/spices.png" title="Nos epiciers"></a></li>
+		<li> <a href="/traiteurs"><img class="buttonListShop" src="images/Commerce/png/sushi-1.png" title="Nos traiteurs"></a></li>
+		<li> <a href="/bouchers"><img class="buttonListShop" src="images/Commerce/png/ham.png" title="Nos bouchers"></a></li>
+		<li> <a href="/cavistes"><img class="buttonListShop" src="images/Commerce/png/glass-4.png" title="Nos cavistes"></a></li>
+		<li> <a href="/boulangers"><img class="buttonListShop" src="images/Commerce/png/bread-1.png" title="Nos boulangers"></a></li>
 
 		<!--
 		-> voir styleCommerce.css pour d'autres images <-S
 
-		<li class="buttonprimeurs"> <a href="http://localhost/Halle-au-Frais/primeurs">test</a></li>
-		<li> <a href="http://localhost/Halle-au-Frais/rotissiers"><img class="buttonrotissiers" src="images/Commerce/png/turkey.png"></a></li>
-		<li class="buttonpoissonniers"> <a href="http://localhost/Halle-au-Frais/poissoniers"></a></li> 
-		<li class="buttonfromagers"> <a href="http://localhost/Halle-au-Frais/fromagers"></a></li>
-		<li class="buttonepiciers"> <a href="http://localhost/Halle-au-Frais/epiciers"></a></li>
-		<li class="buttontraiteurs"> <a href="http://localhost/Halle-au-Frais/traiteurs"></a></li>
-		<li class="buttonbouchers"> <a href="http://localhost/Halle-au-Frais/bouchers"></a></li>
-		<li class="buttoncavistes"> <a href="http://localhost/Halle-au-Frais/cavistes"></a></li>
-		<li class="buttonboulangers"> <a href="http://localhost/Halle-au-Frais/boulangers"></a></li>-->
+		<li class="buttonprimeurs"> <a href="/primeurs">test</a></li>
+		<li> <a href="/rotissiers"><img class="buttonrotissiers" src="images/Commerce/png/turkey.png"></a></li>
+		<li class="buttonpoissonniers"> <a href="/poissoniers"></a></li>
+		<li class="buttonfromagers"> <a href="/fromagers"></a></li>
+		<li class="buttonepiciers"> <a href="/epiciers"></a></li>
+		<li class="buttontraiteurs"> <a href="/traiteurs"></a></li>
+		<li class="buttonbouchers"> <a href="/bouchers"></a></li>
+		<li class="buttoncavistes"> <a href="/cavistes"></a></li>
+		<li class="buttonboulangers"> <a href="/boulangers"></a></li>-->
 	</ul>
 
 	<div class="separation"></div>
 
 	<div class="parentCommerce">
-		<?php foreach($commercant as $com):?> 
+		<?php foreach($commercant as $com):?>
 			<div class="commerces">
 				<?php echo '<h2>' . $com->nom . '</h2>';
 				if(($com->description)!=''): ?>
@@ -42,10 +42,10 @@
 				<?php endif;
 				if(($com->Facebook)!=''): ?>
 					<a href=<?= $com->Facebook ?>>Facebook</a>
-				<?php endif; 
+				<?php endif;
 				if(($com->siteWeb)!=''): ?>
 					<a href=<?= $com->siteWeb ?>>Site Web</a>
-				<?php endif; 
+				<?php endif;
 				if(($com->mail)!=''): ?>
 					<p id="Commercemail"><?php echo 'E-mail : ' . $com->mail; ?></p>
 				<?php endif;

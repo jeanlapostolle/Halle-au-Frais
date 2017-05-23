@@ -5,7 +5,7 @@
 			<?php if(isset($message)) echo $message; ?>
 		</p>
 		<p>
-			<form method="post" action="http://localhost/Halle-au-Frais/creation_article">
+			<form method="post" action="/creation_article">
 				<p>
 					<label for="titre_article">Titre *</label>
 					<br/>
@@ -37,7 +37,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="http://localhost/Halle-au-Frais/admin">Retour au menu d'administration</a>
+			<a class="home" href="/admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

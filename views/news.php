@@ -23,7 +23,7 @@
 						<footer>
 							<div class="piedpage">
 								<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-								<form method="post" action="http://localhost/Halle-au-Frais/actualite">
+								<form method="post" action="/actualite">
 									<p><div class="bouton">
 										<input type="submit" value="Lire la suite">
    										<input type="hidden" name="id" value=<?= $article->id ?>></input>
@@ -36,5 +36,3 @@
 		<?php endforeach; ?>
 	</div>
 </div>
-
-

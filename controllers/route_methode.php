@@ -1,11 +1,11 @@
 <?php
-	
+
 	function accueil(){
 		$maneges = Model::factory('Manege')->find_many();
 		Flight::render('accueil.php', array('images' => $maneges), 'body_content');
 		Flight::render('layout.php', array('title' => 'Home Page'));
 	}
-	
+
 	function news(){
 		$articles = Model::factory('Article')
 			->order_by_desc('id')
@@ -19,7 +19,7 @@
 		Flight::render('actualite.php', array('article' => $article), 'body_content');
 		Flight::render('layout.php', array('title' => $article->titre));
 	}
-	
+
 	function about(){
 		$commerces = Model::factory('commerce')->find_many();
 		Flight::render('about.php', array('commercant' => $commerces), 'body_content');
@@ -33,7 +33,7 @@
 		Flight::render('about.php', array('commercant' => $primeurs), 'body_content');
 		Flight::render('layout.php', array('title' => 'Primeurs'));
 	}
-	
+
 	function rotissiers(){
 		$rotissiers = Model::factory('commerce')
 			->where('numType',2)
@@ -41,7 +41,7 @@
 		Flight::render('about.php', array('commercant' => $rotissiers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Rotissiers'));
 	}
-	
+
 	function poissoniers(){
 		$poissoniers = Model::factory('commerce')
 			->where('numType',3)
@@ -57,7 +57,7 @@
 		Flight::render('about.php', array('commercant' => $fromagers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Fromagers'));
 	}
-	
+
 	function epiciers(){
 		$epiciers = Model::factory('commerce')
 			->where('numType',5)
@@ -65,7 +65,7 @@
 		Flight::render('about.php', array('commercant' => $epiciers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Epiciers'));
 	}
-	
+
 	function traiteurs(){
 		$traiteurs = Model::factory('commerce')
 			->where('numType',6)
@@ -73,7 +73,7 @@
 		Flight::render('about.php', array('commercant' => $traiteurs), 'body_content');
 		Flight::render('layout.php', array('title' => 'Traiteurs'));
 	}
-	
+
 	function bouchers(){
 		$bouchers = Model::factory('commerce')
 			->where('numType',7)
@@ -81,7 +81,7 @@
 		Flight::render('about.php', array('commercant' => $bouchers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Bouchers'));
 	}
-	
+
 	function cavistes(){
 		$cavistes = Model::factory('commerce')
 			->where('numType',8)
@@ -89,7 +89,7 @@
 		Flight::render('about.php', array('commercant' => $cavistes), 'body_content');
 		Flight::render('layout.php', array('title' => 'Cavistes'));
 	}
-	
+
 	function boulangers(){
 		$boulangers = Model::factory('commerce')
 			->where('numType',9)
@@ -97,16 +97,16 @@
 		Flight::render('about.php', array('commercant' => $boulangers), 'body_content');
 		Flight::render('layout.php', array('title' => 'Boulangers'));
 	}
-	
+
 	function contact(){
 		Flight::render('contact.php', NULL, 'body_content');
 		Flight::render('layout.php', array('title' => 'Contact'));
 	}
-	
+
 	function connexion(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
 		}
@@ -115,20 +115,20 @@
 			if (($_POST['login'])!='' AND ($_POST['pass'])!='')
 			{
 				$login = $_POST['login'];
-				$pass = $_POST['pass']; 
-				
+				$pass = $_POST['pass'];
+
 				$user = Model::factory('admin')
 				->where('login', $login)
 				->where('mdp', $pass)
 				->find_one();
-				
+
 				if (isset($user->login) AND isset($user->mdp))
-				{ 
+				{
 					$_SESSION['login'] = $user->login;
 					$_SESSION['pass'] = $user->mdp;
 					$_SESSION['nom'] = $user->nom;
 					$_SESSION['prenom'] = $user->prenom;
-					
+
 					Flight::render('administration/menu_admin.php', NULL, 'body_content');
 					Flight::render('layout.php', array('title' => 'Menu Admin'));
 				}
@@ -150,21 +150,21 @@
 			Flight::render('layout.php', array('title' => 'Connexion'));
 		}
 	}
-	
+
 	function erreur_authentification($message){
 		Flight::render('administration/erreur_authentification.php', array('message' => $message), 'body_content');
 		Flight::render('layout.php', array('title' => 'Erreur'));
 	}
-	
+
 	function validation($message){
 		Flight::render('administration/validation.php', array('message' => $message), 'body_content');
 		Flight::render('layout.php', array('title' => 'Validation'));
 	}
-	
+
 	function deconnexion(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			Flight::render('administration/deconnexion.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Deconnexion'));
 			session_destroy();
@@ -174,11 +174,11 @@
 			erreur_authentification("Vous n'êtes pas connecté.");
 		}
 	}
-	
+
 	function admin(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
 		}
@@ -187,11 +187,11 @@
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
 		}
 	}
-	
+
 	function creation_compte(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			if (isset($_POST['login']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']))
 			{
 				if(($_POST['login'] != '') AND ($_POST['pass'] != '') AND ($_POST['nom'] != '') AND ($_POST['prenom'] != ''))
@@ -226,13 +226,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function suppression_compte(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$compte_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['suppr']))
 			{
@@ -249,13 +249,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function modification_compte(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$comptes_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['modif']))
 			{
@@ -266,13 +266,13 @@
 			else if (isset($_POST['login_modif']) AND isset($_POST['pass_modif']) AND isset($_POST['nom_modif']) AND isset($_POST['prenom_modif']))
 			{
 					$compte_admin = Model::factory('admin')->find_one($_POST['id_admin']);
-					if(($_POST['login_modif'])!='') 
+					if(($_POST['login_modif'])!='')
 						$compte_admin->login = $_POST['login_modif'];
-					if(($_POST['pass_modif'])!='') 
+					if(($_POST['pass_modif'])!='')
 						$compte_admin->mdp = $_POST['pass_modif'];
-					if(($_POST['nom_modif'])!='') 
+					if(($_POST['nom_modif'])!='')
 						$compte_admin->nom = $_POST['nom_modif'];
-					if(($_POST['prenom_modif'])!='') 
+					if(($_POST['prenom_modif'])!='')
 						$compte_admin->prenom = $_POST['prenom_modif'];
 					$compte_admin->save();
 					validation("Modification validée !");
@@ -286,13 +286,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function creation_article(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
 			{
 				if(($_POST['titre_article'] != '') AND ($_POST['desc_article'] != '') AND ($_POST['contenu_article'] != '') AND ($_POST['image_article'] != '') AND ($_POST['desc_image_article'] != ''))
@@ -323,13 +323,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function suppression_article(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['suppr_article']))
 			{
@@ -346,13 +346,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function modification_article(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['modif']))
 			{
@@ -363,15 +363,15 @@
 			else if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
 			{
 					$article = Model::factory('article')->find_one($_POST['id_article']);
-					if(($_POST['titre_article'])!='') 
+					if(($_POST['titre_article'])!='')
 						$article->titre = htmlentities($_POST['titre_article']);
-					if(($_POST['desc_article'])!='') 
+					if(($_POST['desc_article'])!='')
 						$article->description = htmlentities($_POST['desc_article']);
-					if(($_POST['contenu_article'])!='') 
+					if(($_POST['contenu_article'])!='')
 						$article->contenu = htmlentities($_POST['contenu_article']);
-					if(($_POST['image_article'])!='') 
+					if(($_POST['image_article'])!='')
 						$article->image = htmlentities($_POST['image_article']);
-					if(($_POST['desc_image_article'])!='') 
+					if(($_POST['desc_image_article'])!='')
 						$article->desc_image = htmlentities($_POST['desc_image_article']);
 					$article->date = date("d/m/Y");
 					$article->save();
@@ -386,13 +386,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function creation_commerce(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$type_commerce = Model::factory('type')->find_many();
 			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['prop_comm']) AND isset($_POST['fb_comm']) AND isset($_POST['web_comm']) AND isset($_POST['mail_comm']) AND isset($_POST['tel_comm']))
 			{
@@ -425,13 +425,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function suppression_commerce(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$commerces = Model::factory('commerce')->find_many();
 			if (isset($_POST['suppr_commerce']))
 			{
@@ -448,13 +448,13 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 	function modification_commerce(){
 		session_start();
 		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
-		{	
+		{
 			$commerces = Model::factory('commerce')->find_many();
 			$type_commerce = Model::factory('type')->find_many();
 			if (isset($_POST['modif_commerce']) AND isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
@@ -484,7 +484,7 @@
 		else
 		{
 			erreur_authentification("Vous n'avez pas les droits nécessaires pour accéder au panneau d'administration.");
-		}	
+		}
 	}
-	
+
 ?>

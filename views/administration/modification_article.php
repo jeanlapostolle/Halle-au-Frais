@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification d'article </h2>
 		<p>
-			<form method="post" action="http://localhost/Halle-au-Frais/modification_article">
+			<form method="post" action="/modification_article">
 				<h3> Saisir les nouvelles informations : </h3>
 				<p>
 					<label for="titre_article">Titre</label>
@@ -36,7 +36,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="http://localhost/Halle-au-Frais/admin">Retour au menu d'administration</a>
+			<a class="home" href="/admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>
