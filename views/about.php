@@ -30,7 +30,7 @@
 
 	<div class="separation"></div>
 
-	<div class="parentCommerce">
+	<div id="searchresult" class="parentCommerce">
 		<?php foreach($commercant as $com):?>
 			<div class="commerces">
 				<?php echo '<h2>' . $com->nom . '</h2>';
