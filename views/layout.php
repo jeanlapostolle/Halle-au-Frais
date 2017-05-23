@@ -4,6 +4,7 @@
 	<head>
 		<title><?php echo $title; ?></title>
 		<meta charset='utf-8' />
+		<base href="<?php echo BASE_URI; ?>">
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"> 
 		<link rel="stylesheet" type="text/css" href="css/grid.css">

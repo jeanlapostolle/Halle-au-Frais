@@ -43,8 +43,8 @@
 	pas fini, pour afficher l'icone en version mobile
 	-->
 	<ul id="headerParent">
-		<li><a class="home" href="/">Accueil</a></li>
-		<li><a class="case" href="/actualites">Actualités</a></li>
+		<li><a class="home" href="">Accueil</a></li>
+		<li><a class="case" href="actualites">Actualités</a></li>
 		<li><a href="/"><img src="images/logo-halle.png" alt="Logo Halle au Frais"/></a></li>
 		<li><a class="case" href="/commercants">Commerçants</a></li>
 		<li><a class="case" href="/contact">Contact</a></li>
