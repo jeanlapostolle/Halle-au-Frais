@@ -11,28 +11,31 @@
 <div class="grid grid-pad">
     <div class="col-1-1">
 		<?php foreach($articles as $article):?>
-			<div class="col-1-3">
-				<article class="actualite">
-					<header>
-						<div class="titre article">
-							<h2><?= $article->titre;?></h2>
-						</div>
-							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:360px;height:228px;">
-						</header>
-					<p><?= $article->description;?></p>
-						<footer>
-							<div class="piedpage">
-								<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-								<form method="post" action="/actualite">
-									<p><div class="bouton">
-										<input type="submit" value="Lire la suite">
-   										<input type="hidden" name="id" value=<?= $article->id ?>></input>
-									</div></p>
-								</form>
-							</div>
-						</footer>
-				</article>
-			</div>
+			<article class="col-1-3 actualite">
+				<header class="headArt">
+					<h2><?= $article->titre;?></h2>
+				</header>
+
+				<p>
+					<div class="imgArt"> 
+						<img src=<?= $article->image?> alt=<?=$article->desc_image?> >
+					</div>
+					<div class="textArt">
+						<?= $article->description;?>
+					</div>
+				</p>
+
+				<footer class="piedpage">
+					<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
+					<form method="post" action="/actualite">
+						<p class="bouton">
+							<input type="submit" value="Lire la suite">
+   							<input type="hidden" name="id" value=<?= $article->id ?> >
+						</p>
+					</form>
+				</footer>
+			</article>
 		<?php endforeach; ?>
+
 	</div>
 </div>
