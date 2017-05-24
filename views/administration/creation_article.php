@@ -36,6 +36,7 @@
 				</p>
 			</form>
 		</p>
+
 		<p>
 			<a class="home" href="/admin">Retour au menu d'administration</a>
 		</p>

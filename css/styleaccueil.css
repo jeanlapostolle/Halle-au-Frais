@@ -54,6 +54,7 @@ h1 {text-transform : capitalize}
 	margin: auto;
 	display: block;
 	color: #000000;
+	font-family: 'titre';
 }
 
 .terroir.titre{

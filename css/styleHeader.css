@@ -1,7 +1,7 @@
 header {border-bottom: 1px rgba(100, 160, 100, 0.5) solid}
 
 header nav{padding: 10px 0px 10px 0px}
-header nav {background-color: rgba(190, 220, 0 , 0.5)}	/**/
+header nav {background-color: rgba(190, 220, 0 , 0.5)}	/*#BEDC00*/
 
 header a {
 	text-transform : uppercase;
@@ -20,7 +20,7 @@ header a {
 
 header nav ul {
 	padding-left: 0px;
-	max-width: 800px; 
+	max-width: 800px;
 	margin: 0 auto;
 }
 
@@ -61,5 +61,3 @@ header nav a:hover {color: green; border-color: green;}
 	align-items: center;
 	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 }
-
-

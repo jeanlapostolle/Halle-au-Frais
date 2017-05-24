@@ -1,7 +1,7 @@
 <?php
 
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
+	// error_reporting(E_ALL);
+	// ini_set('display_errors', 1);
 	include('config.php');
 	require 'libs/flight/Flight.php';
 	require 'controllers/route_methode.php';
