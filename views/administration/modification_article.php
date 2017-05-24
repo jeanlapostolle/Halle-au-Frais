@@ -35,6 +35,7 @@
 				<input type="hidden" name="id_article" value=<?= $article->id ?>></input>
 			</form>
 		</p>
+	
 		<p>
 			<a class="home" href="/admin">Retour au menu d'administration</a>
 		</p>

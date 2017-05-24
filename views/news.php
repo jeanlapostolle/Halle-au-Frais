@@ -19,6 +19,8 @@
 						</div>
 							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:100px;height:75px;">
 						</header>
+
+
 					<p><?= $article->description;?></p>
 						<footer>
 							<div class="piedpage">
