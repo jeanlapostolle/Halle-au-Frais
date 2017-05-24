@@ -22,10 +22,12 @@ h1 {
 }
 
 .actualite{
-	width: 360px;
-	height: 408px;
-	margin-bottom: 15px;
-	display: block;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;	
+	align-items: center;
+	width: inherit;	
+	margin: 5px 0px 32px 0px;
 }
 
 h2{

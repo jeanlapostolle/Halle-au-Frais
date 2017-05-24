@@ -1,4 +1,7 @@
 <?php
+
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
 	include('config.php');
 	require 'libs/flight/Flight.php';
 	require 'controllers/route_methode.php';
@@ -18,17 +21,17 @@
 
 	Flight::route('/', 'accueil');
 	Flight::route('/actualites', 'news');
-		Flight::route('/actualite', 'actualite');
+	Flight::route('/actualite', 'actualite');
 	Flight::route('/commercants', 'about');
-		Flight::route('/primeurs', 'primeurs');
-		Flight::route('/rotissiers', 'rotissiers');
-		Flight::route('/poissoniers', 'poissoniers');
-		Flight::route('/fromagers', 'fromagers');
-		Flight::route('/epiciers', 'epiciers');
-		Flight::route('/traiteurs', 'traiteurs');
-		Flight::route('/bouchers', 'bouchers');
-		Flight::route('/cavistes', 'cavistes');
-		Flight::route('/boulangers', 'boulangers');
+	Flight::route('/primeurs', 'primeurs');
+	Flight::route('/rotissiers', 'rotissiers');
+	Flight::route('/poissoniers', 'poissoniers');
+	Flight::route('/fromagers', 'fromagers');
+	Flight::route('/epiciers', 'epiciers');
+	Flight::route('/traiteurs', 'traiteurs');
+	Flight::route('/bouchers', 'bouchers');
+	Flight::route('/cavistes', 'cavistes');
+	Flight::route('/boulangers', 'boulangers');
 	Flight::route('/contact', 'contact');
 	Flight::route('/connexion', 'connexion');
 	Flight::route('/deconnexion', 'deconnexion');
