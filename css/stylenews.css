@@ -1,0 +1,49 @@
+h1 {
+	text-transform : capitalize;
+}
+
+.whoweare h1 {
+	text-align: center;
+}
+
+.whoweare li {
+	list-style : none;
+	text-align : center;
+}
+
+@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
+@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
+
+.whoweare .msg {width : 100%}
+
+.banniere_actualite{
+	margin: auto;
+	display: inline-block;
+}
+
+.actualite{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;	
+	align-items: center;
+	width: inherit;	
+	margin: 5px 0px 32px 0px;
+}
+
+h2{
+	text-align: center;
+}
+
+.titre.article {
+	background-color: rgba(190, 220, 0 , 0.5);
+	padding: 1px 1px 1px 1px;
+}
+
+.piedpage{
+	font-style: italic;
+
+}
+
+.bouton{
+	text-align: center;
+}

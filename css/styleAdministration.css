@@ -1,0 +1,16 @@
+.adminStyle {font-family: 'font'}
+
+.adminStyle h2 {text-transform: uppercase}
+
+.adminStyle h2, .adminStyle h3 {font-family: 'titre'}
+
+.adminStyle a {
+	color: black;
+	text-decoration: none;
+}
+
+.adminStyle a:hover {color: rgb(120, 160, 120)}
+
+
+label, input, textarea, select {font-family: 'font'}
+/*.adminStyle h2~p {padding-left: 10px}

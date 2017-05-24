@@ -1,24 +1,40 @@
-<h1> Les Actualités </h1>
+<link rel="stylesheet" type="text/css" href="css/stylenews.css">
 
-<?php foreach($articles as $article):?>
-	<article class="actualite">
-		<header>
-			<h2><?= $article->titre;?><h2>
-			<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:304px;height:228px;">
-		</header>
-		<p>
-			<?= $article->description;?>
-		</p>
-		<footer>
-			<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-			<form method="post" action="http://localhost/Halle-au-Frais/actualite">
-				<p>
-					<input type="submit" value="Lire la suite">
-   					<input type="hidden" name="id" value=<?= $article->id ?>></input>
-				</p>
-			</form>
-		</footer>
-	</article>
-<?php endforeach; ?>
+<div class="grid grid-pad">
+    <div class="col-1-1">
+		<div class="banniere_actualite">
+			<img src="images/actualites.jpg" alt="actualites" />
+		</div>
+	</div>
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-1-1">
+		<?php foreach($articles as $article):?>
+			<div class="col-1-3">
+				<article class="actualite">
+					<header>
+						<div class="titre article">
+							<h2><?= $article->titre;?></h2>
+						</div>
+							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:100px;height:75px;">
+						</header>
 
 
+					<p><?= $article->description;?></p>
+						<footer>
+							<div class="piedpage">
+								<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
+								<form method="post" action="/actualite">
+									<p><div class="bouton">
+										<input type="submit" value="Lire la suite"></input>
+   										<input type="hidden" name="id" value=<?= $article->id ?>></input>
+									</div></p>
+								</form>
+							</div>
+						</footer>
+				</article>
+			</div>
+		<?php endforeach; ?>
+	</div>
+</div>
