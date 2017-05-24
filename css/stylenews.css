@@ -33,12 +33,13 @@ h2{
 }
 
 .titre.article {
-	background-color: #db8a00;
+	background-color: rgba(190, 220, 0 , 0.5);
 	padding: 1px 1px 1px 1px;
 }
 
 .piedpage{
 	font-style: italic;
+
 }
 
 .bouton{

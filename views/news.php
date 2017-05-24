@@ -17,7 +17,7 @@
 						<div class="titre article">
 							<h2><?= $article->titre;?></h2>
 						</div>
-							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:360px;height:228px;">
+							<img src=<?= $article->image?> alt=<?=$article->desc_image?> style="width:100px;height:75px;">
 						</header>
 					<p><?= $article->description;?></p>
 						<footer>
@@ -25,7 +25,7 @@
 								<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
 								<form method="post" action="/actualite">
 									<p><div class="bouton">
-										<input type="submit" value="Lire la suite">
+										<input type="submit" value="Lire la suite"></input>
    										<input type="hidden" name="id" value=<?= $article->id ?>></input>
 									</div></p>
 								</form>
