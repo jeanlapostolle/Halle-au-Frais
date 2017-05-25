@@ -462,13 +462,13 @@
 					$commerce = Model::factory('commerce')->find_one($_POST['id_commerce']);
 					if(($_POST['nom_comm'])!='')
 						$commerce->nom = htmlentities($_POST['nom_comm']);
-					if(($_POST['desc_article'])!='')
+					if(($_POST['desc_comm'])!='')
 						$commerce->description = htmlentities($_POST['desc_comm']);
 					if(($_POST['prop_comm'])!='')
 						$commerce->propriétaire = htmlentities($_POST['prop_comm']);
 					if(($_POST['liste_type_comm'])!='')
 						$commerce->numType = htmlentities($_POST['liste_type_comm']);
-					$article->save();
+					$commerce->save();
 					validation("Modification validée !");
 			}
 			else

@@ -16,7 +16,7 @@
 				<p>
 					<label for="nom_comm">Nom : </label>
 					<br>
-					<textarea rows="1" cols="40" type="text" name="prop_comm" id="prop_comm"><?php echo $commerce->nom; ?></textarea>
+					<textarea rows="1" cols="40" type="text" name="nom_comm" id="nom_comm"><?php echo $commerce->nom; ?></textarea>
 				</p>
 				<p>
 					<label for="prop_comm">Propriétaire : </label>
