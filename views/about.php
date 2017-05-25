@@ -4,15 +4,15 @@
 	</div>
 
 	<ul class="listeCommerces">
-		<li> <a href="/primeurs"><img class="buttonListShop" src="images/Commerce/png/asparagus.png" title="Nos primeurs"></a></li>
-		<li> <a href="/rotissiers"><img class="buttonListShop" src="images/Commerce/png/turkey.png" title="Nos rotissiers"></a></li>
-		<li> <a href="/poissoniers"><img class="buttonListShop" src="images/Commerce/png/fish.png" title="Nos poissoniers"></a></li>
-		<li> <a href="/fromagers"><img class="buttonListShop" src="images/Commerce/png/cheese.png" title="Nos fromagers"></a></li>
-		<li> <a href="/epiciers"><img class="buttonListShop" src="images/Commerce/png/spices.png" title="Nos epiciers"></a></li>
-		<li> <a href="/traiteurs"><img class="buttonListShop" src="images/Commerce/png/sushi-1.png" title="Nos traiteurs"></a></li>
-		<li> <a href="/bouchers"><img class="buttonListShop" src="images/Commerce/png/ham.png" title="Nos bouchers"></a></li>
-		<li> <a href="/cavistes"><img class="buttonListShop" src="images/Commerce/png/glass-4.png" title="Nos cavistes"></a></li>
-		<li> <a href="/boulangers"><img class="buttonListShop" src="images/Commerce/png/bread-1.png" title="Nos boulangers"></a></li>
+		<li> <a href="primeurs"><img class="buttonListShop" src="images/Commerce/png/asparagus.png" title="Nos primeurs"></a></li>
+		<li> <a href="rotissiers"><img class="buttonListShop" src="images/Commerce/png/turkey.png" title="Nos rotissiers"></a></li>
+		<li> <a href="poissoniers"><img class="buttonListShop" src="images/Commerce/png/fish.png" title="Nos poissoniers"></a></li>
+		<li> <a href="fromagers"><img class="buttonListShop" src="images/Commerce/png/cheese.png" title="Nos fromagers"></a></li>
+		<li> <a href="epiciers"><img class="buttonListShop" src="images/Commerce/png/spices.png" title="Nos epiciers"></a></li>
+		<li> <a href="traiteurs"><img class="buttonListShop" src="images/Commerce/png/sushi-1.png" title="Nos traiteurs"></a></li>
+		<li> <a href="bouchers"><img class="buttonListShop" src="images/Commerce/png/ham.png" title="Nos bouchers"></a></li>
+		<li> <a href="cavistes"><img class="buttonListShop" src="images/Commerce/png/glass-4.png" title="Nos cavistes"></a></li>
+		<li> <a href="boulangers"><img class="buttonListShop" src="images/Commerce/png/bread-1.png" title="Nos boulangers"></a></li>
 
 		<!--
 		-> voir styleCommerce.css pour d'autres images <-S

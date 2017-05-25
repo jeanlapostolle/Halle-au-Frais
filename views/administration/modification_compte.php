@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification de compte </h2>
 		<p>
-			<form method="post" action="/modification_compte">
+			<form method="post" action="modification_compte">
 				<h3> Saisir les nouvelles informations : </h3>
 				<p>
 					<label for="login_modif">Login : </label>
@@ -27,7 +27,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

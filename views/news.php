@@ -27,7 +27,7 @@
 
 				<footer class="piedpage">
 					<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-					<form method="post" action="/actualite">
+					<form method="post" action="actualite">
 						<p class="bouton">
 							<input type="submit" value="Lire la suite">
    							<input type="hidden" name="id" value=<?= $article->id ?> >

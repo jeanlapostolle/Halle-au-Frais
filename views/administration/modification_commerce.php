@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification de commerce </h2>
 		<p>
-			<form method="post" action="/modification_commerce">
+			<form method="post" action="modification_commerce">
 				<h3> Choisir un commerce : </h3>
 				<p>
 					<select name="modif_commerce" size="3">
@@ -42,7 +42,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

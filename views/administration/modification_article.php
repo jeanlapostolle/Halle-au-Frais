@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Modification d'article </h2>
 		<p>
-			<form method="post" action="/modification_article">
+			<form method="post" action="modification_article">
 				<h3> Saisir les nouvelles informations : </h3>
 				<p>
 					<label for="titre_article">Titre</label>
@@ -37,7 +37,7 @@
 		</p>
 	
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

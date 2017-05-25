@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Suppression d'article </h2>
 		<p>
-			<form method="post" action="/suppression_article">
+			<form method="post" action="suppression_article">
 				<h3>Choisir un article : </h3>
 				<p>
 					<select name="suppr_article" size="3">
@@ -17,7 +17,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>
