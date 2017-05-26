@@ -83,8 +83,14 @@ h1 {text-transform : capitalize}
 	font-size: 28px;
 	text-decoration: none;
 	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-	
-	
+}
+
+.anchor{
+  text-decoration: none;
+}
+
+.text:link{
+  text-decoration: none;
 }
 
 .button.primeurs {
