@@ -11,38 +11,44 @@ h1 {
 }
 
 .banniere_actualite{
-	flex: row;
-	align-items: center;
+	max-width: 100%;
 	margin: auto;
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	align-items: center;
 }
 
 .actualite{
-	border: 2px red dotted;
+	border-color: rgb(32,32,32);
+	border-width: 1px;
+	border-radius: 12px;
+	border-style: dashed;
+	text-transform: justify;
 	display: flex;		/*tous les blocs (li)s'alignent s'il le peuvent*/
 	flex-flow: column wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
 	margin: auto;
     max-width: 900px;
-    margin: auto;
     min-width: 320px;
     position: relative;
 }
 
 h2{
-	text-align: center
+	text-align: center;
+	text-transform: uppercase
 }
 
 .imgArt{
-	width: inherit;
-	flex: row;
+	width : inherit;
 	align-items: center;
-	margin: auto;
+	margin-bottom: 15px;
 	position: relative;
 	display: flex;
 	justify-content: space-around;
 	max-width: 150px;
 	min-width: 150px;
+	
 }
 
 .textArt{
@@ -51,6 +57,7 @@ h2{
 	text-align: justify;
 	position: relative;
 	margin: auto;
+	color : grey
 }
 
 .piedpage{
@@ -58,7 +65,7 @@ h2{
 	font-style: italic;
 	margin: auto;
 	color: grey;
-	background-color: white;
+	background-color: grey;
 }
 
 .bouton{

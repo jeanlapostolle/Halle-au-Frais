@@ -82,8 +82,11 @@ h1 {text-transform : capitalize}
   	border: none;
   	height: 200px;
   	width: 200px;
-  	display: inline-block;
-  	margin: auto;
+  	display: flex;
+  	flex-flow: row wrap;
+  	margin-bottom: 15px;
+  	align-items: center;
+  	position: relative;
 }
 
 /*
