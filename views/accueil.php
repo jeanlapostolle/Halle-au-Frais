@@ -71,41 +71,41 @@
 </div>
 
 <div class="grid grid-pad">
-   	<div class="col-1-1">
-   		<div class="col-1-3 button">
-       		<a href="/primeurs#searchresult" class="anchor"><button class="button primeurs"><span class="texte">Primeurs </span></button></a>
-       	</div>
-
-       	<div class="col-1-3 button">
-       		<a href="/rotissiers#searchresult" class="anchor"><button class="button rotissiers"><span class="texte">Rotissiers </span></button></a>
-       	</div>
-
-       	<div class="col-1-3 button">
-   	 		<a href="/poissoniers#searchresult" class="anchor"><button class="button poissonniers"><span class="texte">Poissonniers </span></button></a>
-   		</div>
-
-   		<div class="col-1-3 button">
-       		<a href="/fromagers#searchresult" class="anchor"><button class="button fromagers"><span class="texte">Fromagers </span></button></a>
-       	</div>
-
-       	<div class="col-1-3 button">
-   	 		<a href="/epiciers#searchresult" class="anchor"><button class="button epiciers"><span class="texte">Epiciers </span></button></a>
-       	</div>
-
-       	<div class="col-1-3 button">
-       		<a href="/traiteurs#searchresult" class="anchor"><button class="button traiteurs"><span class="texte">Traiteurs </span></button></a>
-  		</div>
-
-       	<div class="col-1-3 button">
-       		<a href="/bouchers#searchresult" class="anchor"><button class="button bouchers"><span class="texte">Bouchers </span></button></a>
-       	</div>
-
-        <div class="col-1-3 button">
-        	<a href="/cavistes#searchresult" class="anchor"><button class="button cavistes"><span class="texte">Cavistes </span></button></a>
-        </div>
-
-        <div class="col-1-3 button">
-        	<a href="/boulangers#searchresult" class="anchor"><button class="button boulangers"><span class="texte">Boulangers</span></button></a>
-        </div>
+ 	<div class="col-1-1 rubriqueButton">
+   	<div class="col-1-3 button">
+     	<a href="/primeurs#searchresult" class="anchor"><button class="button primeurs"><span class="texte">Primeurs </span></button></a>
     </div>
+
+   	<div class="col-1-3 button">
+    	<a href="/rotissiers#searchresult" class="anchor"><button class="button rotissiers"><span class="texte">Rotissiers </span></button></a>
+   	</div>
+
+    <div class="col-1-3 button">
+   	 	<a href="/poissoniers#searchresult" class="anchor"><button class="button poissonniers"><span class="texte">Poissonniers </span></button></a>
+   	</div>
+
+   	<div class="col-1-3 button">
+   		<a href="/fromagers#searchresult" class="anchor"><button class="button fromagers"><span class="texte">Fromagers </span></button></a>
+    </div>
+
+   	<div class="col-1-3 button">
+	 		<a href="/epiciers#searchresult" class="anchor"><button class="button epiciers"><span class="texte">Epiciers </span></button></a>
+   	</div>
+
+   	<div class="col-1-3 button">
+      <a href="/traiteurs#searchresult" class="anchor"><button class="button traiteurs"><span class="texte">Traiteurs </span></button></a>
+  	</div>
+
+   	<div class="col-1-3 button">
+      <a href="/bouchers#searchresult" class="anchor"><button class="button bouchers"><span class="texte">Bouchers </span></button></a>
+  	</div>
+
+    <div class="col-1-3 button">
+    	<a href="/cavistes#searchresult" class="anchor"><button class="button cavistes"><span class="texte">Cavistes </span></button></a>
+    </div>
+
+    <div class="col-1-3 button">
+    	<a href="/boulangers#searchresult" class="anchor"><button class="button boulangers"><span class="texte">Boulangers</span></button></a>
+    </div>
+  </div>
 </div>
