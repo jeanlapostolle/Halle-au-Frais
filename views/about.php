@@ -1,6 +1,6 @@
 <div id="pageCommercants">
 	<div id="headerCommerce">
-		<h1> Les Commercants </h1>
+		<h1> Nos Commercants </h1>
 	</div>
 
 	<ul class="listeCommerces">

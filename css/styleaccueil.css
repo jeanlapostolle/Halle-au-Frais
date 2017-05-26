@@ -1,17 +1,5 @@
 h1 {text-transform : capitalize}
 
-.whoweare h1 {text-align: center}
-
-.whoweare li {
-	list-style : none;
-	text-align : center;
-}
-
-@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
-@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
-
-.whoweare .msg {width : 100%}
-
 .slider.content{
   max-width: 1270px;
   position: relative;
@@ -59,7 +47,7 @@ h1 {text-transform : capitalize}
 
 .terroir.titre{
 	font-size: 35px;
-	width: 400px;
+	width: inherit;
 	height: 90px;
 	font-weight: bold;
 	text-align: center;
@@ -73,11 +61,8 @@ h1 {text-transform : capitalize}
 
 .button {
 	cursor: pointer;
+	font-weight: bold;
 	border-radius: 4px;
-	font-size: 28px;
-	font-style: bold;
-  	color: #000000;
-  	text-align: center;
   	border-radius: 6px;
   	border: none;
   	height: 200px;
@@ -85,24 +70,21 @@ h1 {text-transform : capitalize}
   	display: flex;
   	flex-flow: row wrap;
   	margin-bottom: 15px;
+  	margin-right: 60px;
+  	margin-left: 60px;
   	align-items: center;
   	position: relative;
+  	text-align: center;
 }
 
-/*
-Thibault : mise en commentaire car il ne faut jamais toucher aux balise simple grid;
-.col-1-3 {
-	width: 300px;
-	display: block;
-	margin: auto;
-	padding-left: 150px;
-	padding-bottom: 25px;
-}*/
-
 .texte {
+	width: inherit;
 	color: #ffffff;
-	font-weight: bold;
+	font-size: 28px;
+	text-decoration: none;
 	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	
+	
 }
 
 .button.primeurs {

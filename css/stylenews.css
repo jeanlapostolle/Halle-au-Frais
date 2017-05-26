@@ -1,13 +1,26 @@
+#headerNews{
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	background : url(./../images/banner/terroir.jpg) center;
+	max-width: 1200px;
+	margin: auto;
+	color: white;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);
+	text-align: center;
+}
+
 h1 {
 	text-transform : capitalize;
 }
 
-.headArt {
+#headArt {
 	width: inherit;
 	flex: row;
 	align-items: center;
-	margin: auto;
 	background-color: white;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	max-width: 356px;
 }
 
 .banniere_actualite{
@@ -23,15 +36,15 @@ h1 {
 	border-width: 1px;
 	border-radius: 12px;
 	border-style: dashed;
-	text-transform: justify;
 	display: flex;		/*tous les blocs (li)s'alignent s'il le peuvent*/
 	flex-flow: column wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
 	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
-	margin: auto;
-    max-width: 900px;
-    min-width: 320px;
+	margin: 5px 5px 5px 5px;
+    max-width: 356px;
+    min-width: 250px;
     position: relative;
+    width: 356px;
 }
 
 h2{
@@ -51,21 +64,22 @@ h2{
 	
 }
 
-.textArt{
+#textArt{
 	width: inherit;
-	max-width: 30%;
-	text-align: justify;
+	text-transform: justify;
 	position: relative;
-	margin: auto;
+	margin-left: 10px;
 	color : grey
 }
 
-.piedpage{
+#piedpage{
 	width: inherit;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
 	font-style: italic;
+	background-color: #B3B6B7;
+	text-align: center;
 	margin: auto;
-	color: grey;
-	background-color: grey;
 }
 
 .bouton{
