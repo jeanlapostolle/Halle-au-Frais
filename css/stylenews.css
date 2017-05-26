@@ -20,7 +20,7 @@ h1 {
 	background-color: white;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
-	max-width: 356px;
+	max-width: 230px;
 }
 
 .banniere_actualite{
@@ -68,8 +68,9 @@ h2{
 	width: inherit;
 	text-transform: justify;
 	position: relative;
-	margin-left: 10px;
-	color : grey
+	margin: auto;
+	color : grey;
+	max-width: 120px;
 }
 
 #piedpage{

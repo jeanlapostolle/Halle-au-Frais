@@ -75,13 +75,13 @@ h1 {text-transform : capitalize}
   	align-items: center;
   	position: relative;
   	text-align: center;
+  	text-decoration: none;
 }
 
 .texte {
 	width: inherit;
 	color: #ffffff;
 	font-size: 28px;
-	text-decoration: none;
 	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 
