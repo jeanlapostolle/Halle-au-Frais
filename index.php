@@ -2,6 +2,8 @@
 
 	// error_reporting(E_ALL);
 	// ini_set('display_errors', 1);
+	session_start();
+	
 	include('config.php');
 	require 'libs/flight/Flight.php';
 	require 'controllers/route_methode.php';
@@ -36,17 +38,17 @@
 	Flight::route('/connexion', 'connexion');
 	Flight::route('/deconnexion', 'deconnexion');
 	Flight::route('/admin', 'admin');
-		Flight::route('/creation_compte', 'creation_compte');
-		Flight::route('/suppression_compte', 'suppression_compte');
-		Flight::route('/modification_compte', 'modification_compte');
-		Flight::route('/modification_compte', 'modification_compte');
-		Flight::route('/creation_article', 'creation_article');
-		Flight::route('/suppression_article', 'suppression_article');
-		Flight::route('/modification_article', 'modification_article');
-		Flight::route('/creation_commerce', 'creation_commerce');
-		Flight::route('/suppression_commerce', 'suppression_commerce');
-		Flight::route('/modification_commerce', 'modification_commerce');
-		Flight::route('/envoi', 'envoi');
+	Flight::route('/creation_compte', 'creation_compte');
+	Flight::route('/suppression_compte', 'suppression_compte');
+	Flight::route('/modification_compte', 'modification_compte');
+	Flight::route('/modification_compte', 'modification_compte');
+	Flight::route('/creation_article', 'creation_article');
+	Flight::route('/suppression_article', 'suppression_article');
+	Flight::route('/modification_article', 'modification_article');
+	Flight::route('/creation_commerce', 'creation_commerce');
+	Flight::route('/suppression_commerce', 'suppression_commerce');
+	Flight::route('/modification_commerce', 'modification_commerce');
+	Flight::route('/envoi', 'envoi');
 	Flight::start();
 
 ?>

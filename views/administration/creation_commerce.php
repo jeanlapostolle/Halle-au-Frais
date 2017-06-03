@@ -5,7 +5,7 @@
 			<?php if(isset($message)) echo $message; ?>
 		</p>
 		<p>
-			<form method="post" action="/creation_commerce">
+			<form method="post" action="creation_commerce">
 				<p>
 					<label for="liste_type_comm">Type * </label>
 					<br>
@@ -56,7 +56,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

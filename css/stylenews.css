@@ -1,49 +1,101 @@
-h1 {
-	text-transform : capitalize;
-}
 
-.whoweare h1 {
-	text-align: center;
-}
+/*----------------------------
+---------PAGE NEWS------------
+----------------------------*/
 
-.whoweare li {
-	list-style : none;
-	text-align : center;
-}
+/*.pageNews:matches(h1, h2) {font-family: 'titre'}*/
 
-@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
-@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
+.pageNews {font-family: 'font'}
+.pageNews h1, .pageNews h2 {font-family: 'titre'}
 
-.whoweare .msg {width : 100%}
 
-.banniere_actualite{
+/*----------------------------
+-----------HEADER-------------
+----------------------------*/
+
+
+#headerNews{
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	background : url(./../images/banner/terroir.jpg) center;
+	max-width: 1200px;
 	margin: auto;
-	display: inline-block;
+	color: white;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);
+	text-align: center;
+	font-weight: bold;
 }
+
+
+/*----------------------------
+------------NEWS--------------
+----------------------------*/
+
 
 .actualite{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;	
+	border: 1px dashed rgb(32,32,32);
+	border-radius: 12px;
+	display: flex;							/*tous les blocs (li)s'alignent s'il le peuvent*/
+	flex-flow: column wrap;					/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
+	justify-content: space-around;			/*espacement entre chaque div et avant / après*/
 	align-items: center;
-	width: inherit;	
-	margin: 5px 0px 32px 0px;
+	margin: 5px;		
+    position: relative;
+    width: 356px;
 }
 
-h2{
-	text-align: center;
+
+/*----en-tête articles*/
+#headArt {
+	width: inherit;
+	flex: row;
+	align-items: center;
+	background-color: white;
+	border-radius: 12px 12px 0 0;
+	max-width: 230px;
 }
 
-.titre.article {
-	background-color: rgba(190, 220, 0 , 0.5);
-	padding: 1px 1px 1px 1px;
+/*------images--*/
+
+.imgArt{
+	width : inherit;
+	align-items: center;
+	margin-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	max-width: 90%;
+	margin: auto;
 }
 
-.piedpage{
+/*---text sous l'image--*/
+
+#textArt{
+	width: inherit;
+	text-transform: justify;
+	position: relative;
+	margin: auto;
+	color : grey;
+	max-width: 120px;
+	font-size: 18px;
+}
+
+/*pied d'articles*/
+
+#piedpage{
+	width: inherit;
+	border-radius: 0 0 12px 12px;
 	font-style: italic;
-
-}
-
-.bouton{
+	background-color: #B3B6B7;
 	text-align: center;
+	margin: auto;
+	font-size: 18px;
 }
+
+
+
+
+
+
+
+

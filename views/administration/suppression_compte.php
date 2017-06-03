@@ -2,7 +2,7 @@
 	<div class="adminStyle col-1-1">
 		<h2> Suppression de compte </h2>
 		<p>
-			<form method="post" action="/suppression_compte">
+			<form method="post" action="suppression_compte">
 				<h3>Choisir un compte administrateur : </h3>
 				<p>
 					<select name="suppr" size="3">
@@ -17,7 +17,7 @@
 			</form>
 		</p>
 		<p>
-			<a class="home" href="/admin">Retour au menu d'administration</a>
+			<a class="home" href="admin">Retour au menu d'administration</a>
 		</p>
 	</div>
 </div>

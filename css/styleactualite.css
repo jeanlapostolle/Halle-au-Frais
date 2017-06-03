@@ -1,8 +1,13 @@
-@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
-@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
+.actualite{
+	width: inherit;
+	text-align: center;
+	text-transform: justify;
+	margin : 10px 0px 0px 10px;
+	max-width: 1200px;
+}
 
 .titrearticle{
-	background-color: #db8a00;
+	border-bottom: 2px solid;
 	text-align: center;
 	padding: 5px 5px 5px 5px;
 	margin-bottom: 10px;
@@ -14,11 +19,16 @@
 
 .contenuarticle{
 	text-align: justify;
-	font-size: 25px;
+	font-size: 20px;
+	display: flex;			
+	flex-flow: row wrap;	
+	justify-content: space-around;
+	align-items: center;
+
 }
 
 .piedarticle{
-	background-color: #db8a00;
+	background-color: grey;
 	font-style: italic;
 	padding: 1px 1px 1px 1px;
 	text-align: right;

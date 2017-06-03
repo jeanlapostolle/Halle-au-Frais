@@ -1,6 +1,6 @@
 <div class="grid grid-pad TheFooter">
 	<div class="col-4-12">
-		<h2><a href="/contact">Contactez-nous</a></h2>
+		<h2><a href="contact">Contactez-nous</a></h2>
 		<h3>Adresse</h3>
 		<p>Centre Commercial Les Halles</p>
 		<p>22 B rue du Général Leclerc</p>
@@ -17,7 +17,7 @@
 
 	<div class="col-4-12">
 		<p>
-			<a class="home" href="/connexion">Panneau d'administration</a>
+			<a class="home" href="connexion">Panneau d'administration</a>
 		</p>
 
 		<p>

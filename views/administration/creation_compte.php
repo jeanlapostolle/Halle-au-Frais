@@ -3,7 +3,7 @@
 		<h2> Création de compte </h2>
 		<p><?php if(isset($message)) echo $message; ?></p>
 		<p>
-			<form method="post" action="/creation_compte">
+			<form method="post" action="creation_compte">
 				<h3>Informations de connexion :</h3>
 				<p>
 					<label for="login">Login * : </label>
@@ -31,6 +31,6 @@
 				</p>
 			</form>
 		</p>
-		<p><a class="home" href="/admin">Retour au menu d'administration</a></p>
+		<p><a class="home" href="admin">Retour au menu d'administration</a></p>
 	</div>
 </div>
