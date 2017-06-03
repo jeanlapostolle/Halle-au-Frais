@@ -11,7 +11,8 @@ git clone https://github.com/Jeannot62600/Halle-au-Frais.git
 
 * Votre site est maintenant prèt à être utilisé.
 
-* Vous aves accés au panneau d'administration via le lien dans le pied de page.
+* Vous aves accés au panneau d'administration via le lien dans le pied de page. 
+* L'identifiant de base est id:admin, pwd: test
 
 * Nous vous conseillons de changer le mot de passe administrateur directement.
 
