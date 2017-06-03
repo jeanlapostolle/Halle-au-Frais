@@ -61,7 +61,7 @@ h2{
 	position: relative;
 	display: flex;
 	justify-content: space-around;
-	max-width: 150px;
+	max-width: 300px;
 	min-width: 150px;
 
 }

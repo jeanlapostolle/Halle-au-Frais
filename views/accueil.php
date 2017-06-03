@@ -1,16 +1,12 @@
 <link rel="stylesheet" type="text/css" href="css/styleaccueil.css">
-<div class="grid grid-pad">
-    <div class="col-1-1">
-      	<div class="content slider">
-      		<?php foreach($last_articles as $article):?>
-      			<a href="actualites"><img class="mySlides" src="<?= $article->image ;?>" /></a>
-			<?php endforeach; ?>
 
-	        <div class="fleche_gauche" onclick="plusDivs(-1)">&#10094;</div>
-	        <div class="fleche_droite" onclick="plusDivs(1)">&#10095;</div>
+<div class="content slider">
+	<?php foreach($last_articles as $article):?>
+		<a href="actualites"><img class="mySlides" src="<?= $article->image ;?>" /></a>
+<?php endforeach; ?>
 
-      	</div>
-    </div>
+  <div class="fleche_gauche" onclick="plusDivs(-1)">&#10094;</div>
+  <div class="fleche_droite" onclick="plusDivs(1)">&#10095;</div>
 </div>
 
 <script>
