@@ -1,8 +1,12 @@
 <?php
 
 	function accueil(){
+		$last_articles = Model::factory('Article')
+			->limit(3)
+			->order_by_desc('id')
+			->find_many();
 		$maneges = Model::factory('Manege')->find_many();
-		Flight::render('accueil.php', array('images' => $maneges), 'body_content');
+		Flight::render('accueil.php', array('last_articles' => $last_articles), 'body_content');
 		Flight::render('layout.php', array('title' => 'Home Page'));
 	}
 
