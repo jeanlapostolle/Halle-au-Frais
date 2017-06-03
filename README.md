@@ -1,7 +1,8 @@
 # Mise en service du site
 
-* Copier/coller le contenu du dossier Halle-au-Frais sur votre serveur
-ou de
+
+* Copier/coller le contenu du dossier Halle-au-Frais sur votre serveur ou de
+
 ```
 git clone https://github.com/Jeannot62600/Halle-au-Frais.git
 ```
@@ -16,8 +17,7 @@ git clone https://github.com/Jeannot62600/Halle-au-Frais.git
 
 * Ne perdez pas ce mot de passe.
 
-Vous pouvez créer et modifier des articles / des commerces / des comptes administrateur
-via le panneau d'administration.
+Vous pouvez créer et modifier des articles / des commerces / des comptes administrateur via le panneau d'administration.
 
-* Vous pouvez écrire et modifier vos articles en MarkDown. Nous vous conseillons d'utiliser
-un éditeur de markdown disponible facilement sur internet.
+
+* Vous pouvez écrire et modifier vos articles en MarkDown. Nous vous conseillons d'utiliser un éditeur de markdown disponible facilement sur internet.
