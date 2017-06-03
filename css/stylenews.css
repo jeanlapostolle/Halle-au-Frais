@@ -1,49 +1,97 @@
+#headerNews{
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	background : url(./../images/banner/terroir.jpg) center;
+	max-width: 1200px;
+	margin: auto;
+	color: white;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);
+	text-align: center;
+	background-size: 100%;
+
+}
+
 h1 {
 	text-transform : capitalize;
 }
 
-.whoweare h1 {
-	text-align: center;
+#headArt {
+	width: inherit;
+	flex: row;
+	align-items: center;
+	background-color: white;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	max-width: 230px;
 }
-
-.whoweare li {
-	list-style : none;
-	text-align : center;
-}
-
-@media screen and (min-width: 480px) {.whoweare .saisie {width : 385px}}
-@media screen and (max-width: 480px) {.whoweare .saisie {width : 100%}}
-
-.whoweare .msg {width : 100%}
 
 .banniere_actualite{
+	max-width: 100%;
 	margin: auto;
-	display: inline-block;
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	align-items: center;
 }
 
 .actualite{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;	
+	border-color: rgb(32,32,32);
+	border-width: 1px;
+	border-radius: 12px;
+	border-style: dashed;
+	display: flex;		/*tous les blocs (li)s'alignent s'il le peuvent*/
+	flex-flow: column wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
+	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
 	align-items: center;
-	width: inherit;	
-	margin: 5px 0px 32px 0px;
+	margin: 5px 5px 5px 5px;
+    max-width: 356px;
+    min-width: 250px;
+    position: relative;
+    width: 356px;
 }
 
 h2{
 	text-align: center;
+	text-transform: uppercase
 }
 
-.titre.article {
-	background-color: rgba(190, 220, 0 , 0.5);
-	padding: 1px 1px 1px 1px;
+.imgArt{
+	width : inherit;
+	align-items: center;
+	margin-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	max-width: 300px;
+	min-width: 150px;
+
 }
 
-.piedpage{
+#textArt{
+	width: inherit;
+	text-transform: justify;
+	position: relative;
+	margin: auto;
+	color : grey;
+	max-width: 120px;
+}
+
+#piedpage{
+	width: inherit;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
 	font-style: italic;
-
+	background-color: #B3B6B7;
+	text-align: center;
+	margin: auto;
 }
 
 .bouton{
-	text-align: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 767px){
+.actualite {
+    margin-left: auto;
+    margin-right: auto;
+}
 }

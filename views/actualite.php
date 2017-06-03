@@ -20,6 +20,6 @@
 				</div>
 			</footer>
 		</article>
-		<p><a class="home" href="/actualites">Retour aux actualités</a></p>
+		<p><a class="home" href="actualites">Retour aux actualités</a></p>
 	</div>
 </div>

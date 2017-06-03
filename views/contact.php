@@ -11,7 +11,7 @@
 				<p><p><label for="nom">Prénom : </label><p><input class="saisie" type="text" id="nom" name="nom" tabindex="1" /></p>
 				<p><p><label for="prenom">Nom : </label><p><input class="saisie" type="text" id="prenom" name="prenom" tabindex="1" /></p>
 				<p><p><label for="email">Email : </label><p><input class="saisie" type="text" id="email" name="email" tabindex="2" /></p>
-				<p><p><label for="message">Ecrivez votre message dans la box ci-dessous (3000 caractères maximum). </label><label for="objet">Saisissez votre objet : </label><input class="saisie" type="text" id="objet" name="objet" tabindex="3" /></p><textarea class="msg" id="message" name="message" tabindex="4" cols="50" rows="8"></textarea></p>
+				<p><p><label for="message">Ecrivez votre message dans la box ci-dessous (3000 caractères maximum). </label><p><label for="objet">Saisissez votre objet : </p></label><input class="saisie" type="text" id="objet" name="objet" tabindex="3" /></p><textarea class="msg" id="message" name="message" tabindex="4" cols="50" rows="8"></textarea></p>
 				<div style="text-align:center;"><input type="submit" name="envoi" value=" Envoyer " /></div>
 			</form>
 		</div>

@@ -1,8 +1,12 @@
 <?php
 
 	function accueil(){
+		$last_articles = Model::factory('Article')
+			->limit(3)
+			->order_by_desc('id')
+			->find_many();
 		$maneges = Model::factory('Manege')->find_many();
-		Flight::render('accueil.php', array('images' => $maneges), 'body_content');
+		Flight::render('accueil.php', array('last_articles' => $last_articles), 'body_content');
 		Flight::render('layout.php', array('title' => 'Home Page'));
 	}
 
@@ -109,9 +113,8 @@
 		Flight::render('contact.php', array('mailer' => $mailer), 'body_content');
 	}
 
-	function connexion(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function connexion(){	
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
@@ -121,7 +124,7 @@
 			if (($_POST['login'])!='' AND ($_POST['pass'])!='')
 			{
 				$login = $_POST['login'];
-				$pass = $_POST['pass'];
+				$pass = md5($_POST['pass']);
 
 				$user = Model::factory('admin')
 				->where('login', $login)
@@ -130,8 +133,8 @@
 
 				if (isset($user->login) AND isset($user->mdp))
 				{
+					$_SESSION['id'] = $user->id;
 					$_SESSION['login'] = $user->login;
-					$_SESSION['pass'] = $user->mdp;
 					$_SESSION['nom'] = $user->nom;
 					$_SESSION['prenom'] = $user->prenom;
 
@@ -167,9 +170,8 @@
 		Flight::render('layout.php', array('title' => 'Validation'));
 	}
 
-	function deconnexion(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function deconnexion(){		
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/deconnexion.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Deconnexion'));
@@ -181,9 +183,8 @@
 		}
 	}
 
-	function admin(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function admin(){	
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
@@ -194,9 +195,8 @@
 		}
 	}
 
-	function creation_compte(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function creation_compte(){	
+		if (isset($_SESSION['id']))
 		{
 			if (isset($_POST['login']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']))
 			{
@@ -205,10 +205,10 @@
 					if (($_POST['pass']) == ($_POST['conf']))
 					{
 						$user = Model::factory('admin')->create();
-						$user->login = $_POST['login'];
-						$user->mdp = $_POST['pass'];
-						$user->nom = $_POST['nom'];
-						$user->prenom = $_POST['prenom'];
+						$user->login = htmlentities($_POST['login']);
+						$user->mdp = md5(htmlentities($_POST['pass']));
+						$user->nom = htmlentities($_POST['nom']);
+						$user->prenom = htmlentities($_POST['prenom']);
 						$user->save();
 						validation("Enregistrement validé !");
 					}
@@ -235,9 +235,8 @@
 		}
 	}
 
-	function suppression_compte(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function suppression_compte(){	
+		if (isset($_SESSION['id']))
 		{
 			$compte_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['suppr']))
@@ -258,9 +257,8 @@
 		}
 	}
 
-	function modification_compte(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function modification_compte(){	
+		if (isset($_SESSION['id']))
 		{
 			$comptes_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['modif']))
@@ -296,8 +294,7 @@
 	}
 
 	function creation_article(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
 			{
@@ -332,9 +329,8 @@
 		}
 	}
 
-	function suppression_article(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+	function suppression_article(){		
+		if (isset($_SESSION['id']))
 		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['suppr_article']))
@@ -356,8 +352,7 @@
 	}
 
 	function modification_article(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['modif']))
@@ -396,8 +391,7 @@
 	}
 
 	function creation_commerce(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$type_commerce = Model::factory('type')->find_many();
 			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['prop_comm']) AND isset($_POST['fb_comm']) AND isset($_POST['web_comm']) AND isset($_POST['mail_comm']) AND isset($_POST['tel_comm']))
@@ -405,14 +399,14 @@
 				if(($_POST['nom_comm'] != '') AND isset($_POST['liste_type_comm']))
 				{
 					$commerce = Model::factory('commerce')->create();
-					$commerce->nom = $_POST['nom_comm'];
-					$commerce->propriétaire = $_POST['prop_comm'];
-					$commerce->description = $_POST['desc_comm'];
-					$commerce->numType = $_POST['liste_type_comm'];
-					$commerce->Facebook = $_POST['fb_comm'];
-					$commerce->siteWeb = $_POST['web_comm'];
-					$commerce->mail = $_POST['mail_comm'];
-					$commerce->telephone = $_POST['tel_comm'];
+					$commerce->nom = htmlentities($_POST['nom_comm']);
+					$commerce->propriétaire = htmlentities($_POST['prop_comm']);
+					$commerce->description = htmlentities($_POST['desc_comm']);
+					$commerce->numType = htmlentities($_POST['liste_type_comm']);
+					$commerce->Facebook = htmlentities($_POST['fb_comm']);
+					$commerce->siteWeb = htmlentities($_POST['web_comm']);
+					$commerce->mail = htmlentities($_POST['mail_comm']);
+					$commerce->telephone = htmlentities($_POST['tel_comm']);
 					$commerce->save();
 					validation("Enregistrement validé !");
 				}
@@ -435,8 +429,7 @@
 	}
 
 	function suppression_commerce(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$commerces = Model::factory('commerce')->find_many();
 			if (isset($_POST['suppr_commerce']))
@@ -458,32 +451,33 @@
 	}
 
 	function modification_commerce(){
-		session_start();
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$commerces = Model::factory('commerce')->find_many();
 			$type_commerce = Model::factory('type')->find_many();
-			if (isset($_POST['modif_commerce']) AND isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
+			if (isset($_POST['modif_commerce']))
 			{
-				if(($_POST['nom_comm'] != '') AND ($_POST['desc_comm'] != '') AND ($_POST['liste_type_comm'] != '') AND ($_POST['prop_comm'] != ''))
-				{
-					$commerce_modif = Model::factory('commerce')->find_one($_POST['modif_commerce']);
-					$commerce_modif->nom = $_POST['nom_comm'];
-					$commerce_modif->propriétaire = $_POST['prop_comm'];
-					$commerce_modif->description = $_POST['desc_comm'];
-					$commerce_modif->numType = $_POST['liste_type_comm'];
-					$commerce_modif->save();
+				$commerce = Model::factory('commerce')->find_one($_POST['modif_commerce']);
+				Flight::render('administration/modification_commerce.php', array('commerce' => $commerce, 'type_commerce' => $type_commerce), 'body_content');
+				Flight::render('layout.php', array('title' => 'Modification Commerce'));
+			}
+			else if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['liste_type_comm']) AND isset($_POST['prop_comm']))
+			{
+					$commerce = Model::factory('commerce')->find_one($_POST['id_commerce']);
+					if(($_POST['nom_comm'])!='')
+						$commerce->nom = htmlentities($_POST['nom_comm']);
+					if(($_POST['desc_comm'])!='')
+						$commerce->description = htmlentities($_POST['desc_comm']);
+					if(($_POST['prop_comm'])!='')
+						$commerce->propriétaire = htmlentities($_POST['prop_comm']);
+					if(($_POST['liste_type_comm'])!='')
+						$commerce->numType = htmlentities($_POST['liste_type_comm']);
+					$commerce->save();
 					validation("Modification validée !");
-				}
-				else
-				{
-					Flight::render('administration/modification_commerce.php', array('commerces' => $commerces, 'type_commerce' => $type_commerce, 'message' => 'Veuillez saisir tous les champs.'), 'body_content');
-					Flight::render('layout.php', array('title' => 'Modification Commerce'));
-				}
 			}
 			else
 			{
-				Flight::render('administration/modification_commerce.php', array('commerces' => $commerces, 'type_commerce' => $type_commerce), 'body_content');
+				Flight::render('administration/choix_commerce.php', array('commerces' => $commerces), 'body_content');
 				Flight::render('layout.php', array('title' => 'Modification Commerce'));
 			}
 		}
