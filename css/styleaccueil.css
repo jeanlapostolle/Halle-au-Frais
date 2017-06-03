@@ -56,7 +56,7 @@ h1 {text-transform : capitalize}
 .terroir.description{
 	font-size: 20px;
 	width: inherit;
-	height: 90px;
+	height: inherit;
 	text-align: justify;
 }
 

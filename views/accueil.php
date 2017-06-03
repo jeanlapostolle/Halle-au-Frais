@@ -97,7 +97,6 @@
       <a href="/traiteurs#searchresult" class="anchor"><button class="button traiteurs"><span class="texte">Traiteurs </span></button></a>
   	</div>
 
-
    	<div class="col-1-3 button">
       <a href="/bouchers#searchresult" class="anchor"><button class="button bouchers"><span class="texte">Bouchers </span></button></a>
   	</div>
