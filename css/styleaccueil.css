@@ -55,33 +55,41 @@ h1 {text-transform : capitalize}
 
 .terroir.description{
 	font-size: 20px;
-	width: 735px;
+	width: inherit;
 	height: 90px;
+	text-align: justify;
+}
+
+.rubriqueButton{
+	width: inherit;
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: 10px;
+  	margin-bottom: 15px;
+  	margin-top: 20px;
+  	margin-left: 10px;
 }
 
 .button {
 	cursor: pointer;
 	font-weight: bold;
-	border-radius: 4px;
-  	border-radius: 6px;
+	border-radius: 12px;
   	border: none;
-  	height: 200px;
-  	width: 200px;
-  	display: flex;
+  	display: block;
   	flex-flow: row wrap;
-  	margin-bottom: 15px;
-  	margin-right: 60px;
-  	margin-left: 60px;
-  	align-items: center;
-  	position: relative;
-  	text-align: center;
-  	text-decoration: none;
+  	margin: auto;
+  	margin-bottom: 20px;
+  	height: 200px;
+	width: 200px;
+	align-items: center;
 }
 
 .texte {
 	width: inherit;
 	color: #ffffff;
 	font-size: 28px;
+	align-items: center;
+	text-align: center;
 	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 

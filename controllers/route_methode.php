@@ -110,7 +110,7 @@
 	}
 
 	function connexion(){	
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
@@ -129,8 +129,8 @@
 
 				if (isset($user->login) AND isset($user->mdp))
 				{
+					$_SESSION['id'] = $user->id;
 					$_SESSION['login'] = $user->login;
-					$_SESSION['pass'] = md5($user->mdp);
 					$_SESSION['nom'] = $user->nom;
 					$_SESSION['prenom'] = $user->prenom;
 
@@ -167,7 +167,7 @@
 	}
 
 	function deconnexion(){		
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/deconnexion.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Deconnexion'));
@@ -180,7 +180,7 @@
 	}
 
 	function admin(){	
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			Flight::render('administration/menu_admin.php', NULL, 'body_content');
 			Flight::render('layout.php', array('title' => 'Menu Admin'));
@@ -192,7 +192,7 @@
 	}
 
 	function creation_compte(){	
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			if (isset($_POST['login']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']))
 			{
@@ -232,7 +232,7 @@
 	}
 
 	function suppression_compte(){	
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$compte_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['suppr']))
@@ -254,7 +254,7 @@
 	}
 
 	function modification_compte(){	
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$comptes_admin = Model::factory('admin')->find_many();
 			if (isset($_POST['modif']))
@@ -290,7 +290,7 @@
 	}
 
 	function creation_article(){
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			if (isset($_POST['titre_article']) AND isset($_POST['desc_article']) AND isset($_POST['contenu_article']) AND isset($_POST['image_article'])AND isset($_POST['desc_image_article']))
 			{
@@ -326,7 +326,7 @@
 	}
 
 	function suppression_article(){		
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['suppr_article']))
@@ -348,7 +348,7 @@
 	}
 
 	function modification_article(){
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$articles = Model::factory('article')->find_many();
 			if (isset($_POST['modif']))
@@ -387,7 +387,7 @@
 	}
 
 	function creation_commerce(){
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$type_commerce = Model::factory('type')->find_many();
 			if (isset($_POST['nom_comm']) AND isset($_POST['desc_comm']) AND isset($_POST['prop_comm']) AND isset($_POST['fb_comm']) AND isset($_POST['web_comm']) AND isset($_POST['mail_comm']) AND isset($_POST['tel_comm']))
@@ -425,7 +425,7 @@
 	}
 
 	function suppression_commerce(){
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$commerces = Model::factory('commerce')->find_many();
 			if (isset($_POST['suppr_commerce']))
@@ -447,7 +447,7 @@
 	}
 
 	function modification_commerce(){
-		if (isset($_SESSION['login']) AND isset($_SESSION['pass']))
+		if (isset($_SESSION['id']))
 		{
 			$commerces = Model::factory('commerce')->find_many();
 			$type_commerce = Model::factory('type')->find_many();
