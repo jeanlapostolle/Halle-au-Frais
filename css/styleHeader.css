@@ -12,7 +12,8 @@
 
 @media screen and (min-width: 1500px) {#imgHeaderBadass {background: url('../images/banner/headerIconesCompressV3.png') center no-repeat}}
 @media screen and (min-width: 831px) and (max-width: 1499px) {#imgHeaderBadass {background: url('../images/banner/headerIconesCompressV3tablette.png') center no-repeat}}
-@media screen and (max-width: 830px) {#imgHeaderBadass {background: url('../images/banner/headerIconesCompressV3mobile.png') center no-repeat}}
+@media screen and (max-width: 830px) and (max-width: 661px)  {#imgHeaderBadass {background: url('../images/banner/headerIconesCompressV3tabletteBis.png') center no-repeat}}
+@media screen and (max-width: 660px) {#imgHeaderBadass {background: url('../images/banner/headerIconesCompressV3mobile.png') center no-repeat}}
 /*
 @media screen and (max-width: 660px) {#LogoMobile {display: block}}	/*visibility : visible;
 @media screen and (min-width: 661px) {#LogoMobile {display: none}}	
