@@ -8,12 +8,17 @@
   	text-align: center;
 	height: 75px;
 	background-size: 100%;
+	font-family: sans-serif;
+
 }
 
-.headerContact h2 {background-color: rgba(0,0,0,0.1)}
+.headerContact h2 {background-color: rgba(0,0,0,0.1);
+	font-family: 'titre';
+}
 
 .whoweare {
 	font-size: 18px;
+	font-family: 'font';
 }
 
 .whoweare h2 {
