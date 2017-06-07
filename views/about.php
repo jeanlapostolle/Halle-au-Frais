@@ -1,7 +1,7 @@
 <div id="pageCommercants">
 	<div id="headerCommerce" class="grid grid-pad">
 		<div class="col-1-1">
-			<h1> Nos Commercants </h1>
+			<h1 id="TitreBannerCommercant"> Nos Commercants </h1>
 		</div>
 	</div>
 

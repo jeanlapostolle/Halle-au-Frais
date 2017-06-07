@@ -14,6 +14,9 @@
 	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);	/* generateur : https://css3gen.com/text-shadow/ */
 }
 
+/*définition de la police*/
+/*#TitreBannerCommercant {font-family: 'Jazz LET', sans-serif, 'titre'}
+
 /*definitions générales*/
 .listeCommerces li a, #headerCommerce h1 {
 	color : white;
