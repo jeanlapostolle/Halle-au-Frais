@@ -1,3 +1,8 @@
+/*----------------------------
+---------PAGE CONTACT---------
+----------------------------*/
+
+
 .headerContact {
 	padding : 32px 0% 32px 0%;
 	background : url(../images/banner/halles_01.jpg) center no-repeat;
@@ -12,37 +17,39 @@
 
 }
 
-.headerContact h2 {background-color: rgba(0,0,0,0.1);
-	font-family: 'titre';
-}
+.headerContact h2 {background-color: rgba(0,0,0,0.1)}
+
+
+
+/*----------------------------
+-----------CONTACT------------
+----------------------------*/
+
+
 
 .whoweare {
-	font-size: 18px;
 	font-family: 'font';
+	font-size: 18px;
 }
 
-.whoweare h2 {
-	/*color: rgb(32, 50, 32);*/
-}
+.whoweare h2 {font-family: 'titre';}
 
 .whoweare ul {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
+	display: flex;		/*technique de display puissante permettant de faire en gros les mêmes choses que simplegrid*/
+	flex-flow: row wrap;	/*row pour alignement horizontal, wrap pour retour à la ligne*/
+	justify-content: space-around;		/*espacement entre chaque div et avant / après les divs*/
 	align-items: center;
 }
 
-/*
-.parking li {
-	list-style-type: square;
-	display: block;
-}
-*/
-
-.liste p {padding-left: 15px}
 
 
-/*Test Délire Icones Fruits&Legumes Liste Info Parking*/
+/*----------------------------
+---------INFO UTILES----------
+----------------------------*/
+
+.liste p {padding-left: 15px}		/*ajout d'un retrait pour chaques paragraphes*/
+
+/*ajout de petites icones pour chaque sous-titres, changeant suivant le placement de l'élément*/
 .whoweare .liste:nth-child(1) h3 {
 	padding: 20px 0px 0px 50px;
 	background: url('../images/icones/ananas.png') no-repeat 0 0%;
