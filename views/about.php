@@ -15,19 +15,6 @@
 		<li> <a href="bouchers#listeCom"><img class="buttonListShop" src="images/Commerce/png/ham.png" title="Nos bouchers"></a></li>
 		<li> <a href="cavistes#listeCom"><img class="buttonListShop" src="images/Commerce/png/glass-4.png" title="Nos cavistes"></a></li>
 		<li> <a href="boulangers#listeCom"><img class="buttonListShop" src="images/Commerce/png/bread-1.png" title="Nos boulangers"></a></li>
-
-		<!--
-		-> voir styleCommerce.css pour d'autres images <-S
-
-		<li class="buttonprimeurs"> <a href="/primeurs">test</a></li>
-		<li> <a href="/rotissiers"><img class="buttonrotissiers" src="images/Commerce/png/turkey.png"></a></li>
-		<li class="buttonpoissonniers"> <a href="/poissoniers"></a></li>
-		<li class="buttonfromagers"> <a href="/fromagers"></a></li>
-		<li class="buttonepiciers"> <a href="/epiciers"></a></li>
-		<li class="buttontraiteurs"> <a href="/traiteurs"></a></li>
-		<li class="buttonbouchers"> <a href="/bouchers"></a></li>
-		<li class="buttoncavistes"> <a href="/cavistes"></a></li>
-		<li class="buttonboulangers"> <a href="/boulangers"></a></li>-->
 	</ul>
 
 	<div class="separation"></div>
