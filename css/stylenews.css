@@ -1,3 +1,8 @@
+/*----------------------------
+-----------HEADER-------------
+----------------------------*/
+
+
 #headerNews{
 	width : inherit;
 	padding : 32px 0% 32px 0%;
@@ -11,10 +16,20 @@
 
 }
 
-h1 {
-	text-transform : capitalize;
+
+.banniere_actualite{
+	max-width: 100%;
+	margin: auto;
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	align-items: center;
 }
 
+/*----------------------------
+------------NEWS--------------
+----------------------------*/
+
+/*----en-tête articles*/
 #headArt {
 	width: inherit;
 	flex: row;
@@ -23,14 +38,6 @@ h1 {
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
 	max-width: 230px;
-}
-
-.banniere_actualite{
-	max-width: 100%;
-	margin: auto;
-	width : inherit;
-	padding : 32px 0% 32px 0%;
-	align-items: center;
 }
 
 .actualite{
@@ -49,11 +56,15 @@ h1 {
     width: 356px;
 }
 
-h2{
-	text-align: center;
-	text-transform: uppercase
+
+@media screen and (max-width: 767px){
+	.actualite {
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
 
+/*------images--*/
 .imgArt{
 	width : inherit;
 	align-items: center;
@@ -66,6 +77,7 @@ h2{
 
 }
 
+/*---text sous l'image--*/
 #textArt{
 	width: inherit;
 	text-transform: justify;
@@ -75,6 +87,7 @@ h2{
 	max-width: 120px;
 }
 
+/*pied d'articles*/
 #piedpage{
 	width: inherit;
 	border-bottom-left-radius: 12px;
@@ -85,13 +98,6 @@ h2{
 	margin: auto;
 }
 
-.bouton{
-	align-items: center;
-}
+.bouton{align-items: center}
 
-@media screen and (max-width: 767px){
-.actualite {
-    margin-left: auto;
-    margin-right: auto;
-}
-}
+

@@ -1,13 +1,25 @@
-/*
-Ci-dessous, description global des li puis des h1
-*/
 
-main {margin: 32px 0px 50px 0px}
+/*----------------------------
+--------PAGE COMMERCE---------
+----------------------------*/
 
-li {list-style-type: none}	/*pas de points ou autres decorations avant chaque element de la liste*/
 
-h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
+/* header */
+#headerCommerce {
+	width : inherit;
+	padding : 32px 0% 32px 0%;
+	background : url(./../images/banner/banner1.jpg) center;
+	max-width: 1200px;
+	margin: auto;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);	/* generateur : https://css3gen.com/text-shadow/ */
+}
 
+/*definitions générales*/
+.listeCommerces li a, #headerCommerce h1 {
+	color : white;
+  	/*text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
+  	text-align: center;
+}
 
 #pageCommercants {
 	width: 100%;
@@ -15,170 +27,55 @@ h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
 	margin: 0 auto;
 }
 
-.listeCommerces {
+
+/*----------------------------
+-------LISTE COMMERCES--------
+----------------------------*/
+
+/* définition de chaques éléments */
+.listeCommerces{
 	width: 100%;
-	max-width: 700px;
+	max-width: 700px; /*Limitation de la largeur effective notamment en version ordinateur*/
 	margin: 0 auto;
 	padding: 0px;
+	display: flex;		/*technique de display puissante permettant de faire en gros les mêmes choses que simplegrid*/
+	flex-flow: row wrap;	/*row pour alignement horizontal, wrap pour retour à la ligne*/
+	justify-content: space-between;	/*space-between = espace entre chaques éléments, mais pas entre les éléments et les bordures de la div -> space-around*/
+	align-items: center;
 }
 
-/*
-ci dessous, css spécifique à la page commercants
-*/
-
-.separation {
-	border-top: 1px solid grey;
-	margin: 50px 0px 50px 0px;
-	width: inherit;
-}
-
-#headerCommerce {
-	padding : 32px 0% 32px 0%;
-	background : url(./../images/banner/banner1.jpg) center;
-
-	margin: auto;
-	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9),  0px 0px 3px rgba(0, 0, 0, 1),  0px 0px 1px rgba(0, 0, 0, 1);	/* generateur : https://css3gen.com/text-shadow/ */
+.listeCommerces li {
+	max-height: 120px;
+	max-width: 120px;
 	text-align: center;
-	background-size: 100%;
-
+	margin : 10px 0px 10px 0px
 }
 
-/*#headerCommerce h1 {background-color: rgba(15,32,15,0.15)}*/
-
-.listeCommerces li a, #headerCommerce h1 {
-	color : white;
-  	/*text-shadow: 0px 0px 5px rgba(15, 50, 15, 0.9);	/* generateur : https://css3gen.com/text-shadow/ */
-  	text-align: center;
-}
-
-
-
-/*
-.listeCommerces a {
-	text-decoration : none;
-	color : black;
-	font-size : 15px;
-}*/
-
-.commerces a {
- 	color : rgb(245, 180, 0);
- 	font-weight : bold;
- }
-
-.commerces a:hover {font-size : 18px}
-
-.listeCommerces li {margin : 10px 0px 10px 0px}
-
-/*
-.listeCommerces li a {
-	background-color: rgba(32, 50, 32, 0.5);
-	font-size : 20px;
-}*/
-
-/*à tester les images que j'ai mis à coté*/
-
+/* définition des links */
 .buttonListShop {
 	background-size: cover;
 	height: 120px;
 	width: 120px;
 }
-
 .buttonListShop:hover {opacity: 0.8}
 
 
-/*
-.buttonprimeurs, .buttonrotissiers, .buttonpoissonniers, .buttonfromagers, .buttonepiciers,
- .buttontraiteurs, .buttonbouchers, .buttoncavistes, .buttonboulangers{
-	background-size: cover;
-	height: 120px;
-	width: 120px;
-}
-.buttonprimeurs:hover, .buttonrotissiers:hover, .buttonpoissonniers:hover,
- .buttonfromagers:hover, .buttonepiciers:hover, .buttontraiteurs:hover,
-  .buttonbouchers:hover, .buttoncavistes:hover, .buttonboulangers:hover {
-  	opacity: 0.8; font-size : 18px}
 
+/*----------------------------
+----------COMMERCES-----------
+----------------------------*/
 
-/*.buttonprimeurs a{
-	background: url(../images/Commerce/png/asparagus.png) center no-repeat; /*bio-store.png 	(tous les legumes)*/
-/*	background-size: cover;}
-.buttonprimeurs:hover {opacity: 0.8; font-size : 18px;}
-*/
-/*
-.buttonrotissiers {background: url(../images/Commerce/png/turkey.png) center no-repeat; /*woman-and-grill.png*/
-/*	background-size: cover;}
-.buttonrotissiers:hover {opacity: 0.8; font-size : 18px;}
-*/
-/*
-.buttonpoissonniers {background: url(../images/Commerce/png/fish.png) center no-repeat; /*octopus.png 	shrimp.png
-	background-size: cover;}
-.buttonpoissonniers:hover {opacity: 0.8; font-size : 18px;}
-
-.buttonfromagers {background: url(../images/Commerce/png/cheese.png) center no-repeat; /*cheese-1.png
-	background-size: cover;}
-.buttonfromagers:hover {opacity: 0.8; font-size : 18px;}
-
-.buttonepiciers {background: url(../images/Commerce/png/spices.png) center no-repeat; /*shopping-groceries.png
-	background-size: cover;}
-.buttonepiciers:hover {opacity: 0.8; font-size : 18px;}
-
-.buttontraiteurs {background: url(../images/Commerce/png/sushi-1.png) center no-repeat; /*cauldron-chef.png
-	background-size: cover;}
-.buttontraiteurs:hover {opacity: 0.8; font-size : 18px;}
-
-.buttonbouchers {background: url(../images/Commerce/png/ham.png) center no-repeat; /*salami.png 	butcher-shop.png
-	background-size: cover;}
-.buttonbouchers:hover {opacity: 0.8; font-size : 18px;}
-
-.buttoncavistes {background: url(../images/Commerce/png/glass-4.png) center no-repeat; /*winemaker.png
-	background-size: cover;}
-.buttoncavistes:hover {opacity: 0.8; font-size : 18px;}
-
-.buttonboulangers {background: url(../images/Commerce/png/bread-1.png) center no-repeat; /*bakery-vendor.png
-	background-size: cover;}
-.buttonboulangers:hover {opacity: 0.8; font-size : 18px;}
-
-/*.listeCommerces li {width : 10%; height: auto;}*/
-
-/*
-@media screen and (max-width: 580px) {.listeCommerces li {width: 30%}}
-@media screen and (min-width: 581px) and (max-width: 999px) {.listeCommerces li {width: 21%}}
-@media screen and (min-width: 1000px) { .listeCommerces li {width: 10%}}
-*/
-
-/*
-@media screen and (min-width: 1000px) and (max-width: 1199px)  {.parentCommerce, .listeCommerces, .headerCommerce  {padding : 0% 5% 0% 5%}}
-@media screen and (min-width: 1200px) and (max-width: 1399px)  {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 10% 0% 10%}}
-@media screen and (min-width: 1400px) and (max-width: 1599px)   {.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 15% 0% 15%}}
-@media screen and (min-width: 1600px){.parentCommerce, .listeCommerces, .headerCommerce {padding : 0% 20% 0% 20%}}
-*/
-
-
-
-
-
-.commerces h2 {text-align: center}
-#desc, #Commercemail, #Commercetel {color : grey}
-#prop {font-weight : bold}
-
-.listeCommerces{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: center;
-	/*width : inherit;	*/
-}
-
-
+/*-----div contenant tous les commerces*/
 .parentCommerce {
 	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
 	flex-flow: row wrap;	/*row : allignement horizontal, wrap : les blocs se mettent les uns en dessous des autres en cas de manque de place (responsive web)*/
-	justify-content: space-around;	/*espacement entre chaque div et avant et après*/
+	justify-content: space-around;	/*espacement entre chaque div et avant / après les divs*/
 	align-items: center;
 	width: inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 	margin: 5px 0px 32px 0px;
 }
 
+/*----div de description de chaque commerce*/
 .commerces {
 	border-color: rgb(32,32,32);
 	border-width: 1px;
@@ -189,18 +86,15 @@ ci dessous, css spécifique à la page commercants
 	margin : 10px 0px 0px 10px;
 	width : 280px;
 }
+.commerces h2 {text-align: center}
 
+.commerces a {
+ 	color : rgb(245, 180, 0);
+ 	font-weight : bold;
+ }
+.commerces a:hover {font-size : 18px}
 
-/*
-@media screen and (max-width: 480px) {.commerces {width: 85%}}
-@media screen and (min-width: 481px) and (max-width: 919px) {.commerces {width: 30%}}
-@media screen and (min-width: 920px) {.commerces {width: 300px}}
-*/
+/*-----class des différents éléments de chaques divs*/
+#desc, #Commercemail, #Commercetel {color : grey}
+#prop {font-weight : bold}
 
-
-
-.listeCommerces li {
-	max-height: 120px;
-	max-width: 120px;
-	text-align: center;
-}

@@ -1,58 +1,6 @@
-header {border-bottom: 1px rgba(100, 160, 100, 0.5) solid}
-
-header nav{padding: 10px 0px 10px 0px}
-header nav {background-color: rgba(190, 220, 0 , 0.5)}	/*#BEDC00*/
-
-header a {
-	text-transform : uppercase;
-	color: black;
-	text-align: center;
-	text-decoration : none;
-	font-family: 'titre';
-	/*text-decoration : overline underline;*/
-}
-
-/*
-@media screen and (min-width: 1000px) and (max-width: 1199px)  {#headerParent {padding : 0% 5% 0% 5%}}
-@media screen and (min-width: 1200px) and (max-width: 1399px)  {#headerParent {padding : 0% 10% 0% 10%}}
-@media screen and (min-width: 1400px) and (max-width: 1599px)   {#headerParent {padding : 0% 15% 0% 15%}}
-@media screen and (min-width: 1600px)	{#headerParent {padding : 0% 20% 0% 20%}}*/
-
-header nav ul {
-	padding-left: 0px;
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-/*header nav {width: inherit}*/
-
-header nav a {
-	border-width: 1px 0px 1px 0px;
-	border-style: solid none solid none;
-	border-color: black;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	width: 20%;
-	font-size: 16px;
-}
-
-header nav li:nth-child(3) a {border-style: hidden}
-
-header nav a:hover {color: green; border-color: green;}
-
-@media screen and (max-width: 660px) {
-  header nav li:nth-child(3) {display : none}
-  header li {padding: 50px 0px 50px 0px}
-  #LogoMobile {display: block}	/*visibility : visible;*/
-}
-@media screen and (min-width: 661px) {#LogoMobile {display: none}}
-/*@media screen and (min-width: 700px) {
-	header li:nth-child(1) {list-style-image: url('../images/icones/abricot.png')}
-	header li:nth-child(2) {list-style-image: url('../images/icones/citrouille.png')}
-	header li:nth-child(4) {list-style-image: url('../images/icones/piment.png')}
-	header li:nth-child(5) {list-style-image: url('../images/icones/viande.png')}
-}*/
-
+/*----------------------------
+------------HEADER------------
+----------------------------*/
 
 #headerParent {
 	display: flex;			/*tous les blocs (li)s'alignent s'il le peuvent*/
@@ -61,3 +9,8 @@ header nav a:hover {color: green; border-color: green;}
 	align-items: center;
 	width : inherit;		/*l'épaisseur de cette box dépend de la box la contenant*/
 }
+
+/*
+@media screen and (max-width: 660px) {#LogoMobile {display: block}}	/*visibility : visible;
+@media screen and (min-width: 661px) {#LogoMobile {display: none}}	
+*/

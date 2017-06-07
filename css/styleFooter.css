@@ -1,56 +1,37 @@
-@font-face
-{
-    font-family: 'font';
-    src: url('polices/GeosansLight.ttf');
-    font-weight: normal;
-    font-style: normal;
+/*----------------------------
+------------FOOTER------------
+----------------------------*/
+
+.footer{
+	color: #FFF;
+	background-color: #333;
 }
 
-@font-face
-{
-    font-family: 'titre';
-    src: url('polices/source-code-pro-light.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
+.TheFooter .home {font-size: 20px}
 .TheFooter {font-family: 'font'}
 .TheFooter h2, .TheFooter h3 {font-family: 'titre'}
-.TheFooter div:nth-child(2) {	
+.TheFooter div {margin: auto}
+.TheFooter img {width: 100px; height: 100px}
+
+.TheFooter ul {
+	display: flex;		/*technique de display puissante permettant de faire en gros les mêmes choses que simplegrid*/
+	flex-flow: row wrap;	/*row pour alignement horizontal, wrap pour retour à la ligne*/
+	justify-content: space-around;		/*espacement entre chaque div et avant / après les divs*/
+	align-items: center;
+}
+
+/* style du premier élément correspondant au contact et à l'adresse*/
+.TheFooter div:nth-child(1) p {font-size: 17px}
+/* style du second élément, correspondant aux icones de FB / Mail / map*/
+.TheFooter div:nth-child(2) {	/*ajout de bordures exclusivement pour le second element, de chaques cotés*/
 	border-width: 0px 1px 0px 1px;
 	border-style: none dashed none dashed;
 	border-color: rgb(100, 135, 0);
 }
-
-
-footer h2, footer a {color: rgb(190, 220, 0)}
-footer {background-color: rgba(12,15,12,0.9)}
-footer h3 {text-transform: uppercase}
-footer h3{color: rgb(160,200,160)}
-footer p {color: rgb(240, 255, 240)}
-/*.TheFooter div {background-color: rgba(12, 15, 12 , 0.3)}*/
-
-
-footer a {text-decoration : none}
-
-.TheFooter div {margin: auto}
-
-/*
-http://fr.tuto.com/blog/2016/03/icones-reseaux-sociaux.htm
-*/
-
-.TheFooter img {width: 100px; height: 100px}
-.TheFooter ul {
-	display: flex;			
-	flex-flow: row wrap;	
-	justify-content: space-around;	
-	align-items: center;
-}
+/* style div admin et copyright*/
 .TheFooter div:nth-child(3) {text-align: right}
 
-
-@media handheld, only screen and (max-width: 767px) {
+@media handheld, only screen and (max-width: 767px) {		/*pour un petit écran, les propriétés précédentes sont écrasés pour celles-ci*/
 	.TheFooter div:nth-child(2) {	
 		border-width: 1px 0px 1px 0px;
 		border-style: dashed none dashed none;
@@ -58,9 +39,6 @@ http://fr.tuto.com/blog/2016/03/icones-reseaux-sociaux.htm
 	}
 }
 
-.TheFooter div {margin: auto}
-
-.TheFooter .home {font-size: 20px}
-.TheFooter div:nth-child(1) p {font-size: 17px}
-
-/*.TheFooter div:nth-child(3) p:nth-child(2) {vertical-align: bottom}*/
+/*
+icones : http://fr.tuto.com/blog/2016/03/icones-reseaux-sociaux.htm
+*/

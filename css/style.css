@@ -1,9 +1,111 @@
-/*
-.header{
-	background-color: #CCC;
-}*/
 
-.footer{
-	color: #FFF;
-	background-color: #333;
+
+/*----------------------------
+------------FONT--------------
+----------------------------*/
+@font-face		/*ajout de polices, une pour les titres, une pour le texte*/
+{
+    font-family: 'font';
+    src: url('polices/GeosansLight.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face
+{
+    font-family: 'titre';
+    src: url('polices/source-code-pro-light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*----------------------------
+------------GENERAL-----------
+----------------------------*/
+
+li {list-style-type: none}	/*pas de points ou autres decorations avant chaque element de la liste*/
+
+h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
+
+h1 {text-transform : capitalize}
+
+h2 {text-align: center}
+
+/* utilisation de la police font (définie dans style.css) pour tous les éléments de saisie*/
+label, input, textarea, select {font-family: 'font'}
+
+.separation { /*ligne de séparation à utiliser partout si besoin*/
+	border-top: 1px solid grey;
+	margin: 50px 0px 50px 0px;		/*comme tous les autres padding/margin du type 'x top, 0 right, y bottom, 0 left', c'est pour aérer*/
+	width: inherit;
+}
+
+.bouton{align-items: center}
+
+
+/*----------------------------
+------------HEADER------------
+----------------------------*/
+
+header {border-bottom: 1px rgba(100, 160, 100, 0.5) solid}
+
+header a {
+	text-transform : uppercase;
+	color: black;
+	text-align: center;
+	text-decoration : none;
+	font-family: 'titre';
+}
+
+/*-------nav header--------*/
+header nav {padding: 10px 0px 10px 0px}
+header nav {background-color: rgba(190, 220, 0 , 0.5)}	/*#BEDC00*/
+header nav ul {
+	padding-left: 0px;				/*pour corriger un padding de 40px -> trouver l'origine*/
+	max-width: 800px;
+	margin: 0 auto;
+}
+header nav a {
+	border-width: 1px 0px 1px 0px;
+	border-style: solid none solid none;
+	border-color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 20%;
+	font-size: 16px;
+}
+header nav li:nth-child(3) a {border-style: hidden}		/*pour éviter d'avoir deux lignes horizontales entourant l'icone des halles*/
+header nav a:hover {color: green; border-color: green;}
+
+@media screen and (max-width: 660px) {
+  header nav li:nth-child(3) {display : none}		/*pour faire disparaitre l'icone des halles en version mobile (trop imposant)*/
+  header li {padding: 50px 0px 50px 0px}
+}
+
+
+
+/*----------------------------
+------------MAIN--------------
+----------------------------*/
+
+
+main {margin: 32px 0px 50px 0px}
+
+
+
+
+/*----------------------------
+------------FOOTER------------
+----------------------------*/
+
+
+footer {background-color: rgba(12,15,12,0.9)}
+footer h2, footer a {color: rgb(190, 220, 0)}
+footer h3 {text-transform: uppercase}
+footer h3{color: rgb(160,200,160)}
+footer p {color: rgb(240, 255, 240)}
+
+footer a {text-decoration : none}
