@@ -15,7 +15,7 @@
 }
 
 /*définition de la police*/
-#TitreBannerCommercant {font-family: 'Jazz LET', sans-serif, 'titre'}
+#TitreBannerCommercant {font-family: 'titre'}
 
 /*definitions générales*/
 .listeCommerces li a, #headerCommerce h1 {

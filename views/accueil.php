@@ -3,7 +3,7 @@
 <div class="content slider">
 	<?php foreach($last_articles as $article):?>
 		<a href="actualites"><img class="mySlides" src="<?= $article->image ;?>" /></a>
-<?php endforeach; ?>
+	<?php endforeach; ?>
 
   <div class="fleche_gauche" onclick="plusDivs(-1)">&#10094;</div>
   <div class="fleche_droite" onclick="plusDivs(1)">&#10095;</div>
@@ -37,7 +37,7 @@
 	   	}
 	   	x[slideIndex-1].style.display = "block";
 	   	dots[slideIndex-1].className += " w3-white";
-	  	}
+	  }
 
   	function carousel() {
       	var i;

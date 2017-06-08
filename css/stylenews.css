@@ -6,7 +6,7 @@
 #headerNews{
 	width : inherit;
 	padding : 32px 0% 32px 0%;
-	background : url(./../images/banner/terroir.jpg) center;
+	background : url(./../images/banner/terroir.jpg) center no-repeat;
 	max-width: 1200px;
 	margin: auto;
 	color: white;
@@ -38,6 +38,7 @@
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
 	max-width: 230px;
+	font-family: 'titre';
 }
 
 .actualite{
@@ -54,6 +55,7 @@
     min-width: 250px;
     position: relative;
     width: 356px;
+	font-family: 'font';
 }
 
 
@@ -93,7 +95,7 @@
 	border-bottom-left-radius: 12px;
 	border-bottom-right-radius: 12px;
 	font-style: italic;
-	background-color: #B3B6B7;
+	background-color: #323232;
 	text-align: center;
 	margin: auto;
 }

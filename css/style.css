@@ -30,7 +30,7 @@ li {list-style-type: none}	/*pas de points ou autres decorations avant chaque el
 
 h2, h1 {text-transform: uppercase}	/*titre tranformés en majuscules*/
 
-h1 {font-family: /*'Jazz LET',*/ sans-serif}
+h1 {font-family: 'titre', /*'Jazz LET',*/ sans-serif}
 
 h2 {text-align: center}
 

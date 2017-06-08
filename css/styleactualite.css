@@ -1,21 +1,31 @@
+/*---------------------
+--------Article--------
+---------------------*/
+
+
+/* Général */
 .actualite{
 	width: inherit;
 	text-align: center;
 	text-transform: justify;
 	margin : 10px 0px 0px 10px;
+	font-family: 'font';
 }
 
+
+/*titre*/
 .titrearticle{
 	border-bottom: 2px solid;
 	text-align: center;
 	padding: 5px 5px 5px 5px;
 	margin-bottom: 10px;
+	font-family: 'titre';
 }
 
-.imagearticle{
-	text-align: center;
-}
+/*image*/
+.imagearticle{text-align: center}
 
+/*Content*/
 .contenuarticle{
 	text-align: justify;
 	font-size: 20px;
@@ -26,9 +36,18 @@
 
 }
 
+/*footer article*/
 .piedarticle{
-	background-color: grey;
+	background-color: #323232;
 	font-style: italic;
 	padding: 1px 1px 1px 1px;
 	text-align: right;
+}
+
+/*lien pied de page*/
+.home {
+	text-transform : uppercase;
+	color: black;
+	text-decoration : none;
+	font-family: 'font';
 }
