@@ -17,8 +17,8 @@
 		Flight::render('layout.php', array('title' => 'Actualités'));
 	}
 
-	function actualite(){
-		$article = Model::factory('Article')->find_one($_POST['id']);
+	function actualite($id){
+		$article = Model::factory('Article')->find_one($id);
 		Flight::render('actualite.php', array('article' => $article), 'body_content');
 		Flight::render('layout.php', array('title' => $article->titre));
 	}

@@ -67,7 +67,7 @@
 }
 
 /*------images--*/
-.imgArt{
+/*.imgArt{
 	width : inherit;
 	align-items: center;
 	margin-bottom: 15px;
@@ -77,6 +77,18 @@
 	max-width: 300px;
 	min-width: 150px;
 
+}*/
+
+.crop {
+    width: 300px;
+    height: 230px;
+    overflow: hidden;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.crop img {
+    margin: 0 0 0 -800px;
 }
 
 /*---text sous l'image--*/

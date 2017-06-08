@@ -23,7 +23,7 @@
 
 	Flight::route('/', 'accueil');
 	Flight::route('/actualites', 'news');
-	Flight::route('/actualite', 'actualite');
+	Flight::route('/actualite/@id', 'actualite');
 	Flight::route('/commercants', 'about');
 	Flight::route('/primeurs', 'primeurs');
 	Flight::route('/rotissiers', 'rotissiers');

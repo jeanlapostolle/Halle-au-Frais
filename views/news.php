@@ -17,7 +17,9 @@
 				</header>
 
 				<p>
-					<img class="imgArt" src=<?= $article->image?> alt=<?=$article->desc_image?> >
+					<div class="crop">
+						<img class="imgArt" src=<?= $article->image?> alt=<?=$article->desc_image?> >
+					</div>
 					<div id="textArt">
 						<?= $article->description;?>
 					</div>
@@ -25,12 +27,7 @@
 
 				<footer id="piedpage">
 					<p>Par <?= $article->auteur;?> le <?= $article->date;?></p>
-					<form method="post" action="actualite">
-						<p class="bouton">
-							<input type="submit" value="Lire la suite">
-   							<input type="hidden" name="id" value=<?= $article->id ?> >
-						</p>
-					</form>
+					<p><a class="home" href="actualite/<?=$article->id?>">Lire la suite</a></p>
 				</footer>
 			</article>
 		<?php endforeach; ?>

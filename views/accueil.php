@@ -2,7 +2,9 @@
 
 <div class="content slider">
 	<?php foreach($last_articles as $article):?>
-		<a href="actualites"><img class="mySlides" src="<?= $article->image ;?>" /></a>
+		<a href="actualite/<?= $article->id ;?>">
+			<img class="mySlides" src="<?= $article->image ;?>" />
+		</a>
 	<?php endforeach; ?>
 
   <div class="fleche_gauche" onclick="plusDivs(-1)">&#10094;</div>
