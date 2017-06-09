@@ -6,9 +6,9 @@
 			<a href="actualite/<?= $article->id ;?>">
 				<img src="<?= $article->image ;?>" />
 					<h1 class="artext"><?= $article->titre ;?></h1>
-					<p class="artext">
+					<h2 class="artext">
 						<?= $article->desc_image ;?>
-					</p>
+					</h2>
 		</div>
 		</a>
 	<?php endforeach; ?>
@@ -113,4 +113,32 @@
     	<a href="/boulangers#searchresult" class="anchor"><button class="button boulangers"><span class="texte">Boulangers</span></button></a>
     </div>
   </div>
+
+</div>
+<div class="grid grid-pad">
+	<div class="col-1-12"></div>
+	<div class="col-10-12">
+		<h1 class="terroir titre">Histoire des Halle au Frais</h1>
+		<p class="terroir description">
+		Le Centre Commercial Les Halles se situe au cœur du quartier du Beffroi, classé monument historique et au Patrimoine mondial de l'UNESCO. Sa Halle au Frais, reconnue pour vendre des produits frais de qualité, les marchés de plein vent (mercredi et samedi toute la journée) et les commerçants aux alentours font de ce lieu un endroit très animé.
+		</p>
+		<p class="terroir description">
+			Le beffroi fut reconstruit au début du xve siècle (1406-1410) Symbolisant l'indépendance de la commune, il servait autrefois aux réunions des notables de la ville puis de salle d'archives, de magasin d'armes et de prison. Un guetteur surveillait alentour les arrivées et prévenait la population des dangers extérieurs.
+
+Le beffroi jouxtait les Halles et l'arrière de l'Hôtel de ville. Il sonnait chaque heure de la journée.
+</p>
+		<p class="terroir description">
+Le 13 août 1562, le beffroi est victime d'un incendie</p>
+<p class="terroir description">
+Le 16 avril 1742, le beffroi est à nouveau la proie des flammes.
+</p>
+<p class="terroir description">
+La réparation du beffroi ne débuta qu'en 1749. C'est le projet de l'architecte Beffara qui fut finalement adopté. Il donna au beffroi l'aspect qu'on lui connaît aujourd'hui. La grosse cloche Marie-Firmine fut fondue en 1748.
+</p>
+<p class="terroir description">
+Le 19 mai 1940, la ville d'Amiens subit un violent bombardement par la Luftwaffe, la toiture et la charpente du beffroi furent la proie des flammes, la cloche de 11 tonnes s'écrasa et se brisa sur le sol.
+</p>
+
+	</div>
+	<div class="col-1-12"></div>
 </div>
