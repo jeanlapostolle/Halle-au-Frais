@@ -7,7 +7,7 @@
 				<div class="titrearticle">
 					<h1><?= $article->titre;?></h1>
 				</div>
-				<div class="imagearticle"><img src=<?= $article->image?> alt=<?=$article->desc_image?>></div>
+				<div class="crop imagearticle"><img src=<?= $article->image?> alt=<?=$article->desc_image?>></div>
 			</header>
 			<p>
 				<div class="contenuarticle">

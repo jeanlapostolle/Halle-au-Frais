@@ -29,8 +29,8 @@
 .contenuarticle{
 	text-align: justify;
 	font-size: 20px;
-	display: flex;			
-	flex-flow: row wrap;	
+	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
 
@@ -50,4 +50,10 @@
 	color: black;
 	text-decoration : none;
 	font-family: 'font';
+}
+
+@media screen and (max-width: 767px){
+	.crop img {
+	    margin: 0 0 0 -800px;
+	}
 }

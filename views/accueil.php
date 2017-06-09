@@ -2,8 +2,14 @@
 
 <div class="content slider">
 	<?php foreach($last_articles as $article):?>
-		<a href="actualite/<?= $article->id ;?>">
-			<img class="mySlides" src="<?= $article->image ;?>" />
+		<div class="mySlides">
+			<a href="actualite/<?= $article->id ;?>">
+				<img src="<?= $article->image ;?>" />
+					<h1 class="artext"><?= $article->titre ;?></h1>
+					<p class="artext">
+						<?= $article->desc_image ;?>
+					</p>
+		</div>
 		</a>
 	<?php endforeach; ?>
 
